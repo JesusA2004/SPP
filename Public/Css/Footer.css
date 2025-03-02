@@ -1,0 +1,62 @@
+/* Estilos para el footer */
+.footer {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff;            /* Texto en blanco */
+    padding: 20px;
+    font-family: sans-serif;   /* Ajusta la fuente a tu preferencia */
+}
+
+.footer-container {
+    max-width: 1200px;         /* Ancho máximo para centrar el contenido */
+    margin: 0 auto;            /* Centrar horizontalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Sección izquierda */
+.footer-left {
+    width: 45%;
+}
+
+.footer-left h2 {
+    color: #E6B400;            /* Un tono dorado */
+    margin-bottom: 20px;
+}
+
+.footer-left h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;            /* Mantener texto blanco */
+}
+
+/* Sección derecha */
+.footer-right {
+    width: 45%;
+}
+
+.footer-location,
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.footer-location h3,
+.footer-contact h3 {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+/* Botón de mapa */
+.map-button {
+    background-color: #E6B400; /* Fondo dorado */
+    color: #000000;            /* Texto negro */
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background-color: #d4a400; /* Efecto hover */
+}
