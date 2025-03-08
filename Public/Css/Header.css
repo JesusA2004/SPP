@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000;
+    padding: 0px 1px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Bodoni moda', sans-serif;
+}
+
+header img {
+    height: 70px; /* Ajusta el tamaño del logotipo */
+    width: auto;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+body {
+    padding-top: 70px; /* Ajuste para evitar que el contenido quede oculto debajo del header */
+}
