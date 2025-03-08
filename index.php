@@ -57,8 +57,6 @@ require_once __DIR__ . '/Config/Routes.php';
         </div>
     </section>
 
-
-
     <!-- Sección Servicios -->
     <section id="servicios">
         <h2 class="section-title">Nuestros servicios</h2>
@@ -71,7 +69,7 @@ require_once __DIR__ . '/Config/Routes.php';
                 <h3>Cercas eléctricas</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <!-- Agrega más service-item según tus necesidades -->
+
         </div>
     </section>
 
@@ -88,8 +86,8 @@ require_once __DIR__ . '/Config/Routes.php';
         </form>
     </section>
 
-    <!-- Enlaza el archivo JavaScript usando la ruta definida -->
     <script src="<?php echo JS_URL; ?>/Principal.js"></script>
+    
 </body>
 
 <?php include '../SPP/Includes/Footer.php'; ?>

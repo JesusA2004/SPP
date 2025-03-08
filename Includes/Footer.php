@@ -5,10 +5,10 @@
         <div class="footer-container">
             <!-- Sección izquierda -->
             <div class="footer-left">
-                <h2>Servicios de Protección Profesional</h2>
+                <h2 align="center">Servicios de Protección Profesional</h2>
                 
                 <h3>Nuestras políticas</h3>
-                <p>
+                <p align="justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Ut a enim nec nisl ultrices elementum. Praesent risus leo, 
                     fringilla eu nulla at, egestas euismod orci. Suspendisse 
@@ -16,7 +16,7 @@
                 </p>
 
                 <h3>Aviso de confidencialidad</h3>
-                <p>
+                <p align="justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Praesent risus leo, fringilla eu nulla at, egestas euismod orci. 
                     Suspendisse porttitor dui in enim.
@@ -26,29 +26,30 @@
             <!-- Sección derecha -->
             <div class="footer-right">
                 <div class="footer-location">
-                    <h3>Dónde estamos</h3>
+                    <h3><b>Ubicación</b></h3>
+                    <br>
                     <p>
-                        Calle Cualquiera 123,<br>
-                        Cualquier Lugar, CP: 12345
+                        Av. Lomas del Tzompantle 200<br>
+                        Cuernavaca, Morelos, CP: 62130
                     </p>
                     <br>
                     <button class="map-button">VER MAPA</button>
                 </div>
 
                 <div class="footer-contact">
-                    <h3>Vías de contacto</h3>
+                    <h3><b>Vías de contacto</b></h3>
+                    <br>
                     <p>
-                        Teléfono<br>
-                        911-234-567
+                        <b>Teléfono:</b> 777-102-26-76
                     </p>
                     <p>
-                        Email<br>
-                        hola@unsitiogenial.es
+                        <b>Email:</b> spp_02@hotmail.com
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    <br>
 </footer>
 
 <script src="<?php echo JS_URL; ?>/Footer.js"></script>

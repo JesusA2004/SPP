@@ -1,14 +1,13 @@
-/* Estilos para el footer */
 .footer {
     background-color: #000000; /* Fondo negro */
-    color: #ffffff;            /* Texto en blanco */
+    color: #ffffff;          
     padding: 20px;
-    font-family: sans-serif;   /* Ajusta la fuente a tu preferencia */
+    font-family: sans-serif;
 }
 
 .footer-container {
-    max-width: 1200px;         /* Ancho máximo para centrar el contenido */
-    margin: 0 auto;            /* Centrar horizontalmente */
+    max-width: 1200px;        
+    margin: 0 auto; /* Centrar horizontalmente */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -20,19 +19,19 @@
 }
 
 .footer-left h2 {
-    color: #E6B400;            /* Un tono dorado */
+    color: #E6B400;         
     margin-bottom: 20px;
 }
 
 .footer-left h3 {
     margin-top: 20px;
     margin-bottom: 5px;
-    color: #ffffff;            /* Mantener texto blanco */
+    color: #ffffff;          
 }
 
 /* Sección derecha */
 .footer-right {
-    width: 45%;
+    width: 40%;
 }
 
 .footer-location,
@@ -49,7 +48,7 @@
 /* Botón de mapa */
 .map-button {
     background-color: #E6B400; /* Fondo dorado */
-    color: #000000;            /* Texto negro */
+    color: #000000;         
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -58,5 +57,8 @@
 }
 
 .map-button:hover {
-    background-color: #d4a400; /* Efecto hover */
+    background-color: #032a54;
+    color: #ffffff; 
+    transform: scale(1.05); /* Efecto de ligero aumento */
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4); /* Sombra azul */
 }

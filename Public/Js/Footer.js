@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (mapButton) {
         mapButton.addEventListener('click', function() {
-            // Aquí puedes enlazar tu mapa de Google, por ejemplo:
-            window.open("https://goo.gl/maps/xxxxxxxx");
+            window.open("https://maps.app.goo.gl/LnJZDmwcRwxpAj4n7");
         });
     }
 });

@@ -154,7 +154,10 @@ nav ul li a.active::after {
 }
 
 .hero button:hover {
-    background-color: #e6b800;
+    background-color: #032a54;
+    color: #ffffff; 
+    transform: scale(1.05); /* Efecto de ligero aumento */
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4); /* Sombra azul */
 }
 
 
