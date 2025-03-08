@@ -93,6 +93,18 @@ nav ul li a.active::after {
     text-align: left;
     color: #fff;
     padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Estilos para el video de fondo */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda el área */
+    z-index: -1; /* Coloca el video por detrás del contenido */
 }
 
 .hero-logo {
@@ -144,6 +156,12 @@ nav ul li a.active::after {
 .hero button:hover {
     background-color: #e6b800;
 }
+
+
+.highlightInicio {
+    color: #c6bc00; 
+}
+
 
 /* =========================================================
    SECCIÓN EMPRESA
@@ -204,7 +222,6 @@ nav ul li a.active::after {
 }
 
 .highlight {
-    
     color: #003366; /* Azul corporativo elegante */
 }
 

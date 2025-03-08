@@ -23,9 +23,15 @@ require_once __DIR__ . '/Config/Routes.php';
 
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">
+        <!-- Video de fondo -->
+        <video autoplay muted loop id="bg-video">
+            <source src="<?php echo VIDEO_URL; ?>/SPPInicio.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <!-- Contenido del hero -->
         <img src="<?php echo IMG_URL; ?>/logoGrande.png" alt="Logo de la empresa" class="hero-logo">
         <h1>Servicios de Protección Profesional</h1>
-        <p>Somos una empresa dedicada a la protección y vigilancia de bienes muebles e inmuebles,  con <span class="highlight">más de 20 años de experiencia</span>, nuestra ventaja competitiva es generar la confianza en nuestros clientes a través de una excelente calidad en nuestros servicios.</p>
+        <p>Somos una empresa dedicada a la protección y vigilancia de bienes muebles e inmuebles,  con <b><span class="highlightInicio">más de 20 años de experiencia</span></b>, nuestra ventaja competitiva es generar la confianza en nuestros clientes a través de una excelente calidad en nuestros servicios.</p>
         <button>SABER MÁS</button>
     </section>
 
