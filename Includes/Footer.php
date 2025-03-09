@@ -2,10 +2,10 @@
 
 <footer class="footer">
     <section id="contacto">
+    <h2 align="center">Servicios de Protección Profesional</h2>
         <div class="footer-container">
             <!-- Sección izquierda -->
             <div class="footer-left">
-                <h2 align="center">Servicios de Protección Profesional</h2>
                 
                 <h3>Nuestras políticas</h3>
                 <p align="justify">
@@ -15,14 +15,17 @@
                     porttitor dui in enim.
                 </p>
 
+                <br>
                 <h3>Aviso de confidencialidad</h3>
                 <p align="justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Praesent risus leo, fringilla eu nulla at, egestas euismod orci. 
                     Suspendisse porttitor dui in enim.
                 </p>
-
-                <!-- Sección Social -->
+            </div>
+            <br>
+            <!-- Sección Social -->
+            <div class="footer-left">
                 <div class="footer-social">
                     <h3><b>Síguenos</b></h3>
                     <div class="social-buttons">
@@ -40,14 +43,11 @@
                         </a>
                     </div>
                 </div>
-                
             </div>
-
             <!-- Sección derecha -->
-            <div class="footer-right" align="center">
+            <div class="footer-left">
                 <div class="footer-location">
                     <h3><b>Ubicación</b></h3>
-                    <br>
                     <p>
                         Av. Lomas del Tzompantle 200<br>
                         Cuernavaca, Morelos, CP: 62130
@@ -66,10 +66,11 @@
                     <br>
                     <button class="map-button">VER MAPA</button>
                 </div>
+            </div>
 
+            <div class="footer-left">
                 <div class="footer-contact">
                     <h3><b>Vías de contacto</b></h3>
-                    <br>
                     <p>
                         <b>Teléfono:</b> 777-102-26-76
                     </p>

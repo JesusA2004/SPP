@@ -37,7 +37,7 @@ require_once __DIR__ . '/Config/Routes.php';
             nuestra ventaja competitiva es generar la confianza en nuestros clientes a través de 
             una excelente calidad en nuestros servicios.
         </p>
-        <button>SABER MÁS</button>
+        <button id="saberMas">SABER MÁS</button>
     </section>
 
     <!-- Espacio adicional entre secciones -->

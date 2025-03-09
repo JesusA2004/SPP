@@ -122,4 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
     filosofiaSubmenu.addEventListener('click', (e) => {
         e.stopPropagation();
     });
+
+    //Scroll hacia la sección de la empresa
+    document.getElementById("saberMas").addEventListener("click", function() {
+        document.getElementById("empresa").scrollIntoView({ behavior: "smooth" });
+    });
 });
