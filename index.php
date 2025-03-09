@@ -19,7 +19,6 @@ require_once __DIR__ . '/Config/Routes.php';
 </head>
 <body>
 
-    <!-- Encabezado con menú de navegación (se mantiene en otro archivo) -->
     <?php include '../SPP/Includes/Header.php'; ?>
 
     <!-- Sección Inicio -->
@@ -32,7 +31,7 @@ require_once __DIR__ . '/Config/Routes.php';
         <!-- Contenido del hero -->
         <img src="<?php echo IMG_URL; ?>/logoGrande.png" alt="Logo de la empresa" class="hero-logo">
         <h1>Servicios de Protección Profesional</h1>
-        <p>
+        <p align="justify">
             Somos una empresa dedicada a la protección y vigilancia de bienes muebles e inmuebles, 
             con <b><span class="highlightInicio">más de 20 años de experiencia</span></b>, 
             nuestra ventaja competitiva es generar la confianza en nuestros clientes a través de 
@@ -45,10 +44,10 @@ require_once __DIR__ . '/Config/Routes.php';
     <div class="section-spacing"></div>
 
     <section id="empresa">
-        <h2 class="section-title" id="mision">Nuestra Empresa</h2>
+        <h2 class="section-title">Nuestra Empresa</h2>
         <div class="empresa-container">
             <div class="empresa-item">
-                <h3 class="empresa-title">Misión</h3>
+                <h3 class="empresa-title" id="mision">Misión</h3>
                 <p class="empresa-text">
                     Nos concentraremos en la prestación de <span class="highlight">Servicios de Seguridad Privada</span> para satisfacer las necesidades de nuestros clientes en base a la <span class="highlight">Calidad</span>, <span class="highlight">Precios</span> y variedad de nuestros servicios. 
                     Realizaremos nuestras actividades con <span class="highlight">responsabilidad</span> y <span class="highlight">eficiencia</span> a efecto de obtener resultados que mantengan el equilibrio con nuestro <span class="highlight">crecimiento a largo plazo</span>, que beneficien a las personas integrantes de la organización, logrando con ello cumplir nuestro <span class="highlight">compromiso con la sociedad</span>.

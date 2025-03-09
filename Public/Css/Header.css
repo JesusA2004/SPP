@@ -1,6 +1,7 @@
 /* =========================================================
    ESTILOS DEL HEADER
    ========================================================= */
+   
 header {
     position: fixed;
     top: 0;
@@ -21,7 +22,7 @@ header {
 header img {
     height: 70px;
     width: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 header img:hover {
@@ -38,6 +39,7 @@ nav ul {
     gap: 25px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 nav ul li {

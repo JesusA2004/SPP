@@ -12,11 +12,10 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f2f2f2;
     color: #333;
-    padding-top: 100px; /* Compensa el header fijo */
 }
 
 section {
-    scroll-margin-top: 100px; /* Ajuste preciso para el header */
+    scroll-margin-top: 100px;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -552,3 +551,8 @@ button:hover::after {
         scroll-margin-top: 80px;
     }
 }
+
+#mision, #vision {
+    scroll-margin-top: 100px; /* Ajusta según la altura real de tu header */
+  }
+  

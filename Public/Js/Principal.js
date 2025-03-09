@@ -1,116 +1,125 @@
-// Principal.js
 document.addEventListener('DOMContentLoaded', () => {
-  // Configuración inicial
-  const header = document.querySelector('header');
-  const videoHero = document.querySelector('#bg-video');
-  
-  // Smooth Scroll Avanzado con easing personalizado
-  const smoothScroll = (target) => {
-      const targetElement = document.querySelector(target);
-      if (!targetElement) return;
+    const header = document.querySelector('header');
 
-      const headerHeight = header.offsetHeight;
-      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = Math.min(800, Math.abs(distance * 0.8));
-      let startTime = null;
+    // Smooth Scroll Avanzado
+    const smoothScroll = (target) => {
+        const targetElement = document.querySelector(target);
+        if (!targetElement) return;
 
-      const animateScroll = (timestamp) => {
-          if (!startTime) startTime = timestamp;
-          const progress = timestamp - startTime;
-          const percentage = Math.min(progress / duration, 1);
-          
-          // Función de easing personalizada (easeInOutCubic)
-          const easing = t => t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;
-          
-          window.scrollTo(0, startPosition + distance * easing(percentage));
-          
-          if (progress < duration) {
-              requestAnimationFrame(animateScroll);
-          }
-      };
+        const headerHeight = header.offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = Math.min(800, Math.abs(distance * 0.8));
+        let startTime = null;
 
-      requestAnimationFrame(animateScroll);
-  };
+        const animateScroll = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const percentage = Math.min(progress / duration, 1);
 
-  // Animaciones de secciones con Intersection Observer
-  const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              animateSectionElements(entry.target);
-          }
-      });
-  }, { threshold: 0.15 });
+            // Easing personalizado
+            const easing = t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
 
-  document.querySelectorAll('section').forEach(section => {
-      sectionObserver.observe(section);
-  });
+            window.scrollTo(0, startPosition + distance * easing(percentage));
 
-  // Animación de elementos internos de la sección
-  const animateSectionElements = (section) => {
-      const elements = section.querySelectorAll('.empresa-item, .service-item, .cliente-item');
-      elements.forEach((el, index) => {
-          setTimeout(() => {
-              el.style.transform = 'translateY(0)';
-              el.style.opacity = '1';
-          }, index * 150);
-      });
-  };
+            if (progress < duration) {
+                requestAnimationFrame(animateScroll);
+            } else {
+                // Restaurar animaciones después de hacer scroll
+                resetAnimations(targetElement);
+            }
+        };
 
-  // Controladores de eventos
-  const setupEventListeners = () => {
-      // Navegación suave
-      document.querySelectorAll('nav a[href^="#"], .hero button').forEach(element => {
-          element.addEventListener('click', (e) => {
-              e.preventDefault();
-              const target = element.getAttribute('href');
-              if (target === '#empresa' && element.tagName === 'BUTTON') {
-                  smoothScroll('#empresa');
-              } else if (target.startsWith('#')) {
-                  smoothScroll(target);
-              }
-              
-              // Efecto de onda de clic
-              createClickWave(e);
-          });
-      });
+        requestAnimationFrame(animateScroll);
+    };
 
-      // Scroll Parallax
-      window.addEventListener('scroll', updateParallax);
-  };
+    // Reiniciar animaciones cuando una sección vuelve a estar visible
+    const resetAnimations = (section) => {
+        const elements = section.querySelectorAll('.empresa-item, .service-item, .cliente-item');
+        elements.forEach((el) => {
+            el.style.transform = 'translateY(50px)';
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.style.transition = 'transform 0.8s ease-out, opacity 0.8s';
+                el.style.transform = 'translateY(0)';
+                el.style.opacity = '1';
+            }, 100);
+        });
+    };
 
-  // Efecto de onda al hacer clic
-  const createClickWave = (e) => {
-      const wave = document.createElement('div');
-      wave.className = 'click-wave';
-      wave.style.left = `${e.clientX}px`;
-      wave.style.top = `${e.clientY}px`;
-      document.body.appendChild(wave);
-      
-      setTimeout(() => wave.remove(), 1000);
-  };
+    // Animaciones de entrada con Intersection Observer
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                animateSectionElements(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
 
-  // Inicialización
-  setupEventListeners();
+    document.querySelectorAll('section').forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // Animaciones de los elementos internos de cada sección
+    const animateSectionElements = (section) => {
+        const elements = section.querySelectorAll('.empresa-item, .service-item, .cliente-item');
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.style.transition = 'transform 0.8s ease-out, opacity 0.8s';
+                el.style.transform = 'translateY(0)';
+                el.style.opacity = '1';
+            }, index * 150);
+        });
+    };
+
+    // Navegación suave y restauración de animaciones
+    document.querySelectorAll('nav a[href^="#"], .hero button').forEach(element => {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = element.getAttribute('href');
+            if (target.startsWith('#')) {
+                smoothScroll(target);
+                history.pushState(null, null, target);
+            }
+            createClickWave(e);
+        });
+    });
+
+    // Efecto de onda al hacer clic
+    const createClickWave = (e) => {
+        const wave = document.createElement('div');
+        wave.className = 'click-wave';
+        wave.style.left = `${e.clientX}px`;
+        wave.style.top = `${e.clientY}px`;
+        document.body.appendChild(wave);
+
+        setTimeout(() => wave.remove(), 1000);
+    };
+
+    // Control del submenú de filosofía
+    const filosofiaSubmenu = document.getElementById('filosofia-submenu');
+    const filosofiaArrow = document.getElementById('arrow');
+    const submenuContainer = document.getElementById('has-submenu');
+
+    submenuContainer.addEventListener('click', (e) => {
+        e.preventDefault();
+        filosofiaSubmenu.classList.toggle('visible');
+        filosofiaArrow.classList.toggle('rotate');
+        e.stopPropagation();
+    });
+
+    // Cerrar el submenú al hacer clic fuera de él
+    document.addEventListener('click', (e) => {
+        if (!filosofiaSubmenu.contains(e.target) && !submenuContainer.contains(e.target)) {
+            filosofiaSubmenu.classList.remove('visible');
+            filosofiaArrow.classList.remove('rotate');
+        }
+    });
+
+    // Evitar que los clics dentro del submenú cierren el menú
+    filosofiaSubmenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 });
-
-// Control del submenú de filosofía
-function toggleFilosofiaMenu(e) {
-  e.preventDefault();
-  const submenu = document.getElementById('filosofia-submenu');
-  const arrow = document.querySelector('.has-submenu .arrow');
-  
-  submenu.classList.toggle('active');
-  arrow.classList.toggle('rotated');
-  
-  // Cerrar al hacer clic fuera
-  document.addEventListener('click', function closeMenu(event) {
-      if (!event.target.closest('.has-submenu')) {
-          submenu.classList.remove('active');
-          arrow.classList.remove('rotated');
-          document.removeEventListener('click', closeMenu);
-      }
-  }, { once: true });
-}
