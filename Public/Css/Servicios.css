@@ -1,0 +1,39 @@
+/* =========================================================
+   SECCIÓN SERVICIOS
+   ========================================================= */
+   #servicios {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#servicios .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #fff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+}

@@ -11,6 +11,14 @@ require_once __DIR__ . '/Config/Routes.php';
     <title>Servicios de Protección Profesional</title>
 
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Index.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Header.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Inicio.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Filosofia.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Submenu.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Responsive.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Servicios.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Cotizar.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">

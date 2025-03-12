@@ -191,4 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
     clientesContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
     clientesContainer.addEventListener('mouseleave', startAutoSlide);
 
+    title.addEventListener('click', () => {
+        const content = title.nextElementSibling;
+        title.classList.toggle('active');
+        content.classList.toggle('expand');
+    });
+
 });

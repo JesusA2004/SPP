@@ -1,7 +1,33 @@
 /* =========================================================
-   ESTILOS GLOBALES MEJORADOS
+   VARIABLES GLOBALES
    ========================================================= */
-   * {
+   :root {
+    --primary-color: #2A2A72;
+    --secondary-color: #009FFD;
+    --accent-color: #FF0076;
+    --easing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* =========================================================
+   ANIMACIONES DE ENTRADA EPICAS
+   ========================================================= */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes textReveal {
+    from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
+    to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,425 +50,6 @@ section {
 section.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* =========================================================
-   HEADER Y NAVEGACIÓN MEJORADOS
-   ========================================================= */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 0 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Bodoni Moda', serif;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-nav ul {
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    position: relative;
-    padding: 15px 0;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #ffcc00 0%, #ff9900 100%);
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* =========================================================
-   SECCIÓN HERO (INICIO)
-   ========================================================= */
-.hero {
-    /* Ajusta la ruta de tu imagen de fondo */
-    background: url('ruta/a/tu-imagen-hero.jpg') center center/cover no-repeat;
-    position: relative;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    text-align: left;
-    color: #fff;
-    padding: 0 20px;
-    overflow: hidden;
-}
-
-/* Estilos para el video de fondo */
-#bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda el área */
-    z-index: -1; /* Coloca el video por detrás del contenido */
-}
-
-.hero-logo {
-    max-width: 150px; /* Ajusta el tamaño del logo */
-    height: auto;
-    margin-bottom: 10px; /* Espacio entre el logo y el título */
-    display: block;
-    margin-left: 300px;
-}
-
-/* Oscurece la imagen de fondo con un overlay */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    z-index: 1;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    z-index: 1;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    background-color: #032a54;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    max-width: 240px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.hero button:hover {
-    background-color: #ffcc00;
-    color: #ffffff; 
-    transform: scale(1.05); /* Efecto de ligero aumento */
-    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4); /* Sombra azul */
-}
-
-
-.highlightInicio {
-    color: #c6bc00; 
-}
-
-
-/* =========================================================
-   SECCIÓN EMPRESA
-   ========================================================= */
-
-#empresa {
-    background-color: #fff;
-    color: #333;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.empresa-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px 0;
-}
-
-.empresa-item {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.empresa-item:hover {
-    transform: translateY(-5px);
-}
-
-#empresa .section-title {
-    font-size: 2rem;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 500;
-    color: #151515;
-    margin-bottom: 10px;
-}
-
-.empresa-title {
-    font-size: 1.5rem;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 500;
-    color: #dcc21e;
-    margin-bottom: 10px;
-}
-
-
-.empresa-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
-}
-
-.highlight {
-    color: #003366; /* Azul corporativo elegante */
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-    .empresa-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .empresa-item {
-        width: 100%;
-    }
-}
-
-
-/* =========================================================
-   SECCIÓN SERVICIOS
-   ========================================================= */
-#servicios {
-    background-color: #f2f2f2;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#servicios .section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.service-item {
-    background-color: #fff;
-    width: 280px;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.service-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-/* =========================================================
-   SECCIÓN CONTACTO
-   ========================================================= */
-#cotizar {
-    background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#cotizar .section-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-#cotizar form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: grid;
-    gap: 20px;
-    text-align: left;
-}
-
-#cotizar input,
-#cotizar textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#cotizar button {
-    background-color: #222;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-#cotizar button:hover {
-    background-color: #333;
-}
-
-/* =========================================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================================= */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .services-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* =========================================================
-   SUBMENÚ ANIMADO MEJORADO
-   ========================================================= */
-.has-submenu .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.95);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.has-submenu .submenu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.has-submenu .submenu li {
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.has-submenu .submenu li:last-child {
-    border-bottom: none;
-}
-
-.has-submenu .submenu li a {
-    padding: 12px 20px;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
-    transition: all 0.2s ease;
-}
-
-.has-submenu .submenu li a:hover {
-    background: rgba(255, 204, 0, 0.1);
-    color: #ffcc00;
-    padding-left: 25px;
-}
-
-.arrow {
-    font-size: 0.8em;
-    margin-left: 5px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.arrow.rotated {
-    transform: rotate(180deg);
-}
-
-/* =========================================================
-   HERO SECTION MEJORADA
-   ========================================================= */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    overflow: hidden;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    transition: transform 0.3s ease;
-}
-
-.hero-logo {
-    max-width: 200px;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.8s ease;
-}
-
-.hero.visible .hero-logo {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 /* =========================================================
@@ -526,146 +133,37 @@ button:hover::after {
     animation: particle-pop 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* =========================================================
-   RESPONSIVE DESIGN
-   ========================================================= */
-@media (max-width: 768px) {
-    header {
-        padding: 0 10px;
-    }
-    
-    nav ul {
-        gap: 15px;
-    }
-    
-    .hero {
-        padding: 0 20px;
-    }
-    
-    .service-item {
-        width: 100%;
-        max-width: 400px;
-    }
-    
-    section {
-        scroll-margin-top: 80px;
-    }
-}
-
 #mision, #vision {
     scroll-margin-top: 100px; /* Ajusta según la altura real de tu header */
   }
 
-/* Estilos para la sección de clientes */
-#clientes {
-    padding: 2rem 0;
-    position: relative;
-    background: #bebebe;
+/* =========================================================
+   EFECTOS DE PARTICULAS
+   ========================================================= */
+   @keyframes particle {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
 }
 
-.clientes-container {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.cliente-slider {
-    overflow: hidden;
-    position: relative;
-}
-
-.cliente-item {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    gap: 10px;
-    height: auto;
-    align-items: center;
-}
-
-.cliente-card {
-    flex: 1;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    min-width: calc(50% - 10px);
-}
-
-.cliente-card img {
-    width: 350px;
-    height: 200px;
-    object-fit: contain;
-    margin: 0 auto 15px;
-}
-
-.cliente-card h3 {
-    color: #130261bd;
-}
-
-/* Flechas de navegación */
-.cliente-prev, .cliente-next {
+.particle {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
+    background: rgba(255,255,255,0.8);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.3s ease;
+    pointer-events: none;
+    animation: particle 3s linear infinite;
 }
 
-.cliente-prev:hover, .cliente-next:hover {
-    background: #fff;
+/* =========================================================
+   RESPONSIVE ADAPTACIONES
+   ========================================================= */
+@media (max-width: 768px) {
+    .service-item {
+        transform: none !important;
+        backdrop-filter: none;
+    }
+    
+    .empresa-item:hover {
+        clip-path: none;
+        transform: none;
+    }
 }
-
-.cliente-prev {
-    left: 0;
-}
-
-.cliente-next {
-    right: 0;
-}
-
-/* Ocultar elementos no activos */
-.cliente-item {
-    display: none;
-    flex: 0 0 100%;
-}
-
-.cliente-item.active {
-    display: flex;
-}
-
-/* Efectos hover adicionales */
-.cliente-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cliente-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.cliente-prev:hover, .cliente-next:hover {
-    transform: translateY(-50%) scale(1.1);
-    background: #ff6b6b;
-    color: white;
-}
-
-/* Efecto de desvanecido */
-.cliente-item {
-    animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0.5; }
-    to { opacity: 1; }
-}
-

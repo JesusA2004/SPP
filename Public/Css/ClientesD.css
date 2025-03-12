@@ -1,0 +1,113 @@
+/* Estilos para la sección de clientes */
+#clientes {
+    padding: 2rem 0;
+    position: relative;
+    background: #bebebe;
+}
+
+.clientes-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.cliente-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.cliente-item {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    gap: 10px;
+    height: auto;
+    align-items: center;
+}
+
+.cliente-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    min-width: calc(50% - 10px);
+}
+
+.cliente-card img {
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.cliente-card h3 {
+    color: #130261bd;
+}
+
+/* Flechas de navegación */
+.cliente-prev, .cliente-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.cliente-prev:hover, .cliente-next:hover {
+    background: #fff;
+}
+
+.cliente-prev {
+    left: 0;
+}
+
+.cliente-next {
+    right: 0;
+}
+
+/* Ocultar elementos no activos */
+.cliente-item {
+    display: none;
+    flex: 0 0 100%;
+}
+
+.cliente-item.active {
+    display: flex;
+}
+
+/* Efectos hover adicionales */
+.cliente-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cliente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cliente-prev:hover, .cliente-next:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: #ff6b6b;
+    color: white;
+}
+
+/* Efecto de desvanecido */
+.cliente-item {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+

@@ -1,0 +1,59 @@
+
+/* =========================================================
+   SUBMENÚ ANIMADO MEJORADO
+   ========================================================= */
+   .has-submenu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.has-submenu .submenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.has-submenu .submenu li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.has-submenu .submenu li:last-child {
+    border-bottom: none;
+}
+
+.has-submenu .submenu li a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
+}
+
+.has-submenu .submenu li a:hover {
+    background: rgba(255, 204, 0, 0.1);
+    color: #ffcc00;
+    padding-left: 25px;
+}
+
+.arrow {
+    font-size: 0.8em;
+    margin-left: 5px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow.rotated {
+    transform: rotate(180deg);
+}

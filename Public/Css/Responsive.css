@@ -1,0 +1,42 @@
+/* =========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================= */
+   @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+   @media (max-width: 768px) {
+    header {
+        padding: 0 10px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .hero {
+        padding: 0 20px;
+    }
+    
+    .service-item {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    section {
+        scroll-margin-top: 80px;
+    }
+}
+
