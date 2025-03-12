@@ -127,4 +127,68 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("saberMas").addEventListener("click", function() {
         document.getElementById("empresa").scrollIntoView({ behavior: "smooth" });
     });
+
+    //Slider de clientes
+    const slider = document.querySelector('.cliente-slider');
+    const items = document.querySelectorAll('.cliente-item');
+    const prevButton = document.querySelector('.cliente-prev');
+    const nextButton = document.querySelector('.cliente-next');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showSlide(currentIndex);
+    }
+
+    // Event listeners
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Mostrar primer slide al cargar
+    showSlide(currentIndex);
+
+    // Auto slide (agregar al JS existente)
+    let autoSlideInterval;
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            nextSlide();
+        }, 4000); // Cambia cada 4 segundos
+    }
+
+    // Detener auto slide al interactuar
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Iniciar auto slide
+    startAutoSlide();
+
+    // Modificar los event listeners existentes
+    nextButton.addEventListener('click', () => {
+        resetAutoSlide();
+        nextSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+        resetAutoSlide();
+        prevSlide();
+    });
+
+    // Agregar pause on hover
+    clientesContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    clientesContainer.addEventListener('mouseleave', startAutoSlide);
+
 });

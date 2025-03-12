@@ -44,7 +44,7 @@ require_once __DIR__ . '/Config/Routes.php';
     <div class="section-spacing"></div>
 
     <section id="empresa">
-        <h2 class="section-title">Nuestra Empresa</h2>
+        <h2 class="section-title">Filosofía empresarial</h2>
         <div class="empresa-container">
             <div class="empresa-item">
                 <h3 class="empresa-title" id="mision">Misión</h3>
@@ -66,21 +66,46 @@ require_once __DIR__ . '/Config/Routes.php';
 
     <!-- Sección Clientes Distinguidos -->
     <section id="clientes">
-        <h2 class="section-title">Clientes Distinguidos</h2>
+        <h2 class="section-title" align="center">Clientes Distinguidos</h2>
+        <br>
         <div class="clientes-container">
-            <!-- Aquí puedes colocar logos, testimonios u otro contenido representativo -->
-            <div class="cliente-item">
-                <img src="<?php echo IMG_URL; ?>/cliente1.jpg" alt="Cliente 1">
+            <button class="cliente-prev">&#10094;</button>
+            <div class="cliente-slider">
+                <div class="cliente-item">
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/morena.jpg" alt="Cliente 1">
+                    </div>
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/impepac.png" alt="Cliente 2">
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/procivac.png" alt="Cliente 3">
+                        <h3>PROCIVAC</h3>
+                    </div>
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/RAN.png" alt="Cliente 4">
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/invest.jpg" alt="Cliente 5">
+                    </div>
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/cliente6.jpg" alt="Cliente 6">
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/cliente7.jpg" alt="Cliente 7">
+                    </div>
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/cliente8.jpg" alt="Cliente 8">
+                    </div>
+                </div>
             </div>
-            <div class="cliente-item">
-                <img src="<?php echo IMG_URL; ?>/cliente2.jpg" alt="Cliente 2">
-            </div>
-            <div class="cliente-item">
-                <img src="<?php echo IMG_URL; ?>/cliente3.jpg" alt="Cliente 3">
-            </div>
-            <div class="cliente-item">
-                <img src="<?php echo IMG_URL; ?>/cliente4.jpg" alt="Cliente 4">
-            </div>
+            <button class="cliente-next">&#10095;</button>
         </div>
     </section>
 
