@@ -173,24 +173,23 @@ require_once __DIR__ . '/Config/Routes.php';
 
         <!-- Mostrar mensaje solo después de enviar el formulario -->
         <?php
-if (isset($_GET['mensaje'])): 
-?>
-    <div id="modalSucces" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <p>
-                <?php 
-                    if ($_GET['mensaje'] == 'success') {
-                        echo "✅ Registro exitoso. Se ha enviado un correo con los detalles de tu solicitud.";
-                    } elseif ($_GET['mensaje'] == 'error') {
-                        echo "❌ Hubo un error al enviar el correo. Inténtalo de nuevo más tarde.";
-                    }
-                ?>
-            </p>
-        </div>
-    </div>
-<?php endif; ?>
-
+            if (isset($_GET['mensaje'])): 
+            ?>
+                <div id="modalSucces" class="modal">
+                    <div class="modal-contenido">
+                        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                        <p>
+                            <?php 
+                                if ($_GET['mensaje'] == 'success') {
+                                    echo "✅ Registro exitoso. Se ha enviado un correo con los detalles de tu solicitud.";
+                                } elseif ($_GET['mensaje'] == 'error') {
+                                    echo "❌ Hubo un error al enviar el correo. Inténtalo de nuevo más tarde.";
+                                }
+                            ?>
+                        </p>
+                    </div>
+                </div>
+        <?php endif; ?>
     </section>
 
     <!-- Script principal (ajusta la ruta si es necesario) -->

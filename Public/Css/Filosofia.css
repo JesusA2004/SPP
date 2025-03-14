@@ -32,11 +32,9 @@
 }
 
 #empresa .section-title {
-    font-size: 2rem;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 500;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
     color: #151515;
-    margin-bottom: 10px;
 }
 
 .empresa-title {

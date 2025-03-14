@@ -194,6 +194,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicialización
     showSlide(currentIndex);
     startAutoSlide();
+
+    document.getElementById("saberMas").addEventListener("click", function() {
+        const target = document.getElementById("empresa");
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        const duration = 250; // Puedes aumentar el tiempo para hacerlo más suave
+        let startTime = null;
+    
+        function animationScroll(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1); // Asegura que no pase del 1
+    
+            window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
+    
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animationScroll);
+            }
+        }
+    
+        function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        }
+    
+        requestAnimationFrame(animationScroll);
+    });
+    
+    
 });
 
 function cerrarModal() {
