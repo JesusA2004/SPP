@@ -1,11 +1,12 @@
-/* Estructura principal */
+/* Estructura principal - Mejorada */
 .footer {
-    background: #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
     color: #ffffff;
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
+    border-top: 2px solid #ffcc0033;
 }
 
 .footer-container {
@@ -13,273 +14,232 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     position: relative;
 }
 
-/* Divisores mejorados */
+/* Divisores animados */
 .footer-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent 0%, #ffcc00 50%, transparent 100%);
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     width: 90%;
-    
-    &.secondary {
-        background: rgba(255, 255, 255, 0.08);
-        margin: 1rem 0;
-        width: 100%;
-    }
-    
-    &.small {
-        width: 70%;
-        margin: 0.8rem auto;
-        height: 1px;
-    }
-}
-
-/* Secciones más compactas */
-.footer-section {
-    padding: 1rem;
     position: relative;
+    overflow: hidden;
+}
+.footer-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,204,0,0.4), transparent);
+    animation: shimmer 3s infinite;
+}
+.footer-divider.secondary {
+    background: rgba(255, 255, 255, 0.1);
+}
+.footer-divider.secondary::after { 
+    display: none; 
+}
+.footer-divider.small {
+    width: 70%;
+    margin: 1rem auto;
 }
 
+@keyframes shimmer {
+    100% { left: 200%; }
+}
+
+/* Títulos con efecto neon */
 .footer-title {
     color: #ffcc00;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ffcc0040;
+    position: relative;
+}
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: #ffcc00;
+    border-radius: 2px;
 }
 
 .footer-subtitle {
+    color:#ffcc00
+}
+
+/* Menú holográfico */
+.footer-menu .menu-item {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-left: 3px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-menu .menu-item::before {
+    content: '▸';
+    margin-right: 10px;
     color: #ffcc00;
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-    position: relative;
-    padding-bottom: 0.4rem;
-    
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background: #ffcc00;
-        transition: width 0.3s ease;
-    }
-    
-    &:hover::after {
-        width: 60px;
-    }
+    filter: drop-shadow(0 0 4px #ffcc00);
+}
+.footer-menu .menu-item:hover {
+    background: linear-gradient(90deg, #ffcc0010 0%, transparent 100%);
+    border-left-color: #ffcc00;
+    transform: translateX(10px);
+    box-shadow: 2px 0 8px #ffcc0030;
 }
 
-/* Menú mejorado */
-.footer-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    
-    .menu-item {
-        color: #ffffff;
-        text-decoration: none;
-        padding: 0.7rem 1.2rem;
-        border-radius: 4px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        background: rgba(255, 255, 255, 0.03);
-        
-        &::before {
-            content: '▸';
-            margin-right: 8px;
-            color: #ffcc00;
-            transition: transform 0.3s ease;
-        }
-        
-        &:hover {
-            background: rgba(255, 204, 0, 0.1);
-            transform: translateX(8px);
-            
-            &::before {
-                transform: translateX(3px);
-            }
-        }
-    }
-}
-
-/* Contacto más compacto */
-.contact-info {
-    gap: 1rem;
-    
-    .contact-item {
-        gap: 0.8rem;
-        
-        .contact-icon {
-            font-size: 1.3rem;
-            filter: drop-shadow(0 2px 2px rgba(255,204,0,0.3));
-        }
-        
-        p {
-            font-size: 0.95rem;
-        }
-    }
-}
-
-/* Redes sociales mejoradas */
-.social-grid {
-    gap: 1.2rem;
-    margin-top: 1.2rem;
-    
-    .social-btn {
-        padding: 0.8rem;
-        border-radius: 8px;
-        background: rgba(255,255,255,0.05);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        
-        img {
-            width: 36px;
-            filter: grayscale(0.8);
-            transition: all 0.3s ease;
-        }
-        
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s ease, height 0.3s ease;
-        }
-        
-        &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            
-            img {
-                filter: grayscale(0) brightness(1.2);
-                transform: scale(1.1);
-            }
-            
-            &::after {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    }
-}
-
-/* Mapa premium */
-.map-container {
-    margin-top: 1.5rem;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+/* Contacto con iconos animados */
+.contact-item .contact-icon {
+    font-size: 1.5rem;
     transition: transform 0.3s ease;
-    
-    &:hover {
-        transform: translateY(-5px);
-    }
+    display: inline-block;
+}
+.contact-item:hover .contact-icon {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 4px #ffcc00);
 }
 
-.small-map {
+/* ========== SECCIÓN "SÍGUENOS" ========== */
+.social-column {
     position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        filter: grayscale(0.3) contrast(1.1);
-        transition: filter 0.3s ease;
+    overflow: visible;
+}
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    position: relative;
+}
+.social-btn {
+    background: none !important;
+    border: none !important;
+    padding: 0;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+.social-btn img {
+    width: 48px !important;
+    height: 48px;
+    transition: all 0.3s ease;
+    filter: grayscale(0.4) brightness(1.1);
+    border-radius: 50%;
+}
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.15);
+}
+.social-btn:hover img {
+    filter: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.social-btn:hover::before {
+    opacity: 1;
+}
+/* Colores individuales */
+.social-btn.whatsapp:hover::before { background: radial-gradient(circle, #25d36655 0%, transparent 70%); }
+.social-btn.facebook:hover::before { background: radial-gradient(circle, #1877f255 0%, transparent 70%); }
+.social-btn.email:hover::before { background: radial-gradient(circle, #ea433555 0%, transparent 70%); }
+.social-btn.instagram:hover::before { background: radial-gradient(circle, #e1306c55 0%, transparent 70%); }
+
+/* Responsive ajustado */
+@media (max-width: 768px) {
+    .footer-title { 
+        font-size: 2rem; 
     }
-    
-    &:hover iframe {
-        filter: grayscale(0) contrast(1);
+    .social-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.7rem;
     }
+    .social-grid .social-btn {
+        padding: 0.7rem;
+    }
+    .social-grid .social-btn img { width: 26px; }
+    .map-button { padding: 0.8rem 1.2rem; }
 }
 
-/* Botón de mapa mejorado */
+.derechos {
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Contenedor para centrar el botón */
+.map-button-container {
+    text-align: center;
+    margin: 20px 0; /* Ajusta el margen según tus necesidades */
+}
+
+/* Botón VER MAPA - Diseño minimalista con efectos hover */
 .map-button {
     position: relative;
-    background: linear-gradient(45deg, #032a54, #001a3a);
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: #fff;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    margin-top: 1rem;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    span {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .map-hover-effect {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        background: rgba(255,255,255,0.15);
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        transition: width 0.3s ease, height 0.3s ease;
-    }
-    
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(3,42,84,0.4);
-        
-        .map-hover-effect {
-            width: 200px;
-            height: 200px;
-        }
-    }
+    transition: all 0.3s ease-in-out;
 }
 
-/* Legal ajustado */
-.footer-legal {
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    opacity: 0.8;
+/* Efecto overlay en hover */
+.map-button::after {
+    content: "";
+    position: center;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 0;
 }
 
-/* Responsive mejorado */
-@media (max-width: 768px) {
-    .footer {
-        padding: 2rem 1rem;
-    }
-    
-    .footer-title {
-        font-size: 1.8rem;
-    }
-    
-    .footer-section {
-        padding: 0.5rem;
-    }
-    
-    .social-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .map-container {
-        margin-top: 1rem;
-    }
+.map-button:hover {
+    background: #fff;
+    color: #121212;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
+
+.map-button:hover::after {
+    left: 0;
+}
+
+/* Asegura que el texto permanezca por encima del overlay */
+.map-button span {
+    position: relative;
+    z-index: 1;
+}
+
+

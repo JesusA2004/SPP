@@ -66,12 +66,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         
         // Redirigir a index.php con un mensaje de éxito
-        header("Location: ../index.php?mensaje=success");
+        header("Location: ../index.php#cotizar?mensaje=success");
         exit();
         
     } catch (Exception $e) {
         // Redirigir a index.php con un mensaje de error
-        header("Location: ../index.php?mensaje=error");
+        header("Location: ../index.php#cotizar?mensaje=error");
         exit();
     }
 }

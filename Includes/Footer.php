@@ -103,7 +103,7 @@
         <div class="footer-divider"></div>
 
         <div class="footer-legal">
-            <p>© 2024 Servicios de Protección Profesional. Todos los derechos reservados</p>
+            <p class="derechos">© 2024 Servicios de Protección Profesional. Todos los derechos reservados</p>
         </div>
     </section>
 </footer>

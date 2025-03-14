@@ -1,175 +1,79 @@
 /* =========================================================
    ESTILOS DEL HEADER
    ========================================================= */
-   
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 0 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Poppins', serif;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-header img {
-    height: 70px;
-    width: auto;
-    transition: transform 0.4s ease;
-    margin-top: 10px;
-}
-
-header img:hover {
-    transform: scale(1.05);
-}
-
-nav {
-    display: flex;
-    padding-right: 30px;
-}
-
-nav ul {
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li {
-    position: relative;
-    padding: 15px 0;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ffcc00;
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* =========================================================
-   SUBMENÚ MEJORADO
-   ========================================================= */
-.has-submenu .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.95);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.has-submenu .submenu.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.has-submenu .submenu li {
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.has-submenu .submenu li:last-child {
-    border-bottom: none;
-}
-
-.has-submenu .submenu li a {
-    padding: 12px 20px;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
-    transition: all 0.2s ease;
-}
-
-.has-submenu .submenu li a:hover {
-    background: rgba(255, 204, 0, 0.1);
-    color: #ffcc00;
-    padding-left: 25px;
-}
-
-.arrow {
-    font-size: 0.8em;
-    margin-left: 5px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.arrow.rotate {
-    transform: rotate(180deg);
-}
-
-/* =========================================================
-   HEADER Y NAVEGACIÓN MEJORADOS
-   ========================================================= */
    header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
-    padding: 0 20px;
+    padding: 15px 20px;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+  }
+  
+  header img {
+    height: 70px;
+    width: auto;
+    transition: transform 0.4s ease;
+  }
+  
+  header img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* =========================================================
+     MENÚ HAMBURGUESA
+     ========================================================= */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
     transition: all 0.3s ease;
-}
-
-nav ul {
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* =========================================================
+     MENÚ PRINCIPAL
+     ========================================================= */
+  .menu-principal {
     display: flex;
-    gap: 25px;
+    gap: 2rem;
+    align-items: center;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    position: relative;
-    padding: 15px 0;
-}
-
-nav ul li a {
+  }
+  
+  .menu-item {
     color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
@@ -178,9 +82,11 @@ nav ul li a {
     gap: 8px;
     transition: all 0.3s ease;
     position: relative;
-}
-
-nav ul li a::after {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .menu-item::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -189,8 +95,187 @@ nav ul li a::after {
     height: 2px;
     background: linear-gradient(90deg, #ffcc00 0%, #ff9900 100%);
     transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
+  }
+  
+  .menu-item:hover::after {
     width: 100%;
-}
+  }
+  
+  .menu-item:hover {
+    color: #ffcc00;
+  }
+  
+  /* =========================================================
+     SUBMENÚ
+     ========================================================= */
+  .has-submenu {
+    position: relative;
+  }
+  
+  .menu-desplegable {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contenido {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+  }
+  
+  .submenu-item {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .submenu-item:hover {
+    background: rgba(255, 204, 0, 0.1);
+    color: #ffcc00;
+    padding-left: 25px;
+  }
+  
+  .contenido.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .arrow {
+    font-size: 0.8em;
+    margin-left: 5px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .arrow.rotate {
+    transform: rotate(180deg);
+  }
+  
+  /* =========================================================
+     RESPONSIVE DESIGN
+     ========================================================= */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .menu-principal {
+      position: fixed;
+      top: 100px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 100px);
+      background: rgba(0, 0, 0, 0.95);
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px 0;
+      transition: left 0.3s ease;
+    }
+  
+    .menu-principal.active {
+      left: 0;
+    }
+  
+    .menu-item {
+      padding: 15px 0;
+      font-size: 1.2rem;
+    }
+  
+    .has-submenu .contenido {
+      position: static;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      margin-top: 10px;
+    }
+  
+    .no-scroll {
+      overflow: hidden;
+    }
+  }
+
+/* =========================================================
+   ESTILOS DEL HEADER RESPONSIVE
+   ========================================================= */
+   @media (max-width: 768px) {
+    header {
+      padding: 10px 15px;
+    }
+  
+    header img {
+      height: 50px;
+    }
+  
+    .hamburger {
+      width: 25px;
+      height: 20px;
+    }
+  
+    .menu-principal {
+      top: 80px;
+      height: calc(100vh - 80px);
+      padding: 10px 0;
+    }
+  
+    .menu-item {
+      padding: 10px 0;
+      font-size: 1rem;
+    }
+  
+    .has-submenu .contenido {
+      margin-top: 5px;
+    }
+  
+    .submenu-item {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 8px 10px;
+    }
+  
+    header img {
+      height: 40px;
+    }
+  
+    .hamburger {
+      width: 20px;
+      height: 15px;
+    }
+  
+    .menu-principal {
+      top: 60px;
+      height: calc(100vh - 60px);
+      padding: 5px 0;
+    }
+  
+    .menu-item {
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+  
+    .submenu-item {
+      padding: 8px 10px;
+      font-size: 0.8rem;
+    }
+  }
+
+  

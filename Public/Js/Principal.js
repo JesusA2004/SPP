@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
+    const clientesContainer = document.querySelector('.cliente-slider');
+    const title = document.querySelector('#title');
+    const submenuContainer = document.querySelector('.has-submenu');
+    const filosofiaSubmenu = document.getElementById('filosofia-submenu');
+    const filosofiaArrow = document.getElementById('arrow');
 
-    // Smooth Scroll Avanzado
+    // Smooth Scroll Mejorado con Easing Elástico
     const smoothScroll = (target) => {
         const targetElement = document.querySelector(target);
         if (!targetElement) return;
@@ -10,23 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
-        const duration = Math.min(800, Math.abs(distance * 0.8));
+        const duration = Math.min(600, Math.max(300, Math.abs(distance * 0.3)));
         let startTime = null;
+
+        const easing = t => {
+            const c4 = (2 * Math.PI) / 3;
+            return t === 0 ? 0 : 
+                t === 1 ? 1 : 
+                Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * c4) + 1;
+        };
 
         const animateScroll = (timestamp) => {
             if (!startTime) startTime = timestamp;
             const progress = timestamp - startTime;
             const percentage = Math.min(progress / duration, 1);
-
-            // Easing personalizado
-            const easing = t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-
+            
             window.scrollTo(0, startPosition + distance * easing(percentage));
 
             if (progress < duration) {
                 requestAnimationFrame(animateScroll);
             } else {
-                // Restaurar animaciones después de hacer scroll
                 resetAnimations(targetElement);
             }
         };
@@ -34,21 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateScroll);
     };
 
-    // Reiniciar animaciones cuando una sección vuelve a estar visible
+    // Sistema de Animaciones
     const resetAnimations = (section) => {
         const elements = section.querySelectorAll('.empresa-item, .service-item, .cliente-item');
         elements.forEach((el) => {
-            el.style.transform = 'translateY(50px)';
+            el.style.transform = 'translateY(30px)';
             el.style.opacity = '0';
             setTimeout(() => {
-                el.style.transition = 'transform 0.8s ease-out, opacity 0.8s';
+                el.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s';
                 el.style.transform = 'translateY(0)';
                 el.style.opacity = '1';
-            }, 100);
+            }, 50);
         });
     };
 
-    // Animaciones de entrada con Intersection Observer
+    // Observer para animaciones
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -56,25 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 animateSectionElements(entry.target);
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     document.querySelectorAll('section').forEach(section => {
         sectionObserver.observe(section);
     });
 
-    // Animaciones de los elementos internos de cada sección
+    // Animación escalonada de elementos
     const animateSectionElements = (section) => {
         const elements = section.querySelectorAll('.empresa-item, .service-item, .cliente-item');
         elements.forEach((el, index) => {
             setTimeout(() => {
-                el.style.transition = 'transform 0.8s ease-out, opacity 0.8s';
                 el.style.transform = 'translateY(0)';
                 el.style.opacity = '1';
-            }, index * 150);
+            }, index * 120);
         });
     };
 
-    // Navegación suave y restauración de animaciones
+    // Control de Eventos
     document.querySelectorAll('nav a[href^="#"], .hero button').forEach(element => {
         element.addEventListener('click', (e) => {
             e.preventDefault();
@@ -87,96 +94,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Efecto de onda al hacer clic
+    // Efecto de Onda Dinámico
     const createClickWave = (e) => {
         const wave = document.createElement('div');
         wave.className = 'click-wave';
-        wave.style.left = `${e.clientX}px`;
-        wave.style.top = `${e.clientY}px`;
+        wave.style.cssText = `
+            left: ${e.clientX}px;
+            top: ${e.clientY}px;
+            background: radial-gradient(circle, rgba(255,204,0,0.4) 0%, transparent 70%);
+        `;
         document.body.appendChild(wave);
-
         setTimeout(() => wave.remove(), 1000);
     };
 
-    // Control del submenú de filosofía
-    const filosofiaSubmenu = document.getElementById('filosofia-submenu');
-    const filosofiaArrow = document.getElementById('arrow');
-    const submenuContainer = document.getElementById('has-submenu');
-
-    submenuContainer.addEventListener('click', (e) => {
-        e.preventDefault();
-        filosofiaSubmenu.classList.toggle('visible');
-        filosofiaArrow.classList.toggle('rotate');
-        e.stopPropagation();
+    // Control del Submenú Mejorado
+    let submenuTimeout;
+    submenuContainer.addEventListener('mouseenter', () => {
+        clearTimeout(submenuTimeout);
+        filosofiaSubmenu.classList.add('visible');
+        filosofiaArrow.classList.add('rotate');
     });
 
-    // Cerrar el submenú al hacer clic fuera de él
+    submenuContainer.addEventListener('mouseleave', () => {
+        submenuTimeout = setTimeout(() => {
+            filosofiaSubmenu.classList.remove('visible');
+            filosofiaArrow.classList.remove('rotate');
+        }, 300);
+    });
+
     document.addEventListener('click', (e) => {
-        if (!filosofiaSubmenu.contains(e.target) && !submenuContainer.contains(e.target)) {
+        if (!submenuContainer.contains(e.target)) {
             filosofiaSubmenu.classList.remove('visible');
             filosofiaArrow.classList.remove('rotate');
         }
     });
 
-    // Evitar que los clics dentro del submenú cierren el menú
-    filosofiaSubmenu.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-
-    //Scroll hacia la sección de la empresa
-    document.getElementById("saberMas").addEventListener("click", function() {
-        document.getElementById("empresa").scrollIntoView({ behavior: "smooth" });
-    });
-
-    //Slider de clientes
+    // Slider de Clientes Optimizado
     const slider = document.querySelector('.cliente-slider');
     const items = document.querySelectorAll('.cliente-item');
     const prevButton = document.querySelector('.cliente-prev');
     const nextButton = document.querySelector('.cliente-next');
     let currentIndex = 0;
+    let autoSlideInterval;
 
-    function showSlide(index) {
+    const showSlide = (index) => {
         items.forEach((item, i) => {
             item.classList.toggle('active', i === index);
         });
-    }
+    };
 
-    function nextSlide() {
+    const nextSlide = () => {
         currentIndex = (currentIndex + 1) % items.length;
         showSlide(currentIndex);
-    }
+    };
 
-    function prevSlide() {
+    const prevSlide = () => {
         currentIndex = (currentIndex - 1 + items.length) % items.length;
         showSlide(currentIndex);
-    }
+    };
 
-    // Event listeners
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
+    const startAutoSlide = () => {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    };
 
-    // Mostrar primer slide al cargar
-    showSlide(currentIndex);
-
-    // Auto slide (agregar al JS existente)
-    let autoSlideInterval;
-
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(() => {
-            nextSlide();
-        }, 4000); // Cambia cada 4 segundos
-    }
-
-    // Detener auto slide al interactuar
-    function resetAutoSlide() {
+    const resetAutoSlide = () => {
         clearInterval(autoSlideInterval);
         startAutoSlide();
-    }
+    };
 
-    // Iniciar auto slide
-    startAutoSlide();
-
-    // Modificar los event listeners existentes
+    // Event Listeners del Slider
     nextButton.addEventListener('click', () => {
         resetAutoSlide();
         nextSlide();
@@ -187,35 +173,32 @@ document.addEventListener('DOMContentLoaded', () => {
         prevSlide();
     });
 
-    // Agregar pause on hover
     clientesContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
     clientesContainer.addEventListener('mouseleave', startAutoSlide);
 
-    title.addEventListener('click', () => {
-        const content = title.nextElementSibling;
-        title.classList.toggle('active');
-        content.classList.toggle('expand');
-    });
-
-
-    //Mensaje oculto de correo enviado correctamente
-    // Verificar si hay un mensaje en la URL
+    // Sistema de Notificaciones
     const urlParams = new URLSearchParams(window.location.search);
     const mensaje = urlParams.get('mensaje');
 
-    // Mostrar el modal solo si hay un mensaje
-    if (mensaje === 'success' || mensaje === 'error') {
-        let modal = document.getElementById("modalSucces");
+    if (mensaje) {
+        const modal = document.getElementById("modalSucces");
+        const modalType = mensaje === 'success' ? 'éxito' : 'error';
+        modal.querySelector('.modal-content').classList.add(modalType);
         modal.style.display = "block";
 
-        // Eliminar el parámetro 'mensaje' de la URL después de mostrar el modal
         const url = new URL(window.location);
         url.searchParams.delete('mensaje');
         window.history.replaceState({}, document.title, url);
     }
 
+    // Inicialización
+    showSlide(currentIndex);
+    startAutoSlide();
 });
 
 function cerrarModal() {
-    document.getElementById("modalSucces").style.display = "none";
+    const modal = document.getElementById("modalSucces");
+    modal.style.display = "none";
+    modal.querySelector('.modal-content').className = 'modal-content';
 }
+
