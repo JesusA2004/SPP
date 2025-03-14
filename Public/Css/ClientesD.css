@@ -2,7 +2,8 @@
 #clientes {
     padding: 2rem 0;
     position: relative;
-    background: #bebebe;
+    background: #00006ae5;
+    color: white;
 }
 
 .clientes-container {

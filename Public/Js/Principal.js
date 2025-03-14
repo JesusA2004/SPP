@@ -197,4 +197,25 @@ document.addEventListener('DOMContentLoaded', () => {
         content.classList.toggle('expand');
     });
 
+
+    //Mensaje oculto de correo enviado correctamente
+    // Verificar si hay un mensaje en la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const mensaje = urlParams.get('mensaje');
+
+    // Mostrar el modal solo si hay un mensaje
+    if (mensaje === 'success' || mensaje === 'error') {
+        let modal = document.getElementById("modalSucces");
+        modal.style.display = "block";
+
+        // Eliminar el parámetro 'mensaje' de la URL después de mostrar el modal
+        const url = new URL(window.location);
+        url.searchParams.delete('mensaje');
+        window.history.replaceState({}, document.title, url);
+    }
+
 });
+
+function cerrarModal() {
+    document.getElementById("modalSucces").style.display = "none";
+}

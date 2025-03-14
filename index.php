@@ -157,14 +157,40 @@ require_once __DIR__ . '/Config/Routes.php';
     <!-- Sección Cotizar -->
     <section id="cotizar">
         <h2 class="section-title">Cotizar</h2>
-        <form>
-            <input type="text" placeholder="Nombre completo" required>
-            <input type="email" placeholder="Correo electrónico" required>
-            <input type="tel" placeholder="Teléfono">
-            <input type="text" placeholder="Empresa">
-            <textarea placeholder="Detalla tus servicios a solicitar" rows="4"></textarea>
+        <form method="POST" action="Config/Mail.php" class="cotizar-form">
+            <input type="text" placeholder="Nombre completo" required id="nameuser" name="nameuser">
+
+            <input type="email" placeholder="Correo electrónico" required id="correo" name="correo">
+
+            <input type="tel" placeholder="Teléfono" required id="telefono" name="telefono">
+
+            <input type="text" placeholder="Empresa" required id="empresa" name="empresa">
+
+            <textarea placeholder="Detalla tus servicios a solicitar" rows="4" id="descripcion" name="descripcion"></textarea>
+            
             <button type="submit">ENVIAR</button>
         </form>
+
+        <!-- Mostrar mensaje solo después de enviar el formulario -->
+        <?php
+if (isset($_GET['mensaje'])): 
+?>
+    <div id="modalSucces" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <p>
+                <?php 
+                    if ($_GET['mensaje'] == 'success') {
+                        echo "✅ Registro exitoso. Se ha enviado un correo con los detalles de tu solicitud.";
+                    } elseif ($_GET['mensaje'] == 'error') {
+                        echo "❌ Hubo un error al enviar el correo. Inténtalo de nuevo más tarde.";
+                    }
+                ?>
+            </p>
+        </div>
+    </div>
+<?php endif; ?>
+
     </section>
 
     <!-- Script principal (ajusta la ruta si es necesario) -->
