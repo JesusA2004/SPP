@@ -35,7 +35,21 @@
           </div>
         </div>
         
-        <a href="#servicios" class="menu-item">Servicios</a>
+        <div class="has-submenu">
+          <div class="menu-desplegable">
+            <span class="menu-item submenu-toggle">
+              Nuestros servicios <span class="arrow">▼</span>
+            </span>
+            <div class="contenido" id="servicios-submenu">
+              <a href="../Views/guardiaSegu.php" class="submenu-item">Guardias de seguridad intramuros</a>
+              <a href="../Views/Escolta.php" class="submenu-item">Escolta</a>
+              <a href="../Views/CCTV.php" class="submenu-item">Instalación de Circuitos Cerrados de Televisión</a>
+              <a href="../Views/cercasNavajas.php" class="submenu-item">Instalación de Cercas Eléctricas</a>
+            </div>
+          </div>
+        </div>
+
+
         <a href="#cotizar" class="menu-item">Cotizar</a>
         <a href="#contacto" class="menu-item">Contacto</a>
       </div>
@@ -82,5 +96,48 @@
       });
     });
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+      submenuToggles.forEach((toggle) => {
+        toggle.addEventListener("click", function () {
+          const submenu = this.nextElementSibling;
+          const arrow = this.querySelector(".arrow");
+
+          // Cerrar otros submenús antes de abrir el actual
+          document.querySelectorAll(".contenido").forEach((menu) => {
+            if (menu !== submenu) {
+              menu.classList.remove("visible");
+            }
+          });
+
+          document.querySelectorAll(".arrow").forEach((arr) => {
+            if (arr !== arrow) {
+              arr.classList.remove("rotate");
+            }
+          });
+
+          // Alternar la visibilidad del submenú actual
+          submenu.classList.toggle("visible");
+          arrow.classList.toggle("rotate");
+        });
+      });
+
+      // Cerrar submenú si se hace clic fuera de él
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".has-submenu")) {
+          document.querySelectorAll(".contenido").forEach((menu) => {
+            menu.classList.remove("visible");
+          });
+          document.querySelectorAll(".arrow").forEach((arrow) => {
+            arrow.classList.remove("rotate");
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

@@ -118,22 +118,36 @@
     flex-direction: column;
   }
   
-  .contenido {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.95);
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 100;
-  }
-  
+  /* Mostrar el submenú cuando la clase "visible" está presente */
+.contenido {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.contenido.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Girar la flecha cuando el submenú está abierto */
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.has-submenu:hover .contenido {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
   .submenu-item {
     padding: 12px 20px;
     font-size: 0.95rem;
@@ -149,21 +163,12 @@
     padding-left: 25px;
   }
   
-  .contenido.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
   .arrow {
     font-size: 0.8em;
     margin-left: 5px;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .arrow.rotate {
-    transform: rotate(180deg);
-  }
   
   /* =========================================================
      RESPONSIVE DESIGN

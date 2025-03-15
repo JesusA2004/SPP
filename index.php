@@ -64,9 +64,9 @@ require_once __DIR__ . '/Config/Routes.php';
             <div class="empresa-item">
                 <h3 class="empresa-title" id="vision">Visión</h3>
                 <p class="empresa-text">
-                    <span class="highlight">Servicios de Protección Profesional S.A. de C.V.</span> será una <span class="highlight">organización reconocida</span> por empleados, competidores, clientes y público en general. 
+                    <span class="highlight">Servicios de Protección Profesional S.A. de C.V.</span> será una <span class="highlight">organización reconocida</span> por colaborador(es), competidores, clientes y público en general. 
                     Seremos la organización <span class="highlight">líder</span> en la prestación de <span class="highlight">Servicios de Seguridad Privada</span>. 
-                    Nuestra premisa será la <span class="highlight">innovación</span>, <span class="highlight">creatividad</span>, <span class="highlight">competitividad</span> y el <span class="highlight">trabajo en equipo</span> de nuestros empleados, buscando en todo momento la <span class="highlight">mejora continua</span> en nuestras actividades, para alcanzar la <span class="highlight">calidad total</span>, así como nuestra capacidad para <span class="highlight">anticipar</span> y <span class="highlight">responder debidamente a los cambios</span> y para <span class="highlight">crear oportunidades</span>.
+                    Nuestra premisa será la <span class="highlight">innovación</span>, <span class="highlight">creatividad</span>, <span class="highlight">competitividad</span> y el <span class="highlight">trabajo en equipo</span> de nuestros colaborador(es), buscando en todo momento la <span class="highlight">mejora continua</span> en nuestras actividades, para alcanzar la <span class="highlight">calidad total</span>, así como nuestra capacidad para <span class="highlight">anticipar</span> y <span class="highlight">responder debidamente a los cambios</span> y para <span class="highlight">crear oportunidades</span>.
                 </p>
             </div>
         </div>
@@ -101,15 +101,15 @@ require_once __DIR__ . '/Config/Routes.php';
                         <img src="<?php echo IMG_URL; ?>/invest.jpg" alt="Cliente 5">
                     </div>
                     <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/cliente6.jpg" alt="Cliente 6">
+                        <img src="<?php echo IMG_URL; ?>/floraplant.png" alt="Cliente 6">
                     </div>
                 </div>
                 <div class="cliente-item">
                     <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/cliente7.jpg" alt="Cliente 7">
+                        <img src="<?php echo IMG_URL; ?>/floramundo.png" alt="Cliente 7">
                     </div>
                     <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/cliente8.jpg" alt="Cliente 8">
+                        <img src="<?php echo IMG_URL; ?>/doster.png" alt="Cliente 8">
                     </div>
                 </div>
             </div>
