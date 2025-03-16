@@ -1,14 +1,13 @@
 /* =========================================================
    SECCIÓN SERVICIOS
    ========================================================= */
-   #servicios {
+#servicios {
     background-color: #f2f2f2;
     padding: 50px 20px;
     text-align: center;
 }
 
 #servicios .section-title {
-    font-size: 26px;
     margin-bottom: 40px;
 }
 
@@ -27,6 +26,13 @@
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+.service-item img{
+    width: 100%;
+    object-fit:contain;
+}
+
+
 
 .service-item h3 {
     font-size: 1.2rem;

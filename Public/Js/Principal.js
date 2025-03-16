@@ -138,9 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoSlideInterval;
 
     const showSlide = (index) => {
-        items.forEach((item, i) => {
-            item.classList.toggle('active', i === index);
-        });
+        slider.style.transform = `translateX(-${index * 100}%)`;
     };
 
     const nextSlide = () => {
@@ -162,66 +160,23 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoSlide();
     };
 
-    // Event Listeners del Slider
-    nextButton.addEventListener('click', () => {
-        resetAutoSlide();
-        nextSlide();
-    });
-
     prevButton.addEventListener('click', () => {
         resetAutoSlide();
         prevSlide();
     });
 
-    clientesContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-    clientesContainer.addEventListener('mouseleave', startAutoSlide);
+    nextButton.addEventListener('click', () => {
+        resetAutoSlide();
+        nextSlide();
+    });
 
-    // Sistema de Notificaciones
-    const urlParams = new URLSearchParams(window.location.search);
-    const mensaje = urlParams.get('mensaje');
-
-    if (mensaje) {
-        const modal = document.getElementById("modalSucces");
-        const modalType = mensaje === 'success' ? 'éxito' : 'error';
-        modal.querySelector('.modal-content').classList.add(modalType);
-        modal.style.display = "block";
-
-        const url = new URL(window.location);
-        url.searchParams.delete('mensaje');
-        window.history.replaceState({}, document.title, url);
-    }
-
-    // Inicialización
     showSlide(currentIndex);
     startAutoSlide();
 
+    // Inicialización del botón "Saber Más"
     document.getElementById("saberMas").addEventListener("click", function() {
-        const target = document.getElementById("empresa");
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-        const startPosition = window.scrollY;
-        const distance = targetPosition - startPosition;
-        const duration = 250; // Puedes aumentar el tiempo para hacerlo más suave
-        let startTime = null;
-    
-        function animationScroll(currentTime) {
-            if (startTime === null) startTime = currentTime;
-            const timeElapsed = currentTime - startTime;
-            const progress = Math.min(timeElapsed / duration, 1); // Asegura que no pase del 1
-    
-            window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
-    
-            if (timeElapsed < duration) {
-                requestAnimationFrame(animationScroll);
-            }
-        }
-    
-        function easeInOutQuad(t) {
-            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-        }
-    
-        requestAnimationFrame(animationScroll);
+        smoothScroll("#empresa");
     });
-    
     
 });
 
@@ -230,4 +185,3 @@ function cerrarModal() {
     modal.style.display = "none";
     modal.querySelector('.modal-content').className = 'modal-content';
 }
-

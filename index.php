@@ -51,30 +51,56 @@ require_once __DIR__ . '/Config/Routes.php';
     <!-- Espacio adicional entre secciones -->
     <div class="section-spacing"></div>
 
-    <section id="empresa">
-        <h2 class="section-title">Filosofía empresarial</h2>
+    <!-- Sección empresa -->
+    <section id="empresa" class="sobre-nosotros">
         <div class="empresa-container">
-            <div class="empresa-item">
-                <h3 class="empresa-title" id="mision">Misión</h3>
-                <p class="empresa-text">
-                    Nos concentraremos en la prestación de <span class="highlight">Servicios de Seguridad Privada</span> para satisfacer las necesidades de nuestros clientes en base a la <span class="highlight">Calidad</span>, <span class="highlight">Precios</span> y variedad de nuestros servicios. 
-                    Realizaremos nuestras actividades con <span class="highlight">responsabilidad</span> y <span class="highlight">eficiencia</span> a efecto de obtener resultados que mantengan el equilibrio con nuestro <span class="highlight">crecimiento a largo plazo</span>, que beneficien a las personas integrantes de la organización, logrando con ello cumplir nuestro <span class="highlight">compromiso con la sociedad</span>.
-                </p>
-            </div>
-            <div class="empresa-item">
-                <h3 class="empresa-title" id="vision">Visión</h3>
-                <p class="empresa-text">
-                    <span class="highlight">Servicios de Protección Profesional S.A. de C.V.</span> será una <span class="highlight">organización reconocida</span> por colaborador(es), competidores, clientes y público en general. 
-                    Seremos la organización <span class="highlight">líder</span> en la prestación de <span class="highlight">Servicios de Seguridad Privada</span>. 
-                    Nuestra premisa será la <span class="highlight">innovación</span>, <span class="highlight">creatividad</span>, <span class="highlight">competitividad</span> y el <span class="highlight">trabajo en equipo</span> de nuestros colaborador(es), buscando en todo momento la <span class="highlight">mejora continua</span> en nuestras actividades, para alcanzar la <span class="highlight">calidad total</span>, así como nuestra capacidad para <span class="highlight">anticipar</span> y <span class="highlight">responder debidamente a los cambios</span> y para <span class="highlight">crear oportunidades</span>.
-                </p>
+            <h2 class="section-title">Filosofía Empresarial</h2>
+            <br>
+            <p align="center">
+                Nuestra filosofía, que marca la personalidad y la actuación de la organización y que nos diferencia de las demás es la siguiente: 
+            <p>
+            <div class="items-container">
+                <div class="empresa-item">
+                    <img src="<?php echo IMG_URL; ?>/mision.png" alt="mision">
+                    <h3 class="empresa-title">Misión</h3>
+                    <p class="empresa-text" id="mision">
+                        Nos concentraremos en la prestación de Servicios de Seguridad Privadapara satisfacer las necesidades de nuestros clientes en base a la Calidad, Preciosy variedad de nuestros servicios. 
+                        Realizaremos nuestras actividades con responsabilidad y eficiencia a efecto de obtener resultados que mantengan el equilibrio con nuestro crecimiento a largo plazo, que beneficien a las personas integrantes de la organización, logrando con ello cumplir nuestro compromiso con la sociedad.
+                    </p>
+                </div>
+                <div class="empresa-item">
+                    <img src="<?php echo IMG_URL; ?>/vision.png" alt="vision">
+                    <h3 class="empresa-title">Visión</h3>
+                    <p class="empresa-text" id="vision">
+                    Servicios de Protección Profesional S.A. de C.V. será una organización reconocida por colaborador(es), competidores, clientes y público en general. 
+                        Seremos la organización líder en la prestación de Servicios de Seguridad Privada. 
+                        Nuestra premisa será la innovación, creatividad, competitividad y el trabajo en equipo de nuestros colaborador(es), buscando en todo momento la mejora continua en nuestras actividades, para alcanzar la calidad total<, así como nuestra capacidad para y responder debidamente a los cambios y para crear oportunidades.
+                    </p>
+                </div>
+
+                <div class="empresa-item">
+                    <img src="<?php echo IMG_URL; ?>/valores.png" alt="valores">
+                    <h3 class="empresa-title">Valores</h3>
+                    <ul class="empresa-text valores-list">
+                        <li>🔹Disciplina </li>
+                        <li>🔹Respeto </li>
+                        <li>🔹Profesionalismo</li>
+                        <li>🔹Responsabilidad</li>
+                        <li>🔹Vocación de servicio</li>
+                        <li>🔹Honestidad</li>
+                        <li>🔹Trabajo en equipo</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Clientes Distinguidos -->
     <section id="clientes">
-        <h2 class="section-title" align="center">Clientes Distinguidos</h2>
+        <h2 class="section-titleClientes" align="center">Clientes Distinguidos</h2>
+        <p align="justify">
+                En Servicios de Protección Profesional, nos enorgullece contar con la confianza de empresas y organizaciones que han depositado su seguridad en nuestras manos. Nuestro compromiso es brindar protección con los más altos estándares de calidad y profesionalismo.
+        </p>
         <br>
         <div class="clientes-container">
             <button class="cliente-prev">&#10094;</button>
@@ -125,26 +151,26 @@ require_once __DIR__ . '/Config/Routes.php';
         <h2 class="section-title">Nuestros Servicios</h2>
         <div class="services-grid">
             <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/guardias.jpg" alt="Guardias de seguridad" class="service-img">
+                <img src="<?php echo IMG_URL; ?>/guardiasSegu.png" alt="Guardias de seguridad" class="service-img">
                 <h3>Guardias de seguridad</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <button onclick="window.location.href='detalle-guardias.php'">Ver más</button>
             </div>
             <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/cercas.jpg" alt="Cercas eléctricas" class="service-img">
+                <img src="<?php echo IMG_URL; ?>/cercasServ.png" alt="Cercas eléctricas" class="service-img">
                 <h3>Cercas eléctricas</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <button onclick="window.location.href='detalle-cercas.php'">Ver más</button>
             </div>
             <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/videovigilancia.jpg" alt="Sistemas de videovigilancia" class="service-img">
+                <img src="<?php echo IMG_URL; ?>/camarasSegu.png" alt="Sistemas de videovigilancia" class="service-img">
                 <h3>Sistemas de videovigilancia</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <button onclick="window.location.href='detalle-videovigilancia.php'">Ver más</button>
             </div>
             <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/monitoreo.jpg" alt="Monitoreo 24/7" class="service-img">
-                <h3>Monitoreo 24/7</h3>
+                <img src="<?php echo IMG_URL; ?>/escoltaServ.png" alt="Monitoreo 24/7" class="service-img">
+                <h3>Escolta</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <button onclick="window.location.href='detalle-monitoreo.php'">Ver más</button>
             </div>
@@ -156,39 +182,52 @@ require_once __DIR__ . '/Config/Routes.php';
 
     <!-- Sección Cotizar -->
     <section id="cotizar">
-        <h2 class="section-title">Cotizar</h2>
+        <h2 class="section-title">Contáctanos completando nuestro formulario y descubre por qué nuestros clientes confían en Servicios de Protección Profesional.</h2>
         <form method="POST" action="Config/Mail.php" class="cotizar-form">
-            <input type="text" placeholder="Nombre completo" required id="nameuser" name="nameuser">
+            <div class="input-container">
+                <label for="nameuser">Nombre Completo</label>
+                <input type="text" placeholder="Ingresa tu nombre completo" required id="nameuser" name="nameuser">
+            </div>
 
-            <input type="email" placeholder="Correo electrónico" required id="correo" name="correo">
+            <div class="input-container">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" placeholder="Ingresa tu correo electrónico" required id="correo" name="correo">
+            </div>
 
-            <input type="tel" placeholder="Teléfono" required id="telefono" name="telefono">
+            <div class="input-container">
+                <label for="telefono">Teléfono</label>
+                <input type="number" placeholder="Ingresa tu teléfono" required id="telefono" name="telefono">
+            </div>
 
-            <input type="text" placeholder="Empresa" required id="empresa" name="empresa">
+            <div class="input-container">
+                <label for="empresa">Nombre de la empresa, evento o actividad</label>
+                <input type="text" placeholder="Ej. Mi Empresa, Evento de Boda, Reunión Corporativa" required id="empresa" name="empresa">
+            </div>
 
-            <textarea placeholder="Detalla tus servicios a solicitar" rows="4" id="descripcion" name="descripcion"></textarea>
+            <div class="input-container">
+                <label for="descripcion">Descripción de Servicios</label>
+                <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
+            </div>
             
-            <button type="submit">ENVIAR</button>
+            <button type="submit">Enviar cotización</button>
         </form>
 
         <!-- Mostrar mensaje solo después de enviar el formulario -->
-        <?php
-            if (isset($_GET['mensaje'])): 
-            ?>
-                <div id="modalSucces" class="modal">
-                    <div class="modal-contenido">
-                        <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                        <p>
-                            <?php 
-                                if ($_GET['mensaje'] == 'success') {
-                                    echo "✅ Registro exitoso. Se ha enviado un correo con los detalles de tu solicitud.";
-                                } elseif ($_GET['mensaje'] == 'error') {
-                                    echo "❌ Hubo un error al enviar el correo. Inténtalo de nuevo más tarde.";
-                                }
-                            ?>
-                        </p>
-                    </div>
+        <?php if (isset($_GET['mensaje'])): ?>
+            <div id="modalSucces" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                    <p>
+                        <?php 
+                            if ($_GET['mensaje'] == 'success') {
+                                echo "✅ Registro exitoso. Se ha enviado un correo con los detalles de tu solicitud.";
+                            } elseif ($_GET['mensaje'] == 'error') {
+                                echo "❌ Hubo un error al enviar el correo. Inténtalo de nuevo más tarde.";
+                            }
+                        ?>
+                    </p>
                 </div>
+            </div>
         <?php endif; ?>
     </section>
 

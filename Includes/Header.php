@@ -41,10 +41,25 @@
               Nuestros servicios <span class="arrow">▼</span>
             </span>
             <div class="contenido" id="servicios-submenu">
-              <a href="../Views/guardiaSegu.php" class="submenu-item">Guardias de seguridad intramuros</a>
-              <a href="../Views/Escolta.php" class="submenu-item">Escolta</a>
-              <a href="../Views/CCTV.php" class="submenu-item">Instalación de Circuitos Cerrados de Televisión</a>
-              <a href="../Views/cercasNavajas.php" class="submenu-item">Instalación de Cercas Eléctricas</a>
+              <a href="../Views/guardiaSegu.php" class="submenu-itemServ">
+                <img src="<?php echo IMG_URL; ?>/guardias.png" alt="GuardiasSeguridad">
+                Guardias de seguridad intramuros
+              </a>
+
+              <a href="../Views/Escolta.php" class="submenu-itemServ">
+                <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
+                Escolta
+              </a>
+
+              <a href="../Views/CCTV.php" class="submenu-itemServ">
+                <img src="<?php echo IMG_URL; ?>/cctv.png" alt="CCTV">
+                Instalación de Circuitos Cerrados de Televisión
+              </a>
+
+              <a href="../Views/cercasNavajas.php" class="submenu-itemServ">
+                <img src="<?php echo IMG_URL; ?>/cercas.png" alt="cercas">
+                Instalación de Cercas Eléctricas y navajas
+              </a>
             </div>
           </div>
         </div>

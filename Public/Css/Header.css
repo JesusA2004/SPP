@@ -124,11 +124,15 @@
   top: 100%;
   left: 0;
   background: rgba(0, 0, 0, 0.95);
-  min-width: 200px;
+  min-width: 260px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  border-radius: 15px;
 }
 
 .contenido.visible {
@@ -148,26 +152,54 @@
   transform: translateY(0);
 }
 
-  .submenu-item {
-    padding: 12px 20px;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
-    transition: all 0.2s ease;
-    text-decoration: none;
-    display: block;
-  }
+.submenu-item {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: block;
+  align-items: center;
+  gap: 10px;
+}
+
+.submenu-itemServ {
+  display: flex;
+  align-items: center; /* Alinear verticalmente la imagen con el texto */
+  gap: 10px; /* Espaciado entre la imagen y el texto */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  color: white;
+  font-size: 0.95rem;
+  padding: 15px;
+}
+
+.submenu-itemServ img {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover;
+  border: 3px solid #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
   
-  .submenu-item:hover {
-    background: rgba(255, 204, 0, 0.1);
-    color: #ffcc00;
-    padding-left: 25px;
-  }
+.submenu-item:hover {
+  background: rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+  padding-left: 25px;
+}
+
+.submenu-itemServ:hover {
+  background: rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+  padding-left: 25px;
+}
   
-  .arrow {
-    font-size: 0.8em;
-    margin-left: 5px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.arrow {
+  font-size: 0.8em;
+  margin-left: 5px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
   
   
   /* =========================================================
@@ -283,4 +315,56 @@
     }
   }
 
+  @media (max-width: 768px) {
+    /* Ajustar posición del menú principal móvil */
+    .menu-principal {
+      top: 80px; /* Ajustado a la altura del header */
+      left: -100%;
+      height: calc(100vh - 80px);
+      padding: 15px 20px;
+      overflow-y: auto; /* Permite scroll si el contenido es largo */
+    }
   
+    /* Submenús en móvil */
+    .has-submenu .contenido {
+      position: relative;
+      background: rgba(0, 0, 0, 0.9);
+      min-width: auto;
+      margin: 5px 0 0 20px; /* Sangría para jerarquía */
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: none; /* Oculto por defecto */
+    }
+  
+    /* Mostrar submenú cuando está activo */
+    .has-submenu .contenido.visible {
+      display: flex; /* Mostrar como flexbox */
+      flex-direction: column;
+    }
+  
+    /* Ajustar tamaño de imágenes en submenú móvil */
+    .submenu-itemServ img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    /* Flecha de submenú */
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+    
+    .arrow.rotate {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-principal {
+      padding: 10px 15px;
+    }
+    
+    .submenu-itemServ {
+      font-size: 0.85rem;
+    }
+  }

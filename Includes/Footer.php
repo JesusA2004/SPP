@@ -70,16 +70,16 @@
                 <div class="footer-column social-column">
                     <h3 class="footer-subtitle">Síguenos</h3>
                     <div class="social-grid">
-                        <a href="https://wa.me/1234567890" target="_blank" class="social-btn whatsapp">
+                        <a href="https://wa.me/7772980092" target="_blank" class="social-btn whatsapp">
                             <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"/>
                         </a>
-                        <a href="https://facebook.com/tuPagina" target="_blank" class="social-btn facebook">
+                        <a href="https://www.facebook.com/share/1KF5JpFEp3/?mibextid=wwXIfr" target="_blank" class="social-btn facebook">
                             <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook"/>
                         </a>
-                        <a href="mailto:spp_02@hotmail.com" class="social-btn email">
+                        <a href="mailto:spp.segpriv@gmail.com" class="social-btn email">
                             <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email"/>
                         </a>
-                        <a href="https://www.instagram.com/tuPagina" target="_blank" class="social-btn instagram">
+                        <a href="https://www.instagram.com/spp_morelos?igsh=aWd5OGFnaG9mZXQy&utm_source=qr" target="_blank" class="social-btn instagram">
                             <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram"/>
                         </a>
                     </div>
@@ -103,7 +103,7 @@
         <div class="footer-divider"></div>
 
         <div class="footer-legal">
-            <p class="derechos">© 2024 Servicios de Protección Profesional. Todos los derechos reservados</p>
+            <p class="derechos">© 2025 Servicios de Protección Profesional. Todos los derechos reservados</p>
         </div>
     </section>
 </footer>

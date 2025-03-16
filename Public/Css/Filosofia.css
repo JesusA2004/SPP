@@ -2,60 +2,101 @@
    SECCIÓN EMPRESA
    ========================================================= */
 
-#empresa {
-    background-color: #fff;
+   #empresa {
+    background-color: #f4f4f4;
     color: #333;
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.sobre-nosotros {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
+    border-radius: 30px;
 }
 
 .empresa-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
 .empresa-item {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .empresa-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Levanta la card */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid #dcc21e;
 }
 
-#empresa .section-title {
-    font-size: 26px;
-    font-family: 'Poppins', sans-serif;
-    color: #151515;
+.empresa-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .empresa-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: 'Philosopher', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: #dcc21e;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    transition: color 0.3s, transform 0.3s; /* Agregamos transición en el tamaño */
 }
 
+.empresa-item:hover .empresa-title {
+    color: #003366;
+    transform: scale(1.2); /* Agranda el texto del título */
+}
 
 .empresa-text {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #444;
     text-align: justify;
     font-family: 'Poppins', sans-serif;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .highlight {
-    color: #003366; /* Azul corporativo elegante */
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Estilos para la lista de valores */
+.valores-list {
+    text-align: left;
+    padding: 0;
+    list-style: none;
+}
+
+.valores-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
 }
 
 /* Ajuste para pantallas pequeñas */

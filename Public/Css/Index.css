@@ -61,6 +61,8 @@ section.visible {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
+    font-size: 28px;
+    color: var(--primary-color);
 }
 
 section.visible .section-title {

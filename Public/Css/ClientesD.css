@@ -2,50 +2,102 @@
 #clientes {
     padding: 2rem 0;
     position: relative;
-    background: #00006ae5;
+    background: linear-gradient(190deg, #000000, #030871); /* Degradado mejorado */
     color: white;
+    text-align: center;
 }
 
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.section-titleClientes {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8),  /* Brillo suave */
+        2px 2px 4px rgba(0, 0, 0, 0.2);   /* Sombra sutil para contraste */
+    margin-bottom: 2rem;
+    animation: fadeInScale 1s ease-in-out;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+/* Efecto al hacer hover */
+.section-titleClientes:hover {
+    color: #c6b302; /* Cambia el color del texto */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    text-shadow: 4px 4px 8px rgba(244, 195, 0, 0.92); /* Efecto de brillo */
+}
+
+/* Efecto cuando la sección entra en la pantalla */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contenedor del carrusel */
 .clientes-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 40px;
-}
-
-.cliente-slider {
     overflow: hidden;
-    position: relative;
+    padding: 0 50px;
 }
 
-.cliente-item {
+/* Carrusel */
+.cliente-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    gap: 10px;
-    height: auto;
-    align-items: center;
 }
 
+/* Elementos del slider */
+.cliente-item {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+/* Tarjetas de clientes */
 .cliente-card {
-    flex: 1;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    width: 390px;
+    flex: 0 0 calc(50% - 10px); /* Se mantienen dos visibles */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
     text-align: center;
-    min-width: calc(50% - 10px);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
+.cliente-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Imágenes dentro de las tarjetas */
 .cliente-card img {
-    width: 350px;
-    height: 200px;
-    object-fit: contain;
-    margin: 0 auto 15px;
-}
-
-.cliente-card h3 {
-    color: #130261bd;
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% de la tarjeta */
+    object-fit:contain;
+    border-radius: 8px;
 }
 
 /* Flechas de navegación */
@@ -53,62 +105,75 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    font-weight: bold;
+    color: #004e92;
     z-index: 10;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cliente-prev:hover, .cliente-next:hover {
-    background: #fff;
+    background: #ff6b6b;
+    color: white;
+    transform: scale(1.1);
 }
 
 .cliente-prev {
-    left: 0;
+    left: 15px;
 }
 
 .cliente-next {
-    right: 0;
+    right: 15px;
 }
 
-/* Ocultar elementos no activos */
-.cliente-item {
-    display: none;
-    flex: 0 0 100%;
-}
-
-.cliente-item.active {
-    display: flex;
-}
-
-/* Efectos hover adicionales */
-.cliente-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cliente-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.cliente-prev:hover, .cliente-next:hover {
-    transform: translateY(-50%) scale(1.1);
-    background: #ff6b6b;
-    color: white;
-}
-
-/* Efecto de desvanecido */
-.cliente-item {
-    animation: fadeIn 0.5s ease-in;
-}
-
+/* Efecto de entrada */
 @keyframes fadeIn {
-    from { opacity: 0.5; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+    .cliente-card {
+        flex: 0 0 100%; /* Muestra una tarjeta a la vez */
+        max-width: 260px;
+    }
+
+    .clientes-container {
+        padding: 0 20px;
+    }
+
+    .cliente-prev, .cliente-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    #clientes p {
+        font-size: 16px; /* Reduce un poco el tamaño de fuente */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+        max-width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+        padding: 0 20px; /* Agrega un poco de espacio a los lados */
+    }
+}
+
+#clientes p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.6;
+    margin: 10px 0;
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+}
