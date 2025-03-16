@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/../Config/Routes.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -70,89 +74,63 @@
       </div>
     </nav>
   </header>
-
+  
   <script>
-    // Control del Menú Hamburguesa
+// JavaScript mejorado
+document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const menuPrincipal = document.querySelector('.menu-principal');
-    const submenuTrigger = document.querySelector('.has-submenu');
-    const submenuContent = document.getElementById('filosofia-submenu');
-    const arrow = document.querySelector('.arrow');
+    const submenuTriggers = document.querySelectorAll('.has-submenu');
 
-    // Alternar menú hamburguesa
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      menuPrincipal.classList.toggle('active');
-      document.body.classList.toggle('no-scroll');
+    // Control del menú hamburguesa
+    hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menuPrincipal.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
     });
 
-    // Control del submenú
-    submenuTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      submenuContent.classList.toggle('visible');
-      arrow.classList.toggle('rotate');
-    });
-
-    // Cerrar menú al hacer clic fuera
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('nav') && !e.target.closest('.hamburger')) {
-        menuPrincipal.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-      }
-    });
-
-    // Cerrar menú al hacer clic en un enlace
-    document.querySelectorAll('.menu-principal a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuPrincipal.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const submenuToggles = document.querySelectorAll(".submenu-toggle");
-
-      submenuToggles.forEach((toggle) => {
-        toggle.addEventListener("click", function () {
-          const submenu = this.nextElementSibling;
-          const arrow = this.querySelector(".arrow");
-
-          // Cerrar otros submenús antes de abrir el actual
-          document.querySelectorAll(".contenido").forEach((menu) => {
-            if (menu !== submenu) {
-              menu.classList.remove("visible");
+    // Control de submenús
+    submenuTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const submenu = this.querySelector('.contenido');
+                const arrow = this.querySelector('.arrow');
+                
+                submenu.classList.toggle('visible');
+                arrow.classList.toggle('rotate');
             }
-          });
-
-          document.querySelectorAll(".arrow").forEach((arr) => {
-            if (arr !== arrow) {
-              arr.classList.remove("rotate");
-            }
-          });
-
-          // Alternar la visibilidad del submenú actual
-          submenu.classList.toggle("visible");
-          arrow.classList.toggle("rotate");
         });
-      });
-
-      // Cerrar submenú si se hace clic fuera de él
-      document.addEventListener("click", function (event) {
-        if (!event.target.closest(".has-submenu")) {
-          document.querySelectorAll(".contenido").forEach((menu) => {
-            menu.classList.remove("visible");
-          });
-          document.querySelectorAll(".arrow").forEach((arrow) => {
-            arrow.classList.remove("rotate");
-          });
-        }
-      });
     });
-  </script>
+
+    // Cerrar menús al hacer clic fuera
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav') && !e.target.closest('.hamburger')) {
+            hamburger.classList.remove('active');
+            menuPrincipal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+            document.querySelectorAll('.contenido').forEach(sub => sub.classList.remove('visible'));
+            document.querySelectorAll('.arrow').forEach(arr => arr.classList.remove('rotate'));
+        }
+    });
+
+    // Hover para desktop
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.has-submenu').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('.contenido').classList.add('visible');
+                item.querySelector('.arrow').classList.add('rotate');
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('.contenido').classList.remove('visible');
+                item.querySelector('.arrow').classList.remove('rotate');
+            });
+        });
+    }
+});
+</script>
 
 </body>
 </html>
