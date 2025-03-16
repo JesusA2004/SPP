@@ -2,7 +2,7 @@
 // Config/Routes.php
 
 // Define la URL base de tu proyecto. Cámbiala según tu entorno (localhost, dominio, etc.)
-define('BASE_URL', 'http://localhost/SPP');
+define('BASE_URL', 'https://spp2.webcindario.com/SPP');
 
 // Define las rutas para los recursos
 define('CSS_URL', BASE_URL . '/Public/Css');

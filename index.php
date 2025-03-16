@@ -64,7 +64,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <img src="<?php echo IMG_URL; ?>/mision.png" alt="mision">
                     <h3 class="empresa-title">Misión</h3>
                     <p class="empresa-text" id="mision">
-                        Nos concentraremos en la prestación de Servicios de Seguridad Privadapara satisfacer las necesidades de nuestros clientes en base a la Calidad, Preciosy variedad de nuestros servicios. 
+                        Nos concentraremos en la prestación de Servicios de Seguridad Privada para satisfacer las necesidades de nuestros clientes en base a la Calidad, Precios y variedad de nuestros servicios. 
                         Realizaremos nuestras actividades con responsabilidad y eficiencia a efecto de obtener resultados que mantengan el equilibrio con nuestro crecimiento a largo plazo, que beneficien a las personas integrantes de la organización, logrando con ello cumplir nuestro compromiso con la sociedad.
                     </p>
                 </div>

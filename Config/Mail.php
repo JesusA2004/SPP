@@ -3,11 +3,9 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use Dotenv\Dotenv; 
 
-// Cargar las variables de entorno
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+// Cargar las credenciales desde config.php
+$config = include __DIR__ . '/../config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
@@ -23,14 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = $_ENV['SMTP_USERNAME']; // Variable de entorno
-        $mail->Password = $_ENV['SMTP_PASSWORD']; // Variable de entorno
+        $mail->Username = $config['SMTP_USERNAME'];
+        $mail->Password = $config['SMTP_PASSWORD'];
         $mail->SMTPSecure = 'tls'; // 'ssl' si usas el puerto 465
         $mail->Port = 587; 
 
         // Destinatario (correo de la empresa)
-        $mail->setFrom($_ENV['SMTP_USERNAME'], 'Servicios de Protección Profesional');
-        $mail->addAddress($_ENV['SMTP_USERNAME']);  // Correo de la empresa donde se recibirán las solicitudes
+        $mail->setFrom($config['SMTP_USERNAME'], 'Servicios de Protección Profesional');
+        $mail->addAddress($config['SMTP_USERNAME']);  // Correo de la empresa donde se recibirán las solicitudes
         
         // Contenido del correo
         $mail->CharSet = 'UTF-8';
