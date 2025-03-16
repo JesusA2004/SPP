@@ -46,7 +46,7 @@ require_once __DIR__ . '/../Config/Routes.php';
       box-sizing: border-box;
     }
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       margin-top: var(--header-height);
     }
@@ -136,26 +136,26 @@ require_once __DIR__ . '/../Config/Routes.php';
       gap: 8px;
       padding: 10px 15px;
       position: relative;
-      transition: all 0.3s var(--easing);
+      transition: all 0.3s ease;
       border-radius: 5px;
     }
+
     .menu-item::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      background: var(--secondary-color);
-      transition: all 0.3s var(--easing);
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffcc00 0%, #ff9900 100%);
+    transition: width 0.3s ease;
     }
+
     .menu-item:hover {
-      color: var(--secondary-color);
-      background: rgba(255, 255, 255, 0.05);
+      color: #ffcc00;
     }
     .menu-item:hover::after {
       width: 100%;
-      left: 0;
     }
 
     /* =========================================================
@@ -166,7 +166,10 @@ require_once __DIR__ . '/../Config/Routes.php';
     }
     .menu-desplegable {
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
+
     .contenido {
       position: absolute;
       top: 100%;
@@ -175,10 +178,12 @@ require_once __DIR__ . '/../Config/Routes.php';
       min-width: 260px;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(10px);
+      transform: translateY(-10px);
       transition: all 0.3s var(--easing);
-      border-radius: 8px;
+      border-radius: 15px;
       padding: 10px 0;
+      display: flex;
+      flex-direction: column;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       z-index: 1000;
     }
@@ -199,28 +204,48 @@ require_once __DIR__ . '/../Config/Routes.php';
     /* =========================================================
        SUBMENÚ SERVICIOS - ESPECÍFICO
        ========================================================= */
-    #servicios-submenu {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 15px;
+
+     /* Submenú Filosofía y Servicios: Mejorar proporciones */
+    .menu-item.filosofia .contenido,
+    .menu-item.servicios .contenido {
+      min-width: 300px; /* Aumentar el ancho para mayor visibilidad */
     }
+
+    .submenu-item:hover {
+      background: rgba(255, 204, 0, 0.1);
+      color: #ffcc00;
+      padding-left: 25px;
+    }
+
+    .submenu-item,
+    .submenu-itemServ {
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.9);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: block;
+      align-items: center;
+      gap: 10px;
+    }
+
     .submenu-itemServ {
       display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 12px;
-      color: var(--text-light);
+      align-items: center; /* Alinear verticalmente la imagen con el texto */
+      gap: 10px; /* Espaciado entre la imagen y el texto */
       text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s var(--easing);
-      background: rgba(255, 255, 255, 0.05);
+      transition: all 0.2s ease;
+      color: white;
+      font-size: 0.95rem;
+      padding: 15px;
     }
     .submenu-itemServ img {
       width: 50px;
       height: 50px;
-      object-fit: contain;
-      transition: transform 0.3s var(--easing);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffcc00;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
     }
     .submenu-itemServ:hover {
       background: rgba(255, 255, 255, 0.1);
