@@ -3,30 +3,6 @@
 require_once __DIR__ . '/Config/Routes.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Protección Profesional</title>
-
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Index.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Header.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Inicio.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Filosofia.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Submenu.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Responsive.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Servicios.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Cotizar.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Liter:wght@300;400;700&family=Inter+Tight:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-
     <?php include '../SPP/Includes/Header.php'; ?>
 
     <!-- Sección Inicio -->

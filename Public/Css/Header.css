@@ -1,291 +1,320 @@
+header > * {
+  border: 1px solid red !important; /* Ver límites de elementos */
+}
 /* =========================================================
-   ESTILOS DEL HEADER
+   VARIABLES Y CONFIGURACIÓN BASE
    ========================================================= */
-   header {
+   :root {
+    --primary-color: #2A2A72;
+    --secondary-color: #009FFD;
+    --accent-color: #FF0076;
+    --text-light: #ffffff;
+    --bg-dark: rgba(0, 0, 0, 0.95);
+    --easing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --header-height: 80px;
+}
+
+/* =========================================================
+   ESTILOS GENERALES DEL HEADER
+   ========================================================= */
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 15px 20px;
+    background: var(--bg-dark);
+    padding: 10px 20px;
     z-index: 1000;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-  }
-  
-  header img {
-    height: 70px;
-    width: auto;
-    transition: transform 0.4s ease;
-    margin-right: auto; /* Empuja el contenido hacia la derecha */
-  }
-  
-  header img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* =========================================================
-     MENÚ HAMBURGUESA
-     ========================================================= */
-     .hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 30px;
-      height: 25px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      z-index: 1001;
-      position: fixed;
-      right: 20px; /* Asegura que esté alineado a la derecha */
-      top: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 5px;
-      padding: 5px;
-    }
-    
-  .hamburger span {
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    transition: all 0.3s ease;
-  }
- 
-  /* =========================================================
-     MENÚ PRINCIPAL
-     ========================================================= */
-  .menu-principal {
-    display: flex;
-    gap: 2rem;
     align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    height: var(--header-height);
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.4s var(--easing);
+    z-index: 1001;
+}
+
+header img:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* =========================================================
+   MENÚ HAMBURGUESA - MEJORADO
+   ========================================================= */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002;
+    margin-left: auto;
+    transition: transform 0.3s var(--easing);
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--text-light);
+    margin: 5px 0;
+    transition: all 0.4s var(--easing);
+    transform-origin: center;
+}
+
+/* Animación cuando está activo */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================================
+   MENÚ PRINCIPAL - ESTRUCTURA
+   ========================================================= */
+.menu-principal {
+    display: flex;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
-  }
-  
-  .menu-item {
-    color: #fff;
+    transition: all 0.4s var(--easing);
+}
+
+.menu-item {
+    color: var(--text-light);
     text-decoration: none;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.3s ease;
+    padding: 10px 15px;
     position: relative;
-    padding: 10px 0;
-    cursor: pointer;
-  }
-  
-  .menu-item::after {
+    transition: all 0.3s var(--easing);
+    border-radius: 5px;
+}
+
+.menu-item::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: 0;
+    left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #ffcc00 0%, #ff9900 100%);
-    transition: width 0.3s ease;
-  }
-  
-  .menu-item:hover::after {
+    background: var(--secondary-color);
+    transition: all 0.3s var(--easing);
+}
+
+.menu-item:hover {
+    color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item:hover::after {
     width: 100%;
-  }
-  
-  .menu-item:hover {
-    color: #ffcc00;
-  }
-  
-  /* =========================================================
-     SUBMENÚ
-     ========================================================= */
-  .has-submenu {
+    left: 0;
+}
+
+/* =========================================================
+   SUBMENÚS - MEJORADOS
+   ========================================================= */
+.has-submenu {
     position: relative;
-  }
-  
-  .menu-desplegable {
+}
+
+.menu-desplegable {
     position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contenido {
+}
+
+.contenido {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: var(--bg-dark);
     min-width: 260px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 15px;
-  }
-  
-  .contenido.visible {
+    transform: translateY(10px);
+    transition: all 0.3s var(--easing);
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contenido.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-  }
-  
-  .arrow.rotate {
+}
+
+.arrow {
+    font-size: 0.8em;
+    margin-left: 8px;
+    transition: transform 0.3s var(--easing);
+}
+
+.arrow.rotate {
     transform: rotate(180deg);
-  }
-  
-  @media (hover: hover) and (min-width: 769px) {
-    .has-submenu:hover .contenido {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-  }
-  
-  .submenu-item {
-    padding: 12px 20px;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
-    transition: all 0.2s ease;
-    text-decoration: none;
-    display: block;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .submenu-itemServ {
+}
+
+/* =========================================================
+   SUBMENÚ SERVICIOS - ESPECÍFICO
+   ========================================================= */
+#servicios-submenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+.submenu-itemServ {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    padding: 12px;
+    color: var(--text-light);
     text-decoration: none;
-    transition: all 0.2s ease;
-    color: white;
-    font-size: 0.95rem;
-    padding: 15px;
-  }
-  
-  .submenu-itemServ img {
+    border-radius: 8px;
+    transition: all 0.3s var(--easing);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.submenu-itemServ img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ffcc00;
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
-  }
-  
-  .submenu-item:hover {
-    background: rgba(255, 204, 0, 0.1);
-    color: #ffcc00;
-    padding-left: 25px;
-  }
-  
-  .submenu-itemServ:hover {
-    background: rgba(255, 204, 0, 0.1);
-    color: #ffcc00;
-    padding-left: 25px;
-  }
-  
-  .arrow {
-    font-size: 0.8em;
-    margin-left: 5px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  /* =========================================================
-     RESPONSIVE DESIGN
-     ========================================================= */
-  @media (max-width: 768px) {
-  
-    .menu-principal {
-      position: fixed;
-      top: 100px;
-      right: -100%;
-      width: 100%;
-      height: calc(100vh - 100px);
-      background: rgba(0, 0, 0, 0.95);
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 25px;
-      transition: right 0.3s ease;
-      overflow-y: auto;
-    }
-  
-    .menu-principal.active {
-      right: 0;
-    }
-  
-    .menu-item {
-      padding: 15px 0;
-      font-size: 1.2rem;
-      width: 100%;
-    }
-  
-    .has-submenu .contenido {
-      position: static;
-      background: transparent;
-      box-shadow: none;
-      margin: 10px 0 0 15px;
-      display: none;
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: none !important;
-    }
-  
-    .has-submenu .contenido.visible {
-      display: flex;
-    }
-  
-    .submenu-itemServ img {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .no-scroll {
-      overflow: hidden;
-    }
-  }
-  
-  /* =========================================================
-     AJUSTES ESPECÍFICOS PARA MOVIL
-     ========================================================= */
-  @media (max-width: 768px) {
-    header {
-      padding: 10px 15px;
-    }
-  
-    header img {
-      height: 50px;
-    }
-  
-    .hamburger {
-      width: 25px;
-      height: 20px;
-    }
-  
-    .menu-principal {
-      top: 80px;
-      height: calc(100vh - 80px);
-    }
-  
-    .menu-item {
-      padding: 12px 0;
-      font-size: 1rem;
-    }
-  
-    .submenu-item {
-      padding: 10px 15px;
-      font-size: 0.9rem;
-    }
-  }
- 
-    
+    object-fit: contain;
+    transition: transform 0.3s var(--easing);
+}
+
+.submenu-itemServ:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.submenu-itemServ:hover img {
+    transform: scale(1.1);
+}
+
+/* =========================================================
+   DISEÑO RESPONSIVE
+   ========================================================= */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
+    .hamburger {
+        display: block;
+    }
+    
+    .menu-principal {
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 100%;
+        max-width: 300px;
+        height: calc(100vh - var(--header-height));
+        background: var(--bg-dark);
+        flex-direction: column;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .menu-principal.active {
+        right: 0;
+    }
+    
+    .has-submenu .contenido {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+    
+    .has-submenu .contenido.visible {
+        max-height: 500px;
+        padding: 10px 0 0 20px;
+    }
+    
+    #servicios-submenu {
+        grid-template-columns: 1fr;
+    }
+    
+    .submenu-itemServ {
+        padding: 10px;
+    }
+    
+    .submenu-itemServ img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* =========================================================
+   EFECTOS DE HOVER Y FOCUS
+   ========================================================= */
+@media (hover: hover) {
+    .has-submenu:hover .contenido {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .menu-item:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+/* =========================================================
+   DISEÑO RESPONSIVE CORREGIDO
+   ========================================================= */
+   @media (max-width: 768px) {
+    header {
+        padding: 10px 15px !important;
+        gap: 15px; /* Añadir espacio entre elementos */
+    }
+    
+    /* Logo */
+    header > a:first-child {
+        flex: 0 0 auto !important; /* Evitar que crezca/reduzca */
+        max-width: 180px;
+    }
+    
+    /* Botón hamburguesa */
+    .hamburger {
+        display: flex !important;
+        order: 1 !important; /* Cambiar orden */
+        margin-left: auto !important;
+        padding: 8px; /* Ajustar para móvil */
+    }
+    
+    /* Menú móvil */
+    .menu-principal {
+        right: -100% !important;
+        width: 85% !important; /* Ancho más apropiado */
+        max-width: none !important;
+    }
+}
+
+/* Asegurar visibilidad del hamburguesa */
+.hamburger {
+    position: static !important;
+    transform: none !important;
+    background: transparent !important;
 }
