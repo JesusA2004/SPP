@@ -125,45 +125,46 @@ require_once __DIR__ . '/Config/Routes.php';
     <!-- Sección Servicios -->
     <section id="servicios" class="servicios">
         <h2 class="section-title">Nuestros Servicios</h2>
+        <br>
         <p align="justify">
-            En Servicios de Protección Profesional, ofrecemos una amplia gama de servicios de seguridad privada para satisfacer las necesidades de nuestros clientes.
+            En Servicios de Protección Profesional, ofrecemos una amplia gama de servicios 
+        </p>
+        <p align="justify">
+            de seguridad privada para satisfacer las necesidades de nuestros clientes. 
         </p>
         <br>
+        <br>
         <figure class="icon-cards mt-3">
-            <div class="icon-cards__content"> <!-- Se mantiene la animación automática -->
-                <div class="icon-cards__item">
+            <div class="icon-cards__content">
+                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/guardiasSegu.png');">
                     <div class="card-content">
                         <h3>Guardias de Seguridad Intramuros</h3>
-                        <img src="imagen1.jpg" alt="Guardias de Seguridad" class="card-img">
                         <p>Proporcionamos servicios de guardias de seguridad intramuros para proteger su propiedad las 24 horas.</p>
-                        <button class="btn-ver-mas">Ver más</button>
+                        <a class="btn-ver-mas" href="../Views/guardiaSegu.php">Ver más</a>
                     </div>
                 </div>
 
-                <div class="icon-cards__item">
+                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/escoltaServ.png');">
                     <div class="card-content">
                         <h3>Escolta</h3>
-                        <img src="imagen2.jpg" alt="Escolta" class="card-img">
                         <p>Brindamos servicios de escolta para personas o bienes de alto valor.</p>
-                        <button class="btn-ver-mas">Ver más</button>
+                        <a class="btn-ver-mas" href="../Views/escolta.php">Ver más</a>
                     </div>
                 </div>
 
-                <div class="icon-cards__item">
+                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/camarasSegu.png');">
                     <div class="card-content">
                         <h3>Instalación de CCTV</h3>
-                        <img src="imagen3.jpg" alt="Instalación de CCTV" class="card-img">
                         <p>Instalación de sistemas de cámaras de vigilancia para mayor seguridad en su propiedad.</p>
-                        <button class="btn-ver-mas">Ver más</button>
+                        <a class="btn-ver-mas" href="../Views/sistemaVideoV.php">Ver más</a>
                     </div>
                 </div>
 
-                <div class="icon-cards__item">
+                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/cercasServ.png');">
                     <div class="card-content">
                         <h3>Instalación de Cercas Eléctricas</h3>
-                        <img src="imagen4.jpg" alt="Cercas Eléctricas" class="card-img">
                         <p>Ofrecemos la instalación de cercas eléctricas y de navajas para máxima protección.</p>
-                        <button class="btn-ver-mas">Ver más</button>
+                        <a class="btn-ver-mas" href="../Views/cercasElec.php">Ver más</a>
                     </div>
                 </div>
             </div>
