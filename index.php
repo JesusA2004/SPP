@@ -171,42 +171,49 @@ require_once __DIR__ . '/Config/Routes.php';
         </figure>
     </section>
 
-
-
     <!-- Espacio adicional entre secciones -->
     <div class="section-spacing"></div>
 
     <!-- Sección Cotizar -->
     <section id="cotizar">
         <h2 class="section-title">Contáctanos completando nuestro formulario y descubre por qué nuestros clientes confían en Servicios de Protección Profesional.</h2>
-        <form method="POST" action="Config/Mail.php" class="cotizar-form">
-            <div class="input-container">
-                <label for="nameuser">Nombre Completo</label>
-                <input type="text" placeholder="Ingresa tu nombre completo" required id="nameuser" name="nameuser">
-            </div>
-
-            <div class="input-container">
-                <label for="correo">Correo Electrónico</label>
-                <input type="email" placeholder="Ingresa tu correo electrónico" required id="correo" name="correo">
-            </div>
-
-            <div class="input-container">
-                <label for="telefono">Teléfono</label>
-                <input type="number" placeholder="Ingresa tu teléfono" required id="telefono" name="telefono">
-            </div>
-
-            <div class="input-container">
-                <label for="empresa">Nombre de la empresa, evento o actividad</label>
-                <input type="text" placeholder="Ej. Mi Empresa, Evento de Boda, Reunión Corporativa" required id="empresa" name="empresa">
-            </div>
-
-            <div class="input-container">
-                <label for="descripcion">Descripción de Servicios</label>
-                <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
+        
+        <div class="cotizar-container">
+            <!-- Imagen a la izquierda -->
+            <div class="cotizar-image">
+                <img src="<?php echo IMG_URL; ?>/seccionCotizar.jpg" alt="Cotizar">
             </div>
             
-            <button type="submit">Enviar cotización</button>
-        </form>
+            <!-- Formulario a la derecha -->
+            <form method="POST" action="Config/Mail.php" class="cotizar-form">
+                <div class="input-container">
+                    <label for="nameuser">Nombre Completo</label>
+                    <input type="text" placeholder="Ingresa tu nombre completo" required id="nameuser" name="nameuser">
+                </div>
+
+                <div class="input-container">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required id="correo" name="correo">
+                </div>
+
+                <div class="input-container">
+                    <label for="telefono">Teléfono</label>
+                    <input type="number" placeholder="Ingresa tu teléfono" required id="telefono" name="telefono">
+                </div>
+
+                <div class="input-container">
+                    <label for="empresa">Nombre de la empresa, evento o actividad</label>
+                    <input type="text" placeholder="Ej. Mi Empresa, Evento de Boda, Reunión Corporativa" required id="empresa" name="empresa">
+                </div>
+
+                <div class="input-container">
+                    <label for="descripcion">Descripción de Servicios</label>
+                    <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
+                </div>
+                
+                <button type="submit">Enviar cotización</button>
+            </form>
+        </div>
 
         <!-- Mostrar mensaje solo después de enviar el formulario -->
         <?php if (isset($_GET['mensaje'])): ?>
@@ -226,6 +233,7 @@ require_once __DIR__ . '/Config/Routes.php';
             </div>
         <?php endif; ?>
     </section>
+
 
     <!-- Script principal (ajusta la ruta si es necesario) -->
     <script src="<?php echo JS_URL; ?>/Principal.js"></script>
