@@ -122,36 +122,55 @@ require_once __DIR__ . '/Config/Routes.php';
     <!-- Espacio adicional entre secciones -->
     <div class="section-spacing"></div>
 
-    <!-- Sección Servicios con 4 cards y con imagen descriptiva en cada una -->
-    <section id="servicios">
+    <!-- Sección Servicios -->
+    <section id="servicios" class="servicios">
         <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/guardiasSegu.png" alt="Guardias de seguridad" class="service-img">
-                <h3>Guardias de seguridad</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button onclick="window.location.href='detalle-guardias.php'">Ver más</button>
+        <p align="justify">
+            En Servicios de Protección Profesional, ofrecemos una amplia gama de servicios de seguridad privada para satisfacer las necesidades de nuestros clientes.
+        </p>
+        <br>
+        <figure class="icon-cards mt-3">
+            <div class="icon-cards__content"> <!-- Se mantiene la animación automática -->
+                <div class="icon-cards__item">
+                    <div class="card-content">
+                        <h3>Guardias de Seguridad Intramuros</h3>
+                        <img src="imagen1.jpg" alt="Guardias de Seguridad" class="card-img">
+                        <p>Proporcionamos servicios de guardias de seguridad intramuros para proteger su propiedad las 24 horas.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </div>
+
+                <div class="icon-cards__item">
+                    <div class="card-content">
+                        <h3>Escolta</h3>
+                        <img src="imagen2.jpg" alt="Escolta" class="card-img">
+                        <p>Brindamos servicios de escolta para personas o bienes de alto valor.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </div>
+
+                <div class="icon-cards__item">
+                    <div class="card-content">
+                        <h3>Instalación de CCTV</h3>
+                        <img src="imagen3.jpg" alt="Instalación de CCTV" class="card-img">
+                        <p>Instalación de sistemas de cámaras de vigilancia para mayor seguridad en su propiedad.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </div>
+
+                <div class="icon-cards__item">
+                    <div class="card-content">
+                        <h3>Instalación de Cercas Eléctricas</h3>
+                        <img src="imagen4.jpg" alt="Cercas Eléctricas" class="card-img">
+                        <p>Ofrecemos la instalación de cercas eléctricas y de navajas para máxima protección.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </div>
             </div>
-            <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/cercasServ.png" alt="Cercas eléctricas" class="service-img">
-                <h3>Cercas eléctricas</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button onclick="window.location.href='detalle-cercas.php'">Ver más</button>
-            </div>
-            <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/camarasSegu.png" alt="Sistemas de videovigilancia" class="service-img">
-                <h3>Sistemas de videovigilancia</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button onclick="window.location.href='detalle-videovigilancia.php'">Ver más</button>
-            </div>
-            <div class="service-item">
-                <img src="<?php echo IMG_URL; ?>/escoltaServ.png" alt="Monitoreo 24/7" class="service-img">
-                <h3>Escolta</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button onclick="window.location.href='detalle-monitoreo.php'">Ver más</button>
-            </div>
-        </div>
+        </figure>
     </section>
+
+
 
     <!-- Espacio adicional entre secciones -->
     <div class="section-spacing"></div>

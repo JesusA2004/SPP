@@ -53,19 +53,23 @@ require_once __DIR__ . '/../Config/Routes.php';
           <div class="menu-desplegable">
             <span class="menu-item submenu-toggle">Nuestros servicios <span class="arrow">▼</span></span>
             <div class="contenido" id="servicios-submenu">
+              <a href="#servicios" class="submenu-itemServ">
+                <img src="<?php echo IMG_URL; ?>/todosServicios.png" alt="TodosServicios">
+                Todos los servicios
+              </a>
               <a href="../Views/guardiaSegu.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/guardias.png" alt="GuardiasSeguridad">
                 Guardias de seguridad intramuros
               </a>
-              <a href="../Views/Escolta.php" class="submenu-itemServ">
+              <a href="../Views/escolta.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
                 Escolta
               </a>
-              <a href="../Views/CCTV.php" class="submenu-itemServ">
+              <a href="../Views/sistemaVideoV.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cctv.png" alt="CCTV">
                 Instalación de Circuitos Cerrados de Televisión
               </a>
-              <a href="../Views/cercasNavajas.php" class="submenu-itemServ">
+              <a href="../Views/cercasElec.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cercas.png" alt="Cercas">
                 Instalación de Cercas Eléctricas y navajas
               </a>
@@ -80,5 +84,3 @@ require_once __DIR__ . '/../Config/Routes.php';
   
   <script src="<?php echo JS_URL; ?>/Header.js">    
   </script>
-</body>
-</html>
