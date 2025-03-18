@@ -1,5 +1,3 @@
-// footer.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const mapButton = document.querySelector('.map-button');
     
@@ -9,10 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-    });
-    
+    // Asegurarse de que footerLinks está bien definido
+    const footerLinks = document.querySelectorAll('.footer-link');
+
+    // Verifica si hay enlaces antes de intentar recorrerlos
+    if (footerLinks.length > 0) {
+        footerLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    }
 });
