@@ -2,6 +2,7 @@
   padding: 50px 0;
   height: 800px;
   background-color: rgb(226, 231, 236);
+  border-radius: 30px;
 }
 
 .servicios .section-title {

@@ -44,9 +44,20 @@ require_once __DIR__ . '/../Config/Routes.php';
           <div class="menu-desplegable">
             <span class="menu-item">Filosofía Empresarial <span class="arrow">▼</span></span>
             <div class="contenido" id="filosofia-submenu">
-              <a href="#mision" class="submenu-item">Misión</a>
-              <a href="#vision" class="submenu-item">Visión</a>
-              <a href="#clientes" class="submenu-item">Clientes Distinguidos</a>
+              <a href="#mision" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/misionHeader.png" alt="mision">
+                Misión
+              </a>
+
+              <a href="#vision" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/visionHeader.png" alt="vision">
+                Visión
+              </a>
+              <a href="#clientes" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/clientesHeader.png" alt="clientes">
+                Clientes Distinguidos
+              </a>
+
             </div>
           </div>
         </div>

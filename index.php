@@ -117,10 +117,12 @@ require_once __DIR__ . '/Config/Routes.php';
             </div>
             <button class="cliente-next">&#10095;</button>
         </div>
+        <br>
     </section>
 
     <!-- Espacio adicional entre secciones -->
     <div class="section-spacing"></div>
+    <br>
 
     <!-- Sección Servicios -->
     <section id="servicios" class="servicios">
@@ -173,46 +175,49 @@ require_once __DIR__ . '/Config/Routes.php';
 
     <!-- Espacio adicional entre secciones -->
     <div class="section-spacing"></div>
+    <br>
 
     <!-- Sección Cotizar -->
     <section id="cotizar">
-        <h2 class="section-title">Contáctanos completando nuestro formulario y descubre por qué nuestros clientes confían en Servicios de Protección Profesional.</h2>
-        
         <div class="cotizar-container">
             <!-- Imagen a la izquierda -->
             <div class="cotizar-image">
-                <img src="<?php echo IMG_URL; ?>/seccionCotizar.jpg" alt="Cotizar">
+                <img id="cotizarImg" src="<?php echo IMG_URL; ?>/seccionCotizar1.jpg" alt="Cotizar">
             </div>
-            
-            <!-- Formulario a la derecha -->
-            <form method="POST" action="Config/Mail.php" class="cotizar-form">
-                <div class="input-container">
-                    <label for="nameuser">Nombre Completo</label>
-                    <input type="text" placeholder="Ingresa tu nombre completo" required id="nameuser" name="nameuser">
-                </div>
 
-                <div class="input-container">
-                    <label for="correo">Correo Electrónico</label>
-                    <input type="email" placeholder="Ingresa tu correo electrónico" required id="correo" name="correo">
-                </div>
+            <div class="cotizar-form-container">
+                <h2 class="section-title">Contáctanos completando nuestro formulario y descubre por qué nuestros clientes confían en Servicios de Protección Profesional.</h2>
 
-                <div class="input-container">
-                    <label for="telefono">Teléfono</label>
-                    <input type="number" placeholder="Ingresa tu teléfono" required id="telefono" name="telefono">
-                </div>
+                <!-- Formulario a la derecha -->
+                <form method="POST" action="Config/Mail.php" class="cotizar-form">
+                    <div class="input-container">
+                        <label for="nameuser">Nombre Completo</label>
+                        <input type="text" placeholder="Ingresa tu nombre completo" required id="nameuser" name="nameuser">
+                    </div>
 
-                <div class="input-container">
-                    <label for="empresa">Nombre de la empresa, evento o actividad</label>
-                    <input type="text" placeholder="Ej. Mi Empresa, Evento de Boda, Reunión Corporativa" required id="empresa" name="empresa">
-                </div>
+                    <div class="input-container">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" placeholder="Ingresa tu correo electrónico" required id="correo" name="correo">
+                    </div>
 
-                <div class="input-container">
-                    <label for="descripcion">Descripción de Servicios</label>
-                    <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
-                </div>
-                
-                <button type="submit" class="botonEnviar">Enviar cotización</button>
-            </form>
+                    <div class="input-container">
+                        <label for="telefono">Teléfono</label>
+                        <input type="number" placeholder="Ingresa tu teléfono" required id="telefono" name="telefono">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="empresa">Nombre de la empresa, evento o actividad</label>
+                        <input type="text" placeholder="Ej. Mi Empresa, Evento de Boda, Reunión Corporativa" required id="empresa" name="empresa">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="descripcion">Descripción de Servicios</label>
+                        <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="botonEnviar">Enviar cotización</button>
+                </form>
+            </div>
         </div>
 
         <!-- Mostrar mensaje solo después de enviar el formulario -->
@@ -250,11 +255,33 @@ require_once __DIR__ . '/Config/Routes.php';
             </div>
         <?php endif; ?>
     </section>
-
+    <br>               
 
     <!-- Script principal (ajusta la ruta si es necesario) -->
     <script src="<?php echo JS_URL; ?>/Principal.js"></script>
     <script src="<?php echo JS_URL; ?>/Modal.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let imagenes = [
+                "<?php echo IMG_URL; ?>/seccionCotizar1.jpg",
+                "<?php echo IMG_URL; ?>/seccionCotizar2.png",
+                "<?php echo IMG_URL; ?>/seccionCotizar3.png"
+            ];
+            
+            let index = 0;
+            let imgElement = document.getElementById("cotizarImg");
+
+            setInterval(() => {
+                imgElement.style.opacity = "0"; // Desvanecer la imagen actual
+
+                setTimeout(() => {
+                    index = (index + 1) % imagenes.length;
+                    imgElement.src = imagenes[index] + "?t=" + new Date().getTime(); // Forzar la recarga
+                    imgElement.style.opacity = "1"; // Hacer visible la nueva imagen
+                }, 500); // Tiempo suficiente para la transición de opacidad
+            }, 4000); // Cambia la imagen cada 4 segundos
+        });
+    </script>
 
     <?php include '../SPP/Includes/Footer.php'; ?>
 

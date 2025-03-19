@@ -38,10 +38,44 @@
     gap: 2rem; /* Espacio entre la imagen y el formulario */
 }
 
-#cotizar .cotizar-image img {
-    max-width: 100%; /* Ajusta la imagen para que no se desborde */
-    height: auto;
+#cotizar .cotizar-image {
+    width: 700px; /* Ancho fijo del contenedor */
+    height: 1000px; /* Alto fijo del contenedor (ajústalo según necesites) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que la imagen se salga */
     border-radius: 10px;
+    background: #f0f0f0; /* Opcional: color de fondo para evitar espacios vacíos */
+}
+
+#cotizar .cotizar-image img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa todo el alto del contenedor */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    border-radius: 10px;
+}
+
+.cotizar-image img {
+    transition: opacity 0.5s ease-in-out;
+    max-width: 100%; 
+}
+
+/*Formulario*/
+/* Ajustar el contenedor del formulario y título */
+.cotizar-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%; /* Ajusta el tamaño para que se alinee con el formulario */
+}
+
+/* Ajustar el título */
+.cotizar-form-container .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
 }
 
 #cotizar .cotizar-form {
@@ -57,11 +91,12 @@
 
 #cotizar .section-title {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
+    text-align: left;
     color: #003366;
     margin-bottom: 2rem;
     position: relative;
     text-shadow: 2px 2px 4px rgba(42, 123, 189, 0.1);
+    margin-left: 30px;
 }
 
 #cotizar form {

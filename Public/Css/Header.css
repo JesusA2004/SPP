@@ -184,13 +184,41 @@
       .menu-item.servicios .contenido {
         min-width: 300px; /* Aumentar el ancho para mayor visibilidad */
       }
-  
+
+      /*Submenú Filosofía */	
+      
+      .submenu-item{
+        display: flex;
+        align-items: center; /* Alinear verticalmente la imagen con el texto */
+        justify-content: center;
+        gap: 10px; /* Espaciado entre la imagen y el texto */
+        text-decoration: none;
+        transition: all 0.2s ease;
+        color: white;
+        font-size: 0.95rem;
+        padding: 15px;
+        position: relative;
+      }
+      
+      .submenu-item img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ffcc00;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+      }
+
       .submenu-item:hover {
         background: rgba(255, 204, 0, 0.1);
         color: #ffcc00;
         padding-left: 25px;
       }
-  
+
+      .submenu-item:hover img {
+        transform: scale(1.1);
+      }
+
       .submenu-item,
       .submenu-itemServ {
         padding: 12px 20px;
@@ -202,7 +230,9 @@
         align-items: center;
         gap: 10px;
       }
-  
+      
+      /*Submenú servicio*/
+
       .submenu-itemServ {
         display: flex;
         align-items: center; /* Alinear verticalmente la imagen con el texto */
