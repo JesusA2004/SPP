@@ -22,8 +22,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 /* ========================================
@@ -100,6 +98,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 1rem;
   margin: 0;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .card {
@@ -112,6 +112,8 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
   margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .card::before {

@@ -25,7 +25,7 @@ require_once __DIR__ . '/../Config/Routes.php';
 <body>
 
   <header>
-    <a href="index.php">
+    <a href="../index.php">
       <img src="<?php echo IMG_URL; ?>/logo.png" alt="Logo de la empresa">
     </a>
     <!-- Botón Hamburguesa -->
@@ -36,14 +36,14 @@ require_once __DIR__ . '/../Config/Routes.php';
     </button>
     <nav>
       <div class="menu-principal">
-        <a href="#inicio" class="menu-item">Inicio</a>
+        <a href="../index.php#inicio" class="menu-item">Inicio</a>
         <div class="has-submenu">
           <div class="menu-desplegable">
             <span class="menu-item">Filosofía Empresarial <span class="arrow">▼</span></span>
             <div class="contenido" id="filosofia-submenu">
-              <a href="#mision" class="submenu-item">Misión</a>
-              <a href="#vision" class="submenu-item">Visión</a>
-              <a href="#clientes" class="submenu-item">Clientes Distinguidos</a>
+              <a href="../index.php#mision" class="submenu-item">Misión</a>
+              <a href="../index.php#vision" class="submenu-item">Visión</a>
+              <a href="../index.php#clientes" class="submenu-item">Clientes Distinguidos</a>
             </div>
           </div>
         </div>
@@ -51,27 +51,27 @@ require_once __DIR__ . '/../Config/Routes.php';
           <div class="menu-desplegable">
             <span class="menu-item submenu-toggle">Nuestros servicios <span class="arrow">▼</span></span>
             <div class="contenido" id="servicios-submenu">
-              <a href="#servicios" class="submenu-itemServ">
+              <a href="../index.php#servicios" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/todosServicios.png" alt="TodosServicios">
                 Todos los servicios
               </a>
-              <a href="../Views/guardiaSegu.php" class="submenu-itemServ">
+              <a href="guardiaSegu.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/guardias.png" alt="GuardiasSeguridad">
                 Guardias de seguridad intramuros
               </a>
-              <a href="../Views/escolta.php" class="submenu-itemServ">
+              <a href="escolta.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
                 Escolta
               </a>
-              <a href="../Views/cercasElec.php" class="submenu-itemServ">
+              <a href="cercasElec.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cercas.png" alt="Cercas">
                 Instalación de Cercas Eléctricas y navajas
               </a>
             </div>
           </div>
         </div>
-        <a href="#cotizar" class="menu-item">Cotizar</a>
-        <a href="#contacto" class="menu-item">Contacto</a>
+        <a href="../index.php#cotizar" class="menu-item">Cotizar</a>
+        <a href="../index.php#contacto" class="menu-item">Contacto</a>
       </div>
     </nav>
   </header>
