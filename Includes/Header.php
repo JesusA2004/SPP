@@ -44,15 +44,21 @@ require_once __DIR__ . '/../Config/Routes.php';
           <div class="menu-desplegable">
             <span class="menu-item">Filosofía Empresarial <span class="arrow">▼</span></span>
             <div class="contenido" id="filosofia-submenu">
-              <a href="#mision" class="submenu-item">
+              <a href="#empresa" class="submenu-item">
                 <img src="<?php echo IMG_URL; ?>/misionHeader.png" alt="mision">
                 Misión
               </a>
 
-              <a href="#vision" class="submenu-item">
+              <a href="#empresa" class="submenu-item">
                 <img src="<?php echo IMG_URL; ?>/visionHeader.png" alt="vision">
                 Visión
               </a>
+
+              <a href="#empresa" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/valoresHeader.png" alt="valores">
+                Valores
+              </a>
+
               <a href="#clientes" class="submenu-item">
                 <img src="<?php echo IMG_URL; ?>/clientesHeader.png" alt="clientes">
                 Clientes Distinguidos
@@ -69,19 +75,19 @@ require_once __DIR__ . '/../Config/Routes.php';
                 <img src="<?php echo IMG_URL; ?>/todosServicios.png" alt="TodosServicios">
                 Todos los servicios
               </a>
-              <a href="../Views/guardiaSegu.php" class="submenu-itemServ">
+              <a href="../Pages/guardiaSegu.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/guardias.png" alt="GuardiasSeguridad">
                 Guardias de seguridad intramuros
               </a>
-              <a href="../Views/escolta.php" class="submenu-itemServ">
+              <a href="../Pages/escolta.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
                 Escolta
               </a>
-              <a href="../Views/sistemaVideoV.php" class="submenu-itemServ">
+              <a href="../Pages/sistemaVideoV.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cctv.png" alt="CCTV">
                 Instalación de Circuitos Cerrados de Televisión
               </a>
-              <a href="../Views/cercasElec.php" class="submenu-itemServ">
+              <a href="../Pages/cercasElec.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cercas.png" alt="Cercas">
                 Instalación de Cercas Eléctricas y navajas
               </a>

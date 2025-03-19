@@ -190,7 +190,6 @@
       .submenu-item{
         display: flex;
         align-items: center; /* Alinear verticalmente la imagen con el texto */
-        justify-content: center;
         gap: 10px; /* Espaciado entre la imagen y el texto */
         text-decoration: none;
         transition: all 0.2s ease;
@@ -219,7 +218,6 @@
         transform: scale(1.1);
       }
 
-      .submenu-item,
       .submenu-itemServ {
         padding: 12px 20px;
         font-size: 0.95rem;
@@ -252,8 +250,9 @@
         box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
       }
       .submenu-itemServ:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 204, 0, 0.1);
         transform: translateY(-3px);
+        padding-left: 15px;
       }
       .submenu-itemServ:hover img {
         transform: scale(1.1);
