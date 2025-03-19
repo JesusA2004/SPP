@@ -1,12 +1,13 @@
-/* Estilos para la sección de clientes */
+/* Estilos base */
 #clientes {
     padding: 2rem 0;
     position: relative;
-    background: linear-gradient(190deg, #000000, #030871); /* Degradado mejorado */
+    background: linear-gradient(190deg, #000000, #030871);
     color: white;
     text-align: center;
 }
 
+/* Animación de entrada */
 @keyframes fadeInScale {
     0% {
         opacity: 0;
@@ -18,33 +19,29 @@
     }
 }
 
+/* Título de Clientes Distinguidos */
 .section-titleClientes {
     font-family: 'Poppins', sans-serif;
     font-size: 28px;
     color: #ffffff;
-    text-shadow: 
-        0 0 5px rgba(255, 255, 255, 0.8),  /* Brillo suave */
-        2px 2px 4px rgba(0, 0, 0, 0.2);   /* Sombra sutil para contraste */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     animation: fadeInScale 1s ease-in-out;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
-
-
-/* Efecto al hacer hover */
 .section-titleClientes:hover {
-    color: #c6b302; /* Cambia el color del texto */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    text-shadow: 4px 4px 8px rgba(244, 195, 0, 0.92); /* Efecto de brillo */
+    color: #c6b302;
+    transform: scale(1.1);
+    text-shadow: 4px 4px 8px rgba(244, 195, 0, 0.92);
 }
 
-/* Efecto cuando la sección entra en la pantalla */
+/* Efecto de aparición */
 .reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -78,7 +75,7 @@
 /* Tarjetas de clientes */
 .cliente-card {
     width: 390px;
-    flex: 0 0 calc(50% - 10px); /* Se mantienen dos visibles */
+    flex: 0 0 calc(50% - 10px);
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -87,7 +84,6 @@
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
 }
-
 .cliente-card:hover {
     transform: translateY(-8px);
 }
@@ -95,8 +91,8 @@
 /* Imágenes dentro de las tarjetas */
 .cliente-card img {
     width: 100%;
-    height: 100%; /* Ajusta la altura al 100% de la tarjeta */
-    object-fit:contain;
+    height: 100%;
+    object-fit: contain;
     border-radius: 8px;
 }
 
@@ -120,17 +116,14 @@
     align-items: center;
     justify-content: center;
 }
-
 .cliente-prev:hover, .cliente-next:hover {
     background: #ff6b6b;
     color: white;
     transform: scale(1.1);
 }
-
 .cliente-prev {
     left: 15px;
 }
-
 .cliente-next {
     right: 15px;
 }
@@ -141,31 +134,7 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .cliente-card {
-        flex: 0 0 100%; /* Muestra una tarjeta a la vez */
-        max-width: 260px;
-    }
-
-    .clientes-container {
-        padding: 0 20px;
-    }
-
-    .cliente-prev, .cliente-next {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-
-    #clientes p {
-        font-size: 16px; /* Reduce un poco el tamaño de fuente */
-        text-align: center; /* Centra el texto en pantallas pequeñas */
-        max-width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
-        padding: 0 20px; /* Agrega un poco de espacio a los lados */
-    }
-}
-
+/* Texto de la sección clientes */
 #clientes p {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
@@ -173,7 +142,151 @@
     text-align: justify;
     line-height: 1.6;
     margin: 10px 0;
-    max-width: 900px; 
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/******************************************************
+  MEDIA QUERIES (Responsive)
+******************************************************/
+
+/* Extra pequeños: hasta 320px */
+@media (max-width: 320px) {
+    .cliente-card {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 280px;
+    }
+    .clientes-container {
+        padding: 0 10px;
+        max-width: 280px;
+    }
+    .cliente-prev, .cliente-next {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    #clientes p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+/* Pequeños: de 321px a 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+    .cliente-card {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .clientes-container {
+        padding: 0 15px;
+        max-width: 260px;
+    }
+    .cliente-prev, .cliente-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    #clientes p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}
+
+/* Dispositivos pequeños a medianos: de 481px a 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    .cliente-card {
+        flex: 0 0 100%;
+        max-width: 280px;
+    }
+    .clientes-container {
+        padding: 0 20px;
+        max-width: 280px;
+    }
+    .cliente-prev, .cliente-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    #clientes p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+/* Tablets: de 768px a 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .cliente-card {
+        flex: 0 0 100%;
+        max-width: 300px;
+    }
+    .clientes-container {
+        padding: 0 20px;
+        max-width: 600px;
+    }
+    .cliente-prev, .cliente-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    #clientes p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+/* Laptops pequeñas y dispositivos medianos: de 992px a 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cliente-card {
+        width: 350px;
+        flex: 0 0 calc(50% - 10px);
+    }
+    .clientes-container {
+        max-width: 800px;
+        padding: 0 30px;
+    }
+    #clientes p {
+        font-size: 17px;
+    }
+    .cliente-prev, .cliente-next {
+        top: calc(50% + 10px);
+    }
+}
+
+/* Pantallas grandes: de 1200px a 1599px */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .cliente-card {
+        width: 390px;
+        flex: 0 0 calc(50% - 10px);
+    }
+    .clientes-container {
+        max-width: 900px;
+        padding: 0 50px;
+    }
+    #clientes p {
+        font-size: 18px;
+    }
+    .cliente-prev, .cliente-next {
+        top: 50%;
+    }
+}
+
+/* Pantallas extra grandes: 1600px en adelante */
+@media (min-width: 1600px) {
+    .cliente-card {
+        width: 420px;
+        flex: 0 0 calc(50% - 10px);
+    }
+    .clientes-container {
+        max-width: 1100px;
+        padding: 0 60px;
+    }
+    #clientes p {
+        font-size: 20px;
+    }
 }

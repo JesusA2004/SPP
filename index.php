@@ -211,7 +211,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
                 </div>
                 
-                <button type="submit">Enviar cotización</button>
+                <button type="submit" class="botonEnviar">Enviar cotización</button>
             </form>
         </div>
 
