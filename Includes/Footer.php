@@ -59,7 +59,7 @@
                         <div class="footer-divider small"></div>
                         <div class="contact-item">
                             <span class="contact-icon">✉️</span>
-                            <p>spp_02@hotmail.com</p>
+                            <p>spp.segpriv@gmail.com</p>
                         </div>
                     </div>
                 </div>

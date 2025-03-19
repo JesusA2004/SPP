@@ -41,8 +41,8 @@ require_once __DIR__ . '/../Config/Routes.php';
           <div class="menu-desplegable">
             <span class="menu-item">Filosofía Empresarial <span class="arrow">▼</span></span>
             <div class="contenido" id="filosofia-submenu">
-              <a href="../index.php#mision" class="submenu-item">Misión</a>
-              <a href="../index.php#vision" class="submenu-item">Visión</a>
+              <a href="../index.php#empresa" class="submenu-item">Misión</a>
+              <a href="../index.php#empresa" class="submenu-item">Visión</a>
               <a href="../index.php#clientes" class="submenu-item">Clientes Distinguidos</a>
             </div>
           </div>
@@ -85,6 +85,8 @@ require_once __DIR__ . '/../Config/Routes.php';
       <div class="section-title">
         <h2>Servicio Integral de Videovigilancia CCTV</h2>
       </div>
+
+      <br>
 
       <!-- Sección Introducción + Imagen -->
       <div class="intro-section">
@@ -205,11 +207,9 @@ require_once __DIR__ . '/../Config/Routes.php';
     </div>
   </section>
 
-  <!-- Scripts (No modificar header/footer) -->
   <script src="<?php echo JS_URL; ?>/Servicios.js"></script>
   <script src="<?php echo JS_URL; ?>/Header.js"></script>
   
-  <!-- FOOTER (No se modifica) -->
-  <?php include '../Includes/Footer.php'; ?>
+  <?php include '../Includes/FooterServicios.php'; ?>
 </body>
 </html>
