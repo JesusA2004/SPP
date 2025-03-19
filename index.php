@@ -140,7 +140,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <div class="card-content">
                         <h3>Guardias de Seguridad Intramuros</h3>
                         <p>Proporcionamos servicios de guardias de seguridad intramuros para proteger su propiedad las 24 horas.</p>
-                        <a class="btn-ver-mas" href="../Views/guardiaSegu.php">Ver más</a>
+                        <a class="btn-ver-mas" href=Pages/guardiaSegu.php>Ver más</a>
                     </div>
                 </div>
 
@@ -148,7 +148,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <div class="card-content">
                         <h3>Escolta</h3>
                         <p>Brindamos servicios de escolta para personas o bienes de alto valor.</p>
-                        <a class="btn-ver-mas" href="../Views/escolta.php">Ver más</a>
+                        <a class="btn-ver-mas" href="Pages/escolta.php">Ver más</a>
                     </div>
                 </div>
 
@@ -156,7 +156,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <div class="card-content">
                         <h3>Instalación de CCTV</h3>
                         <p>Instalación de sistemas de cámaras de vigilancia para mayor seguridad en su propiedad.</p>
-                        <a class="btn-ver-mas" href="../Views/sistemaVideoV.php">Ver más</a>
+                        <a class="btn-ver-mas" href="Pages/sistemaVideoV.php">Ver más</a>
                     </div>
                 </div>
 
@@ -164,7 +164,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <div class="card-content">
                         <h3>Instalación de Cercas Eléctricas</h3>
                         <p>Ofrecemos la instalación de cercas eléctricas y de navajas para máxima protección.</p>
-                        <a class="btn-ver-mas" href="../Views/cercasElec.php">Ver más</a>
+                        <a class="btn-ver-mas" href="Pages/cercasElec.php">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -216,19 +216,36 @@ require_once __DIR__ . '/Config/Routes.php';
         </div>
 
         <!-- Mostrar mensaje solo después de enviar el formulario -->
-        <?php if (isset($_GET['mensaje'])): ?>
+        <?php if (isset($_GET['mensaje']) && ($_GET['mensaje'] == 'success' || $_GET['mensaje'] == 'error')): ?>
             <div id="modalSucces" class="modal">
                 <div class="modal-contenido">
-                    <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                    <p>
-                        <?php 
-                            if ($_GET['mensaje'] == 'success') {
-                                echo "✅ Registro exitoso. Se ha enviado un correo con los detalles de tu solicitud.";
-                            } elseif ($_GET['mensaje'] == 'error') {
-                                echo "❌ Hubo un error al enviar el correo. Inténtalo de nuevo más tarde.";
-                            }
-                        ?>
-                    </p>
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                
+                <div class="modal-header">
+                    <?php if ($_GET['mensaje'] == 'success'): ?>
+                    <!-- Ícono de check -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Check icon">
+                    <h2>¡Registro Exitoso!</h2>
+                    <p>¡Gracias!, nos pondremos en contacto contigo en breve. Los datos enviados son: </p>
+                    <?php else: ?>
+                    <!-- Ícono de error -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Error icon" style="filter: hue-rotate(150deg);">
+                    <h2>¡Ups, ocurrió un error!</h2>
+                    <p>No se pudo enviar tu solicitud en este momento</p>
+                    <?php endif; ?>
+                </div>
+                
+                <?php if ($_GET['mensaje'] == 'success'): ?>
+                    <div class="modal-body">
+                    <p><span>Nombre:</span> <?php echo htmlspecialchars($_GET['nameuser'] ?? ''); ?></p>
+                    <p><span>Correo:</span> <?php echo htmlspecialchars($_GET['correo'] ?? ''); ?></p>
+                    <p><span>Teléfono:</span> <?php echo htmlspecialchars($_GET['telefono'] ?? ''); ?></p>
+                    <p><span>Empresa:</span> <?php echo htmlspecialchars($_GET['empresa'] ?? ''); ?></p>
+                    <p><span>Descripción:</span> <?php echo htmlspecialchars($_GET['descripcion'] ?? ''); ?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <button class="botonConfirmacion" onclick="cerrarModal()">Continuar</button>
                 </div>
             </div>
         <?php endif; ?>
@@ -237,6 +254,7 @@ require_once __DIR__ . '/Config/Routes.php';
 
     <!-- Script principal (ajusta la ruta si es necesario) -->
     <script src="<?php echo JS_URL; ?>/Principal.js"></script>
+    <script src="<?php echo JS_URL; ?>/Modal.js"></script>
 
     <?php include '../SPP/Includes/Footer.php'; ?>
 

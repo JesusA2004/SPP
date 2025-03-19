@@ -180,8 +180,3 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
-function cerrarModal() {
-    const modal = document.getElementById("modalSucces");
-    modal.style.display = "none";
-    modal.querySelector('.modal-content').className = 'modal-content';
-}

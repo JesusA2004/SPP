@@ -24,6 +24,7 @@ require_once __DIR__ . '/../Config/Routes.php';
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Cotizar.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Header.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Modal.css">
 </head>
 <body>
   <header>

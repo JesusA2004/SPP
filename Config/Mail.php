@@ -1,4 +1,4 @@
-<?php 
+<?php
 require __DIR__ . '/../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Destinatario (correo de la empresa)
         $mail->setFrom($config['SMTP_USERNAME'], 'Servicios de Protección Profesional');
-        $mail->addAddress($config['SMTP_USERNAME']);  // Correo de la empresa donde se recibirán las solicitudes
+        $mail->addAddress($config['SMTP_USERNAME']); // Correo de la empresa donde se recibirán las solicitudes
         
         // Contenido del correo
         $mail->CharSet = 'UTF-8';
@@ -38,10 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body = "
         <html>
             <body style='font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;'>
-                <div style='max-width: 600px; background: #ffffff; padding: 20px; border-radius: 5px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);'>
+                <div style='max-width: 600px; background: #ffffff; padding: 20px; border-radius: 5px; 
+                            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);'>
                     <h2 style='color: #1a73e8;'>📩 Nueva solicitud de contacto</h2>
                     
-                    <p>Se ha recibido una nueva solicitud de información a través del sitio web de <b>Servicios de Protección Profesional</b>. A continuación, los detalles:</p>
+                    <p>Se ha recibido una nueva solicitud de información a través del sitio web de 
+                    <b>Servicios de Protección Profesional</b>. A continuación, los detalles:</p>
                     
                     <h3 style='color: #333;'>📌 Información del solicitante:</h3>
                     <p><b>Nombre:</b> $nameuser</p>
@@ -63,14 +65,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Enviar correo
         $mail->send();
         
-        // Redirigir a index.php con un mensaje de éxito
-        header("Location: ../index.php#cotizar?mensaje=success");
+        // Redirigir con parámetros en la URL (para mostrar datos en el modal)
+        // urlencode() para que se codifiquen caracteres especiales
+        $location = sprintf(
+            '../index.php?mensaje=success&nameuser=%s&correo=%s&telefono=%s&empresa=%s&descripcion=%s#cotizar',
+            urlencode($nameuser),
+            urlencode($correo),
+            urlencode($telefono),
+            urlencode($empresa),
+            urlencode($descripcion)
+        );
+        header("Location: $location");
         exit();
         
     } catch (Exception $e) {
         // Redirigir a index.php con un mensaje de error
-        header("Location: ../index.php#cotizar?mensaje=error");
+        header("Location: ../index.php?mensaje=error#cotizar");
         exit();
     }
 }
-?>
