@@ -75,19 +75,19 @@ require_once __DIR__ . '/../Config/Routes.php';
                 <img src="<?php echo IMG_URL; ?>/todosServicios.png" alt="TodosServicios">
                 Todos los servicios
               </a>
-              <a href="../Pages/guardiaSegu.php" class="submenu-itemServ">
+              <a href="../SPP/Pages/guardiaSegu.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/guardias.png" alt="GuardiasSeguridad">
                 Guardias de seguridad intramuros
               </a>
-              <a href="../Pages/escolta.php" class="submenu-itemServ">
+              <a href="../SPP/Pages/escolta.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
                 Escolta
               </a>
-              <a href="../Pages/sistemaVideoV.php" class="submenu-itemServ">
+              <a href="../SPP/Pages/sistemaVideoV.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cctv.png" alt="CCTV">
                 Instalación de Circuitos Cerrados de Televisión
               </a>
-              <a href="../Pages/cercasElec.php" class="submenu-itemServ">
+              <a href="../SPP/Pages/cercasElec.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cercas.png" alt="Cercas">
                 Instalación de Cercas Eléctricas y navajas
               </a>

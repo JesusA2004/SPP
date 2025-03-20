@@ -129,10 +129,12 @@ require_once __DIR__ . '/Config/Routes.php';
         <h2 class="section-title">Nuestros Servicios</h2>
         <br>
         <p align="justify">
-            En Servicios de Protección Profesional, ofrecemos una amplia gama de servicios 
+            Nuestra organización proporciona servicios de Seguridad Privada a dependencias de gobierno, plazas 
+            comerciales, residenciales, organizaciones 
         </p>
         <p align="justify">
-            de seguridad privada para satisfacer las necesidades de nuestros clientes. 
+            privadas tanto industrias como prestadoras de servicios en los siguientes 
+            rubros:
         </p>
         <br>
         <br>
