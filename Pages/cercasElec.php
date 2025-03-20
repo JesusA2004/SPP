@@ -45,18 +45,15 @@ require_once __DIR__ . '/../Config/Routes.php';
                   <img src="<?php echo IMG_URL; ?>/misionHeader.png" alt="mision">
                   Misión
                 </a>
-
-                <a href="#empresa" class="submenu-item">
+              <a href="#empresa" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/visionHeader.png" alt="vision">
                   Visión
                 </a>
-
-                <a href="#empresa" class="submenu-item">
+              <a href="#empresa" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/valoresHeader.png" alt="valores">
                   Valores
                 </a>
-
-                <a href="#clientes" class="submenu-item">
+              <a href="#clientes" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/clientesHeader.png" alt="clientes">
                   Clientes Distinguidos
                 </a>
@@ -97,26 +94,73 @@ require_once __DIR__ . '/../Config/Routes.php';
   ======================================== -->
   <section class="servicio-descripcion">
     <div class="container">
-      <div class="section-title">
-        <h2>Instalación Profesional de Cercas Electrificadas</h2>
-      </div>
-
-      <br>
-
       <!-- Sección Introducción + Imagen -->
       <div class="intro-section">
         <div class="intro-content">
+        <h2>Instalación Profesional de Cercas Electrificadas</h2>
+        <br>
           <div class="card card-intro">
             <h3>Protección Perimetral Inteligente</h3>
-            <p>Sistemas de seguridad perimetral de alta eficacia con tecnología electrificada y elementos disuasivos para protección integral de propiedades.</p>
+            <p>Resguardar y proteger tu casa, edificio, empresa o local de posibles intrusos y/o delincuentes mediante la delimitación del perímetro por medio del tendido de alambres electrificados o alambres resistentes con navajas de lámina de acero galvanizadas </p>
+            <br>
+            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
-        <img src="<?php echo IMG_URL; ?>/cercas.png" alt="Cercas eléctricas" class="intro-image">
+        <img src="<?php echo IMG_URL; ?>/instalacionCercas.png" alt="Cercas eléctricas" class="intro-image">
       </div>
 
+      <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->
+      <div class="caracteristicas-container">
+        <!-- Caja 1 -->
+        <div class="caracteristica-box box1">
+          <h3>Energía Óptima</h3>
+          <p>Suministro regulable para máxima eficiencia.</p>
+        </div>
+        <!-- Caja 2 -->
+        <div class="caracteristica-box box2">
+          <h3>Sistema Anti-Manipulación</h3>
+          <p>Protección avanzada contra intervenciones no autorizadas.</p>
+        </div>
+        <!-- Caja 3 -->
+        <div class="caracteristica-box box3">
+          <h3>Resistencia Total</h3>
+          <p>Diseñadas para soportar condiciones climáticas extremas.</p>
+        </div>
+      </div>
+  
+  </section>
+
+  <!-- ========================================
+       Sección: Galería
+  ======================================== -->
+    <section class="servicio-galeria">
+      <div class="container">
+        <div class="section-title">
+          <h2>Proyectos Realizados</h2>
+        </div>
+        
+        <div class="galeria-grid">
+          <div class="item">
+            <p>Instalación Residencial</p>
+            <img src="<?php echo IMG_URL; ?>/cercaResidencial.jpg" alt="Instalación residencial">
+          </div>
+          <div class="item">
+            <p>Protección Industrial</p>
+            <img src="<?php echo IMG_URL; ?>/cercaIndustria.jpg" alt="Protección industrial">
+          </div>
+          <div class="item">
+            <p>Sistema con Navajas</p>
+            <img src="<?php echo IMG_URL; ?>/cercaNavajas.png" alt="Sistema con navajas">
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="servicio-descripcion">
       <!-- Grid principal con tarjetas -->
       <div class="card-grid">
-        <!-- Tarjeta 2: Características Principales -->
+        <!-- Tarjeta 2: Características Técnicas -->
         <div class="card card-features">
           <h3>Características Técnicas</h3>
           <ul class="features-list">
@@ -155,78 +199,8 @@ require_once __DIR__ . '/../Config/Routes.php';
           </p>
         </div>
 
-        <!-- Tarjeta 5: Proceso de Instalación -->
-        <div class="card card-monitoring">
-          <h3>Metodología de Trabajo</h3>
-          <p>
-            1. Evaluación de riesgos<br>
-            2. Diseño personalizado<br>
-            3. Instalación certificada<br>
-            4. Pruebas de funcionamiento<br>
-            5. Capacitación al usuario<br>
-            6. Mantenimiento programado
-          </p>
-        </div>
-
-        <!-- Tarjeta 6: Seguridad y Normativas -->
-        <div class="card card-plans">
-          <h3>Cumplimiento Normativo</h3>
-          <p>
-            • Certificación CE<br>
-            • Normas IEC 60335-2-76<br>
-            • Protección contra descargas<br>
-            • Señalización certificada<br>
-            • Aislantes de alta resistencia
-          </p>
-        </div>
-
       </div>
 
-      <!-- Otras tarjetas -->
-      <div class="card-grid">
-        <!-- Tarjeta 7: Componentes -->
-        <div class="card card-protocols">
-          <h3>Componentes Incluidos</h3>
-          <p>
-            - Electrificador de alto rendimiento<br>
-            - Aislantes cerámicos/poliméricos<br>
-            - Cable de acero inoxidable<br>
-            - Postes galvanizados<br>
-            - Sistema de puesta a tierra<br>
-            - Señalización de seguridad
-          </p>
-        </div>
-        
-        <!-- Tarjeta 8: Mantenimiento -->
-        <div class="card card-remote-maintenance">
-          <h3>Servicio Post-Instalación</h3>
-          <p>
-            • Revisiones trimestrales<br>
-            • Limpieza profesional<br>
-            • Actualización de componentes<br>
-            • Reparaciones urgentes 24/7<br>
-            • Monitoreo remoto opcional
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================
-       Sección: Galería
-  ======================================== -->
-  <section class="servicio-galeria">
-    <div class="container">
-      <div class="section-title">
-        <h2>Proyectos Realizados</h2>
-      </div>
-      
-      <div class="galeria-grid">
-        <img src="<?php echo IMG_URL; ?>/cerca-residencial.jpg" alt="Instalación residencial">
-        <img src="<?php echo IMG_URL; ?>/cerca-industrial.jpg" alt="Protección industrial">
-        <img src="<?php echo IMG_URL; ?>/cerca-navajas.jpg" alt="Sistema con navajas">
-      </div>
     </div>
   </section>
 

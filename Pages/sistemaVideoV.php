@@ -95,7 +95,7 @@ require_once __DIR__ . '/../Config/Routes.php';
 
     <!-- ========================================
        Sección: Servicio de Videovigilancia
-  ======================================== -->
+    ======================================== -->
   <section class="servicio-descripcion">
     <div class="container">
       <div class="section-title">
@@ -121,85 +121,110 @@ require_once __DIR__ . '/../Config/Routes.php';
     </div>
   </section>
   
-        <!-- Tarjeta 2: Características Principales -->
-        <div class="card card-features">
-          <h3>Características Principales</h3>
-          <ul class="features-list">
-            <li>🔄 <strong>Monitoreo en tiempo real</strong></li>
-            <li>📹 <strong>Cámaras de alta resolución (4K/8MP)</strong></li>
-            <li>🔇 <strong>Tecnología anti-vandalismo</strong></li>
-            <li>📱 <strong>Acceso remoto seguro</strong></li>
-            <li>🔒 <strong>Sistemas de almacenamiento avanzados</strong></li>
-            <li>⚙️ <strong>Integración total</strong></li>
-          </ul>
-        </div>
-
-        <!-- Tarjeta 3: Proceso de Instalación y Soporte -->
-        <div class="card card-installation">
-          <h3>Instalación y Soporte</h3>
-          <p>
-            Nuestro equipo especializado realiza un estudio previo para diseñar la mejor estrategia de instalación, 
-            garantizando una cobertura óptima. Desde la configuración inicial hasta el soporte post-venta, te ofrecemos 
-            mantenimiento preventivo y correctivo para asegurar el funcionamiento ininterrumpido de tus sistemas.
-          </p>
-        </div>
-
-        <!-- Tarjeta 4: Beneficios Adicionales -->
-        <div class="card card-benefits">
-          <h3>Beneficios</h3>
-          <p>
-            Al elegir nuestro servicio, obtendrás asesoramiento personalizado, un sistema escalable y la posibilidad 
-            de integrar tecnologías emergentes en seguridad, asegurando una inversión duradera y de alta calidad.
-          </p>
-        </div>
-
-        <!-- Tarjeta 5: Centro de Monitoreo -->
-        <div class="card card-monitoring">
-          <h3>Centro de Monitoreo 24/7</h3>
-          <p>
-            Contamos con un centro de monitoreo activo las 24 horas del día, 
-            gestionado por profesionales que responden de manera inmediata a cualquier incidente.
-          </p>
-        </div>
-
-        <!-- Tarjeta 6: Planes Flexibles -->
-        <div class="card card-plans">
-          <h3>Planes Flexibles</h3>
-          <p>
-            Ofrecemos distintos planes de servicio adaptados a tus necesidades y presupuesto. 
-            Desde soluciones residenciales hasta proyectos empresariales de gran escala.
-          </p>
-        </div>
-
-      </div><!-- Fin .card-grid -->
-
-      <!-- Ejemplo de otra fila de tarjetas (opcional) -->
-      <div class="card-grid">
-        <!-- Tarjeta 7: Protocolos de Seguridad -->
-        <div class="card card-protocols">
-          <h3>Protocolos de Seguridad</h3>
-          <p>
-            Implementamos protocolos avanzados para la protección de tus datos e imágenes, 
-            cumpliendo con las normativas de privacidad y garantizando la confidencialidad.
-          </p>
-        </div>
+  <!-- ========================================
+       Sección: Características (MODIFICADA)
+    ======================================== -->
+  <section class="caracteristicas">
+    <div class="container">
+      <div class="caracteristicas-container">
         
-        <!-- Tarjeta 8: Mantenimiento Remoto -->
-        <div class="card card-remote-maintenance">
-          <h3>Mantenimiento Remoto</h3>
+        <!-- Bloque 1 -->
+        <div class="caracteristica-box box1">
+          <h3>Oficiales de seguridad</h3>
           <p>
-            Gracias a nuestras herramientas de diagnóstico remoto, podemos resolver incidencias 
-            sin necesidad de desplazarnos, ahorrándote tiempo y costes adicionales.
+            La misión de los Oficiales de Seguridad de GSI Seguridad Privada se centra en otorgar 
+            la vigilancia, el control y la prevención necesarios para que sus instalaciones se mantengan 
+            fuera de peligro.
+          </p>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="caracteristica-box box2">
+          <h3>Evaluación y confianza patrimonial interna</h3>
+          <p>
+            Acuciosos procesos de filtros de personal para que la contratación de personal clave 
+            sea cuidadosamente revisada y se logren contrataciones de personal sin riesgos.
+          </p>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="caracteristica-box box3">
+          <h3>Rastreo y monitoreo vehicular</h3>
+          <p>
+            Realizamos una alianza con el fabricante de GPS Surtech que surte el mejor 
+            dispositivo de rastreo vehicular para ofrecer la mejor solución para el 
+            monitoreo de sus vehículos en toda la República Mexicana.
           </p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- ========================================
+       Sección: Resto de Tarjetas (igual que antes)
+    ======================================== -->
+
+  <!-- Tarjeta 3: Proceso de Instalación y Soporte -->
+  <div class="card card-installation">
+    <h3>Instalación y Soporte</h3>
+    <p>
+      Nuestro equipo especializado realiza un estudio previo para diseñar la mejor estrategia de instalación, 
+      garantizando una cobertura óptima. Desde la configuración inicial hasta el soporte post-venta, te ofrecemos 
+      mantenimiento preventivo y correctivo para asegurar el funcionamiento ininterrumpido de tus sistemas.
+    </p>
+  </div>
+
+  <!-- Tarjeta 4: Beneficios Adicionales -->
+  <div class="card card-benefits">
+    <h3>Beneficios</h3>
+    <p>
+      Al elegir nuestro servicio, obtendrás asesoramiento personalizado, un sistema escalable y la posibilidad 
+      de integrar tecnologías emergentes en seguridad, asegurando una inversión duradera y de alta calidad.
+    </p>
+  </div>
+
+  <!-- Tarjeta 5: Centro de Monitoreo -->
+  <div class="card card-monitoring">
+    <h3>Centro de Monitoreo 24/7</h3>
+    <p>
+      Contamos con un centro de monitoreo activo las 24 horas del día, 
+      gestionado por profesionales que responden de manera inmediata a cualquier incidente.
+    </p>
+  </div>
+
+  <!-- Tarjeta 6: Planes Flexibles -->
+  <div class="card card-plans">
+    <h3>Planes Flexibles</h3>
+    <p>
+      Ofrecemos distintos planes de servicio adaptados a tus necesidades y presupuesto. 
+      Desde soluciones residenciales hasta proyectos empresariales de gran escala.
+    </p>
+  </div>
+
+  <!-- Ejemplo de otra fila de tarjetas (opcional) -->
+  <div class="card-grid">
+    <!-- Tarjeta 7: Protocolos de Seguridad -->
+    <div class="card card-protocols">
+      <h3>Protocolos de Seguridad</h3>
+      <p>
+        Implementamos protocolos avanzados para la protección de tus datos e imágenes, 
+        cumpliendo con las normativas de privacidad y garantizando la confidencialidad.
+      </p>
+    </div>
+    
+    <!-- Tarjeta 8: Mantenimiento Remoto -->
+    <div class="card card-remote-maintenance">
+      <h3>Mantenimiento Remoto</h3>
+      <p>
+        Gracias a nuestras herramientas de diagnóstico remoto, podemos resolver incidencias 
+        sin necesidad de desplazarnos, ahorrándote tiempo y costes adicionales.
+      </p>
+    </div>
+  </div>
+
+  <!-- ========================================
        Sección: Galería de Instalaciones
-  ======================================== -->
+    ======================================== -->
   <section class="servicio-galeria">
     <div class="container">
       <div class="section-title">

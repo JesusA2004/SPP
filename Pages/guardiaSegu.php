@@ -35,31 +35,28 @@ require_once __DIR__ . '/../Config/Routes.php';
       <span></span>
     </button>
     <nav>    
-    <div class="menu-principal">
+      <div class="menu-principal">
         <a href="../index.php#inicio" class="menu-item">Inicio</a>
         <div class="has-submenu">
           <div class="menu-desplegable">
             <span class="menu-item">Filosofía Empresarial <span class="arrow">▼</span></span>
             <div class="contenido" id="filosofia-submenu">
               <a href="#empresa" class="submenu-item">
-                  <img src="<?php echo IMG_URL; ?>/misionHeader.png" alt="mision">
-                  Misión
-                </a>
-
-                <a href="#empresa" class="submenu-item">
-                  <img src="<?php echo IMG_URL; ?>/visionHeader.png" alt="vision">
-                  Visión
-                </a>
-
-                <a href="#empresa" class="submenu-item">
-                  <img src="<?php echo IMG_URL; ?>/valoresHeader.png" alt="valores">
-                  Valores
-                </a>
-
-                <a href="#clientes" class="submenu-item">
-                  <img src="<?php echo IMG_URL; ?>/clientesHeader.png" alt="clientes">
-                  Clientes Distinguidos
-                </a>
+                <img src="<?php echo IMG_URL; ?>/misionHeader.png" alt="mision">
+                Misión
+              </a>
+              <a href="#empresa" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/visionHeader.png" alt="vision">
+                Visión
+              </a>
+              <a href="#empresa" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/valoresHeader.png" alt="valores">
+                Valores
+              </a>
+              <a href="#clientes" class="submenu-item">
+                <img src="<?php echo IMG_URL; ?>/clientesHeader.png" alt="clientes">
+                Clientes Distinguidos
+              </a>
             </div>
           </div>
         </div>
@@ -75,7 +72,7 @@ require_once __DIR__ . '/../Config/Routes.php';
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
                 Escolta
               </a>
-              <a href="../Views/sistemaVideoV.php" class="submenu-itemServ">
+              <a href="sistemaVideoV.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cctv.png" alt="CCTV">
                 Instalación de Circuitos Cerrados de Televisión
               </a>
@@ -113,6 +110,26 @@ require_once __DIR__ . '/../Config/Routes.php';
         </div>
         <img src="<?php echo IMG_URL; ?>/guardias.png" alt="Guardias de seguridad" class="intro-image">
       </div>
+
+      <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->
+      <div class="caracteristicas-container">
+        <!-- Caja 1 -->
+        <div class="caracteristica-box box1">
+          <h3>Vigilancia Constante</h3>
+          <p>Personal capacitado en monitoreo continuo.</p>
+        </div>
+        <!-- Caja 2 -->
+        <div class="caracteristica-box box2">
+          <h3>Respuesta Inmediata</h3>
+          <p>Acciones rápidas ante cualquier situación.</p>
+        </div>
+        <!-- Caja 3 -->
+        <div class="caracteristica-box box3">
+          <h3>Integridad y Confianza</h3>
+          <p>Compromiso con la seguridad y profesionalismo.</p>
+        </div>
+      </div>
+      <!-- FIN NUEVA SECCIÓN -->
 
       <!-- Grid principal con tarjetas -->
       <div class="card-grid">
@@ -188,7 +205,7 @@ require_once __DIR__ . '/../Config/Routes.php';
             • Uniformes profesionales<br>
             • Equipos de comunicación digital<br>
             • Kit de primeros auxilios<br>
-            • Linternas tácticass<br>
+            • Linternas tácticas<br>
             • Chalecos reflectivos
           </p>
         </div>
