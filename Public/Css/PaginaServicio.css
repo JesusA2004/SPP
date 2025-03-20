@@ -136,6 +136,7 @@ body {
   margin: 3rem auto;       /* Espacio superior e inferior unificado */
   max-width: 1200px;       /* Limita el ancho para un mejor aspecto */
   padding: 0 2rem;         /* Espacio horizontal interno */
+  margin-left: -35px;
 }
 
 .card {
@@ -150,6 +151,12 @@ body {
   /* Se eliminan márgenes laterales individuales
      para que .card-grid maneje el espacio */
   margin-top: 0; /* Ajustamos para que no sume demasiado espacio vertical */
+}
+
+.card-features h3{
+  color:#ffffff;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 20px;
 }
 
 .card::before {
@@ -300,6 +307,22 @@ body::after {
 /* ========================================
    Sección de 3 cajas holográficas
 ======================================== */
+/* Estilos para alinear el icono con el título */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el icono y el texto */
+}
+
+.section-title img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
 .caracteristicas-container {
   display: flex;               /* Alineación horizontal */
   justify-content: space-between;

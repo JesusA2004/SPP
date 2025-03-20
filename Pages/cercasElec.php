@@ -101,7 +101,7 @@ require_once __DIR__ . '/../Config/Routes.php';
         <br>
           <div class="card card-intro">
             <h3>Protección Perimetral Inteligente</h3>
-            <p>Resguardar y proteger tu casa, edificio, empresa o local de posibles intrusos y/o delincuentes mediante la delimitación del perímetro por medio del tendido de alambres electrificados o alambres resistentes con navajas de lámina de acero galvanizadas </p>
+            <p>Resguardar y proteger tu casa, edificio, empresa o local de posibles intrusos y/o delincuentes mediante la delimitación del perímetro por medio del tendido de alambres electrificados o alambres resistentes con navajas de lámina de acero galvanizadas. </p>
             <br>
             <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
@@ -158,49 +158,44 @@ require_once __DIR__ . '/../Config/Routes.php';
 
 
   <section class="servicio-descripcion">
+    <div class="container">
+      <div class="section-title">
+          <h2>Supervisión operativa</h2>
+          <img src="<?php echo IMG_URL; ?>/iconoSupervision.png" alt="Icono Supervisión">
+      </div>
       <!-- Grid principal con tarjetas -->
       <div class="card-grid">
         <!-- Tarjeta 2: Características Técnicas -->
         <div class="card card-features">
-          <h3>Características Técnicas</h3>
-          <ul class="features-list">
-            <li>⚡ <strong>Energía regulable (3,000-10,000V)</strong></li>
-            <li>🔒 <strong>Sistema anti-manipulación</strong></li>
-            <li>🌧️ <strong>Resistente a condiciones climáticas</strong></li>
-            <li>📡 <strong>Integración con alarmas</strong></li>
-            <li>🛡️ <strong>Materiales de grado industrial</strong></li>
-            <li>📱 <strong>Control remoto opcional</strong></li>
-          </ul>
+          <h3>Supervisión presencial</h3>
+          <br>
+          <p>La supervisión operativa para verificar que la prestación del servicio se proporcione de manera eficiente, se realiza 
+          mediante supervisión física por parte de un supervisor.</p>
         </div>
 
         <!-- Tarjeta 3: Tipos de Cercas -->
-        <div class="card card-installation">
-          <h3>Variantes Disponibles</h3>
+        <div class="card card-features">
+          <h3>Supervisión a distancia</h3>
+          <br>
           <p>
-            ◉ Cercas electrificadas estándar<br>
-            ◉ Sistemas con navajas anti-trepe<br>
-            ◉ Cercas invisibles (hilo conductor)<br>
-            ◉ Sistemas solares autónomos<br>
-            ◉ Cercas para áreas especiales (piscinas, jardines)<br>
-            ◉ Sistemas híbridos (eléctrico + convencional)
+            • Monitoreo continuo vía radio y/o teléfono celular.<br>
+            • Realizada las 24 horas del día.<br>
+            • Involucra tanto al supervisor como a la central operativa de la organización.<br>
           </p>
         </div>
 
         <!-- Tarjeta 4: Beneficios -->
-        <div class="card card-benefits">
-          <h3>Ventajas Clave</h3>
+        <div class="card card-features">
+          <h3>Colaboración con las autoridades</h3>
+          <br>
           <p>
-            • Disuasión visual y física<br>
-            • Bajo mantenimiento<br>
-            • Larga vida útil<br>
-            • Adaptable a cualquier terreno<br>
-            • Certificación internacional<br>
-            • Garantía extendida
+            • Coordinación permanente para apoyo en contingencias.<br>
+            • Colaboración con autoridades de seguridad municipales y estatales.<br>
           </p>
         </div>
 
       </div>
-
+    </div>
     </div>
   </section>
 
