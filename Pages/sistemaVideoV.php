@@ -24,6 +24,7 @@ require_once __DIR__ . '/../Config/Routes.php';
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <a href="../index.php">
       <img src="<?php echo IMG_URL; ?>/logo.png" alt="Logo de la empresa">
@@ -44,22 +45,19 @@ require_once __DIR__ . '/../Config/Routes.php';
               <a href="#empresa" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/misionHeader.png" alt="mision">
                   Misión
-                </a>
-
-                <a href="#empresa" class="submenu-item">
+              </a>
+              <a href="#empresa" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/visionHeader.png" alt="vision">
                   Visión
-                </a>
-
-                <a href="#empresa" class="submenu-item">
+              </a>
+              <a href="#empresa" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/valoresHeader.png" alt="valores">
                   Valores
-                </a>
-
-                <a href="#clientes" class="submenu-item">
+              </a>
+              <a href="#clientes" class="submenu-item">
                   <img src="<?php echo IMG_URL; ?>/clientesHeader.png" alt="clientes">
                   Clientes Distinguidos
-                </a>
+              </a>
             </div>
           </div>
         </div>
@@ -93,158 +91,103 @@ require_once __DIR__ . '/../Config/Routes.php';
   </header>
   <!-- FIN HEADER -->
 
-    <!-- ========================================
-       Sección: Servicio de Videovigilancia
-    ======================================== -->
+  <!-- ========================================
+       Sección: Servicio Integral de Videovigilancia CCTV
+  ======================================== -->
   <section class="servicio-descripcion">
     <div class="container">
-      <div class="section-title">
-        <h2>Servicio Integral de Videovigilancia CCTV</h2>
-      </div>
-
-      <br>
-
       <!-- Sección Introducción + Imagen -->
       <div class="intro-section">
         <div class="intro-content">
+          <h2>Servicio Integral de Videovigilancia CCTV</h2>
+          <br>
           <div class="card card-intro">
             <h3>Introducción</h3>
-            <p>Nuestro servicio de videovigilancia CCTV está diseñado para brindarte la máxima seguridad...</p>
+            <p>Nuestro servicio de videovigilancia CCTV está diseñado para brindarte la máxima seguridad mediante tecnología de última generación.</p>
+            <br>
+            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
         <img src="<?php echo IMG_URL; ?>/camaras.png" alt="Sistema CCTV" class="intro-image">
       </div>
 
-      <!-- Grid principal con tarjetas -->
-      <div class="card-grid">
-      </div>
-    </div>
-  </section>
-  
-  <!-- ========================================
-       Sección: Características (MODIFICADA)
-    ======================================== -->
-  <section class="caracteristicas">
-    <div class="container">
+      <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->
       <div class="caracteristicas-container">
-        
         <!-- Bloque 1 -->
         <div class="caracteristica-box box1">
           <h3>Oficiales de seguridad</h3>
-          <p>
-            La misión de los Oficiales de Seguridad de GSI Seguridad Privada se centra en otorgar 
-            la vigilancia, el control y la prevención necesarios para que sus instalaciones se mantengan 
-            fuera de peligro.
-          </p>
+          <p>Vigilancia y control para mantener tus instalaciones seguras.</p>
         </div>
-
         <!-- Bloque 2 -->
         <div class="caracteristica-box box2">
-          <h3>Evaluación y confianza patrimonial interna</h3>
-          <p>
-            Acuciosos procesos de filtros de personal para que la contratación de personal clave 
-            sea cuidadosamente revisada y se logren contrataciones de personal sin riesgos.
-          </p>
+          <h3>Evaluación y confianza patrimonial</h3>
+          <p>Procesos de selección rigurosos para garantizar personal confiable.</p>
         </div>
-
         <!-- Bloque 3 -->
         <div class="caracteristica-box box3">
           <h3>Rastreo y monitoreo vehicular</h3>
-          <p>
-            Realizamos una alianza con el fabricante de GPS Surtech que surte el mejor 
-            dispositivo de rastreo vehicular para ofrecer la mejor solución para el 
-            monitoreo de sus vehículos en toda la República Mexicana.
-          </p>
+          <p>Alianzas estratégicas para el mejor monitoreo en tiempo real.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       Sección: Resto de Tarjetas (igual que antes)
-    ======================================== -->
-
-  <!-- Tarjeta 3: Proceso de Instalación y Soporte -->
-  <div class="card card-installation">
-    <h3>Instalación y Soporte</h3>
-    <p>
-      Nuestro equipo especializado realiza un estudio previo para diseñar la mejor estrategia de instalación, 
-      garantizando una cobertura óptima. Desde la configuración inicial hasta el soporte post-venta, te ofrecemos 
-      mantenimiento preventivo y correctivo para asegurar el funcionamiento ininterrumpido de tus sistemas.
-    </p>
-  </div>
-
-  <!-- Tarjeta 4: Beneficios Adicionales -->
-  <div class="card card-benefits">
-    <h3>Beneficios</h3>
-    <p>
-      Al elegir nuestro servicio, obtendrás asesoramiento personalizado, un sistema escalable y la posibilidad 
-      de integrar tecnologías emergentes en seguridad, asegurando una inversión duradera y de alta calidad.
-    </p>
-  </div>
-
-  <!-- Tarjeta 5: Centro de Monitoreo -->
-  <div class="card card-monitoring">
-    <h3>Centro de Monitoreo 24/7</h3>
-    <p>
-      Contamos con un centro de monitoreo activo las 24 horas del día, 
-      gestionado por profesionales que responden de manera inmediata a cualquier incidente.
-    </p>
-  </div>
-
-  <!-- Tarjeta 6: Planes Flexibles -->
-  <div class="card card-plans">
-    <h3>Planes Flexibles</h3>
-    <p>
-      Ofrecemos distintos planes de servicio adaptados a tus necesidades y presupuesto. 
-      Desde soluciones residenciales hasta proyectos empresariales de gran escala.
-    </p>
-  </div>
-
-  <!-- Ejemplo de otra fila de tarjetas (opcional) -->
-  <div class="card-grid">
-    <!-- Tarjeta 7: Protocolos de Seguridad -->
-    <div class="card card-protocols">
-      <h3>Protocolos de Seguridad</h3>
-      <p>
-        Implementamos protocolos avanzados para la protección de tus datos e imágenes, 
-        cumpliendo con las normativas de privacidad y garantizando la confidencialidad.
-      </p>
-    </div>
-    
-    <!-- Tarjeta 8: Mantenimiento Remoto -->
-    <div class="card card-remote-maintenance">
-      <h3>Mantenimiento Remoto</h3>
-      <p>
-        Gracias a nuestras herramientas de diagnóstico remoto, podemos resolver incidencias 
-        sin necesidad de desplazarnos, ahorrándote tiempo y costes adicionales.
-      </p>
-    </div>
-  </div>
-
-  <!-- ========================================
        Sección: Galería de Instalaciones
-    ======================================== -->
+  ======================================== -->
   <section class="servicio-galeria">
     <div class="container">
       <div class="section-title">
         <h2>Nuestras instalaciones CCTV</h2>
       </div>
       
-      <!-- Ejemplo de Galería Estática (Grid) -->
       <div class="galeria-grid">
-        <img src="<?php echo IMG_URL; ?>/cctv-ejemplo1.jpg" alt="Instalación comercial">
-        <img src="<?php echo IMG_URL; ?>/cctv-ejemplo2.jpg" alt="Instalación residencial">
-        <img src="<?php echo IMG_URL; ?>/cctv-ejemplo3.jpg" alt="Tecnología night vision">
-        <!-- Agrega más imágenes si lo deseas -->
+        <div class="item">
+          <img src="<?php echo IMG_URL; ?>/cctv-ejemplo1.jpg" alt="Instalación comercial">
+        </div>
+        <div class="item">
+          <img src="<?php echo IMG_URL; ?>/cctv-ejemplo2.jpg" alt="Instalación residencial">
+        </div>
+        <div class="item">
+          <img src="<?php echo IMG_URL; ?>/cctv-ejemplo3.jpg" alt="Tecnología night vision">
+        </div>
       </div>
-      
-      <!-- SUGERENCIAS para presentar la galería de forma moderna:
-        1) Carrusel con flechas (usando librerías como Swiper, Flickity o Glide.js).
-        2) Lightbox o Modal (al hacer clic, se abre la imagen en grande con efectos).
-        3) Masonry Layout (estilo Pinterest) para un diseño fluido e irregular.
-        4) Slideshow automático (con o sin miniaturas).
-      -->
+    </div>
+  </section>
+
+  <!-- ========================================
+       Sección: Soporte y Beneficios
+  ======================================== -->
+  <section class="servicio-descripcion">
+    <div class="container">
+      <div class="section-title">
+          <h2>Soporte y Beneficios</h2>
+          <img src="<?php echo IMG_URL; ?>/iconoSupervision.png" alt="Icono Supervisión">
+      </div>
+      <!-- Grid principal con tarjetas -->
+      <div class="card-grid">
+        <!-- Tarjeta: Instalación y Soporte -->
+        <div class="card card-installation">
+          <h3>Instalación y Soporte</h3>
+          <p>
+            Nuestro equipo especializado diseña la mejor estrategia de instalación y ofrece mantenimiento preventivo y correctivo para asegurar el funcionamiento ininterrumpido de tus sistemas.
+          </p>
+        </div>
+        <!-- Tarjeta: Beneficios -->
+        <div class="card card-benefits">
+          <h3>Beneficios</h3>
+          <p>
+            Obtén asesoramiento personalizado, soluciones escalables y la integración de tecnologías emergentes, asegurando una inversión de alta calidad.
+          </p>
+        </div>
+        <!-- Tarjeta: Centro de Monitoreo -->
+        <div class="card card-monitoring">
+          <h3>Centro de Monitoreo 24/7</h3>
+          <p>
+            Contamos con un centro de monitoreo activo las 24 horas, gestionado por profesionales que responden de inmediato a cualquier incidente.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 

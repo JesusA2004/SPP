@@ -94,18 +94,16 @@ require_once __DIR__ . '/../Config/Routes.php';
   ======================================== -->
   <section class="servicio-descripcion">
     <div class="container">
-      <div class="section-title">
-        <h2>Servicio de Escoltas Profesionales</h2>
-      </div>
-
-      <br>
-
       <!-- Sección Introducción + Imagen -->
       <div class="intro-section">
         <div class="intro-content">
+          <h2>Servicio de Escoltas Profesionales</h2>
+          <br>
           <div class="card card-intro">
             <h3>Protección Ejecutiva Personalizada</h3>
             <p>Nuestro servicio de escoltas ofrece protección móvil de alto nivel para personas y bienes, con profesionales entrenados en técnicas avanzadas de seguridad ejecutiva.</p>
+            <br>
+            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
         <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escoltas profesionales" class="intro-image">
@@ -121,7 +119,7 @@ require_once __DIR__ . '/../Config/Routes.php';
         <!-- Caja 2 -->
         <div class="caracteristica-box box2">
           <h3>Protección Móvil</h3>
-          <p>Escultas altamente capacitados para protección en movimiento.</p>
+          <p>Escoltas altamente capacitados para protección en movimiento.</p>
         </div>
         <!-- Caja 3 -->
         <div class="caracteristica-box box3">
@@ -129,101 +127,6 @@ require_once __DIR__ . '/../Config/Routes.php';
           <p>Acciones rápidas y coordinadas ante cualquier eventualidad.</p>
         </div>
       </div>
-      <!-- FIN NUEVA SECCIÓN -->
-
-      <!-- Grid principal con tarjetas -->
-      <div class="card-grid">
-        <!-- Tarjeta 2: Características Principales -->
-        <div class="card card-features">
-          <h3>Nuestros Protocolos</h3>
-          <ul class="features-list">
-            <li>🛡️ <strong>Evaluación de riesgo personalizada</strong></li>
-            <li>🚗 <strong>Movilidad blindada disponible</strong></li>
-            <li>📡 <strong>Comunicación encriptada 24/7</strong></li>
-            <li>🎯 <strong>Tácticas evasivas y defensivas</strong></li>
-            <li>🔒 <strong>Protección en movimiento</strong></li>
-            <li>🤝 <strong>Coordinación con autoridades</strong></li>
-          </ul>
-        </div>
-
-        <!-- Tarjeta 3: Proceso de Protección -->
-        <div class="card card-installation">
-          <h3>Metodología de Trabajo</h3>
-          <p>
-            1. Análisis de perfil y evaluación de riesgo<br>
-            2. Diseño de rutas seguras y alternativas<br>
-            3. Implementación de protocolos de emergencia<br>
-            4. Monitoreo constante del entorno<br>
-            5. Informes detallados de cada operación
-          </p>
-        </div>
-
-        <!-- Tarjeta 4: Beneficios -->
-        <div class="card card-benefits">
-          <h3>Ventajas Clave</h3>
-          <p>
-            • Escoltas certificados y con experiencia<br>
-            • Tecnología de protección integrada<br>
-            • Respuesta inmediata ante amenazas<br>
-            • Discreción absoluta<br>
-            • Cobertura nacional e internacional
-          </p>
-        </div>
-
-        <!-- Tarjeta 5: Tipos de Servicio -->
-        <div class="card card-monitoring">
-          <h3>Modalidades de Protección</h3>
-          <p>
-            ◉ Protección ejecutiva individual<br>
-            ◉ Custodia familiar<br>
-            ◉ Escolta vehicular<br>
-            ◉ Protección para eventos<br>
-            ◉ Traslado de valores<br>
-            ◉ Escolta corporativa
-          </p>
-        </div>
-
-        <!-- Tarjeta 6: Equipamiento -->
-        <div class="card card-plans">
-          <h3>Equipamiento Especializado</h3>
-          <p>
-            • Dispositivos de localización GPS<br>
-            • Sistemas de comunicación cifrada<br>
-            • Vehículos blindados opcionales<br>
-            • Equipo táctico de protección<br>
-            • Tecnología anti-secuestro
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Otras tarjetas -->
-      <div class="card-grid">
-        <!-- Tarjeta 7: Capacitación -->
-        <div class="card card-protocols">
-          <h3>Capacitación Continua</h3>
-          <p>
-            Nuestros escoltas reciben entrenamiento constante en:<br>
-            - Conducción evasiva<br>
-            - Primeros auxilios avanzados<br>
-            - Manejo de situaciones críticas<br>
-            - Protección contra ataques armados
-          </p>
-        </div>
-        
-        <!-- Tarjeta 8: Tecnología Integrada -->
-        <div class="card card-remote-maintenance">
-          <h3>Sistemas de Apoyo</h3>
-          <p>
-            • Monitoreo satelital<br>
-            • Análisis de inteligencia previo<br>
-            • Coordinación con centros de mando<br>
-            • Actualización de rutas en tiempo real<br>
-            • Botón de pánico conectado a central
-          </p>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -237,9 +140,62 @@ require_once __DIR__ . '/../Config/Routes.php';
       </div>
       
       <div class="galeria-grid">
-        <img src="<?php echo IMG_URL; ?>/escolta-vehicular.jpg" alt="Protección vehicular">
-        <img src="<?php echo IMG_URL; ?>/escolta-evento.jpg" alt="Seguridad en eventos">
-        <img src="<?php echo IMG_URL; ?>/escolta-ejecutivo.jpg" alt="Protección ejecutiva">
+        <div class="item">
+          <p>Protección Vehicular</p>
+          <img src="<?php echo IMG_URL; ?>/escolta-vehicular.jpg" alt="Protección vehicular">
+        </div>
+        <div class="item">
+          <p>Seguridad en Eventos</p>
+          <img src="<?php echo IMG_URL; ?>/escolta-evento.jpg" alt="Seguridad en eventos">
+        </div>
+        <div class="item">
+          <p>Protección Ejecutiva</p>
+          <img src="<?php echo IMG_URL; ?>/escolta-ejecutivo.jpg" alt="Protección ejecutiva">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       Sección: Protocolo y Metodología
+  ======================================== -->
+  <section class="servicio-descripcion">
+    <div class="container">
+      <div class="section-title">
+          <h2>Protocolo y Metodología</h2>
+          <img src="<?php echo IMG_URL; ?>/iconoSupervision.png" alt="Icono Supervisión">
+      </div>
+      <!-- Grid principal con tarjetas -->
+      <div class="card-grid">
+        <!-- Tarjeta: Protocolos de Seguridad -->
+        <div class="card card-features">
+          <h3>Protocolos de Seguridad</h3>
+          <p>
+            • Evaluación de riesgo personalizada<br>
+            • Implementación de medidas de seguridad avanzadas<br>
+            • Uso de tecnología en la comunicación y monitoreo
+          </p>
+        </div>
+
+        <!-- Tarjeta: Movilidad y Respuesta -->
+        <div class="card card-features">
+          <h3>Movilidad y Respuesta</h3>
+          <p>
+            • Vehículos de alta seguridad y blindados<br>
+            • Respuesta inmediata ante amenazas<br>
+            • Coordinación con unidades móviles especializadas
+          </p>
+        </div>
+
+        <!-- Tarjeta: Coordinación y Apoyo -->
+        <div class="card card-features">
+          <h3>Coordinación y Apoyo</h3>
+          <p>
+            • Comunicación encriptada 24/7<br>
+            • Colaboración con autoridades locales y nacionales<br>
+            • Soporte continuo durante la operación
+          </p>
+        </div>
       </div>
     </div>
   </section>
