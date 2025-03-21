@@ -105,7 +105,7 @@ require_once __DIR__ . '/../Config/Routes.php';
             <h3>Introducción</h3>
             <p>Nuestro servicio de videovigilancia CCTV está diseñado para brindarte la máxima seguridad mediante tecnología de última generación.</p>
             <br>
-            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
+            <a href="../index.php?servicio=videovigilancia&descripcion=Servicio%20Integral%20de%20Videovigilancia%20CCTV#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
         <img src="<?php echo IMG_URL; ?>/camaras.png" alt="Sistema CCTV" class="intro-image">
@@ -187,6 +187,9 @@ require_once __DIR__ . '/../Config/Routes.php';
             Contamos con un centro de monitoreo activo las 24 horas, gestionado por profesionales que responden de inmediato a cualquier incidente.
           </p>
         </div>
+      </div>
+      <div align="center">
+        <a href="../index.php?servicio=videovigilancia&descripcion=Servicio%20Integral%20de%20Videovigilancia%20CCTV#cotizar" class="btn-cotizar">Cotizar</a>
       </div>
     </div>
   </section>

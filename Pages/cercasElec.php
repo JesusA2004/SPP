@@ -76,7 +76,7 @@ require_once __DIR__ . '/../Config/Routes.php';
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
                 Escolta
               </a>
-              <a href="../Views/sistemaVideoV.php" class="submenu-itemServ">
+              <a href="sistemaVideoV.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/cctv.png" alt="CCTV">
                 Instalación de Circuitos Cerrados de Televisión
               </a>
@@ -103,7 +103,7 @@ require_once __DIR__ . '/../Config/Routes.php';
             <h3>Protección Perimetral Inteligente</h3>
             <p>Resguardar y proteger tu casa, edificio, empresa o local de posibles intrusos y/o delincuentes mediante la delimitación del perímetro por medio del tendido de alambres electrificados o alambres resistentes con navajas de lámina de acero galvanizadas. </p>
             <br>
-            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
+            <a href="../index.php?servicio=InstalacionCercasElectricas&descripcion=Instalación%20Profesional%20de%20Cercas%20Electrificadas#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
         <img src="<?php echo IMG_URL; ?>/instalacionCercas.png" alt="Cercas eléctricas" class="intro-image">
@@ -192,10 +192,13 @@ require_once __DIR__ . '/../Config/Routes.php';
             • Coordinación permanente para apoyo en contingencias.<br>
             • Colaboración con autoridades de seguridad municipales y estatales.<br>
           </p>
+          </div>
         </div>
-
       </div>
-    </div>
+      <div align="center">
+        <a href="../index.php?servicio=InstalacionCercasElectricas&descripcion=Instalación%20Profesional%20de%20Cercas%20Electrificadas#cotizar" class="btn-cotizar">Cotizar</a>
+      </div>
+      <br>
     </div>
   </section>
 

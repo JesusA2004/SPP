@@ -103,7 +103,7 @@ require_once __DIR__ . '/../Config/Routes.php';
             <h3>Protección Humana Especializada</h3>
             <p>Nuestro servicio de guardias de seguridad ofrece protección física profesional las 24 horas, combinando presencia disuasiva con respuesta inmediata ante cualquier eventualidad.</p>
             <br>
-            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
+            <a href="../index.php?servicio=GuardiasDeSeguridad&descripcion=Protección%20Humana%20Especializada%20las%2024%20horas#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
         <img src="<?php echo IMG_URL; ?>/guardias.png" alt="Guardias de seguridad" class="intro-image">
@@ -190,6 +190,10 @@ require_once __DIR__ . '/../Config/Routes.php';
         </div>
       </div>
     </div>
+    <div align = "center">
+      <a href="../index.php?servicio=GuardiasDeSeguridad&descripcion=Protección%20Humana%20Especializada%20las%2024%20horas#cotizar" class="btn-cotizar">Cotizar</a>
+    </div>
+    <br><br>
     </div>
   </section>
 

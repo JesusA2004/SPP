@@ -214,7 +214,7 @@ require_once __DIR__ . '/Config/Routes.php';
 
                     <div class="input-container">
                         <label for="descripcion">Descripción de Servicios</label>
-                        <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"></textarea>
+                        <textarea placeholder="Cuéntanos sobre tus necesidades o el tipo de servicio que requieres" rows="4" id="descripcion" name="descripcion"><?php echo isset($_GET['descripcion']) ? htmlspecialchars($_GET['descripcion']) : ''; ?></textarea>
                     </div>
                     
                     <button type="submit" class="botonEnviar">Enviar cotización</button>

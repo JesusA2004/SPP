@@ -103,7 +103,7 @@ require_once __DIR__ . '/../Config/Routes.php';
             <h3>Protección Ejecutiva Personalizada</h3>
             <p>Nuestro servicio de escoltas ofrece protección móvil de alto nivel para personas y bienes, con profesionales entrenados en técnicas avanzadas de seguridad ejecutiva.</p>
             <br>
-            <a href="../index.php#cotizar" class="btn-cotizar">Cotizar</a>
+            <a href="../index.php?servicio=Escolta&descripcion=Protección%20Personalizada%20y%20segura%20en%20todo%20momento#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
         <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escoltas profesionales" class="intro-image">
@@ -197,6 +197,10 @@ require_once __DIR__ . '/../Config/Routes.php';
           </p>
         </div>
       </div>
+      <div align="center">
+        <a href="../index.php?servicio=Escolta&descripcion=Protección%20Personalizada%20y%20segura%20en%20todo%20momento#cotizar" class="btn-cotizar">Cotizar</a>
+      </div>
+      <br><br>
     </div>
   </section>
 
