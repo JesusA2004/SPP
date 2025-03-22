@@ -138,9 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoSlideInterval;
 
     const showSlide = (index) => {
-        slider.style.transform = `translateX(-${index * 100}%)`;
+        // Calcula el ancho actual de un slide
+        const slideWidth = document.querySelector('.cliente-item').offsetWidth;
+        slider.style.transform = `translateX(-${index * slideWidth}px)`;
     };
-
+    
     const nextSlide = () => {
         currentIndex = (currentIndex + 1) % items.length;
         showSlide(currentIndex);

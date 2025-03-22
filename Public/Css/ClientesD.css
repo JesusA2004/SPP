@@ -179,6 +179,7 @@
 /* Carrusel */
 .cliente-slider {
     display: flex;
+    gap: 2%;
     transition: transform 0.5s ease-in-out;
     width: 100%;
 }
@@ -410,3 +411,35 @@
         font-size: 20px;
     }
 }
+
+@media (max-width: 480px) {
+    /* Reducir el ancho de cada slide para mostrar parte del siguiente */
+    .cliente-item {
+        min-width: 100%;
+        /* Elimina o reduce márgenes laterales si los hubiera */
+        margin: 0;
+      }
+      
+      /* Ajusta el contenedor para que no haya padding extra que modifique el ancho visible */
+      .clientes-container {
+        padding: 0 5px;
+      }
+    /* Ajustar la card para que no quede tan junta */
+    .cliente-card {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto 10px auto;
+      padding: 10px;
+    }
+    /* Ajustar tamaño de flechas y texto si es necesario */
+    .cliente-prev, .cliente-next {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+    }
+    #clientes p {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+  }
+  
