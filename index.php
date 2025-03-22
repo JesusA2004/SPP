@@ -75,7 +75,7 @@ require_once __DIR__ . '/Config/Routes.php';
     <section id="clientes">
         <h2 class="section-titleClientes" align="center">Clientes Distinguidos</h2>
         <p align="justify">
-                En Servicios de Protección Profesional, nos enorgullece contar con la confianza de empresas y organizaciones que han depositado su seguridad en nuestras manos. Nuestro compromiso es brindar protección con los más altos estándares de calidad y profesionalismo.
+            En Servicios de Protección Profesional, nos enorgullece contar con la confianza de empresas y organizaciones que han depositado su seguridad en nuestras manos. Nuestro compromiso es brindar protección con los más altos estándares de calidad y profesionalismo.
         </p>
         <br>
         <div class="clientes-container">
@@ -128,13 +128,9 @@ require_once __DIR__ . '/Config/Routes.php';
     <section id="servicios" class="servicios">
         <h2 class="section-title">Nuestros Servicios</h2>
         <br>
-        <p align="justify">
+        <p align="justify" class="descripcion-servicios">
             Nuestra organización proporciona servicios de Seguridad Privada a dependencias de gobierno, plazas 
-            comerciales, residenciales, organizaciones 
-        </p>
-        <p align="justify">
-            privadas tanto industrias como prestadoras de servicios en los siguientes 
-            rubros:
+            comerciales, residenciales, organizaciones privadas tanto industrias como prestadoras de servicios en los siguientes rubros:
         </p>
         <br>
         <br>
