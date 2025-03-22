@@ -97,16 +97,17 @@ require_once __DIR__ . '/../Config/Routes.php';
       <!-- Sección Introducción + Imagen -->
       <div class="intro-section">
         <div class="intro-content">
-          <h2>Servicio de Guardias de Seguridad Profesionales</h2>
+          <h2>Servicio de Guardias de Seguridad Intramuros</h2>
           <br>
           <div class="card card-intro">
             <h3>Protección Humana Especializada</h3>
-            <p>Nuestro servicio de guardias de seguridad ofrece protección física profesional las 24 horas, combinando presencia disuasiva con respuesta inmediata ante cualquier eventualidad.</p>
+            <p>Nuestro personal cuenta con la capacidad y experiencia para el resguardo y vigilancia de las personas y bienes 
+            materiales dentro de la unidad donde se labora.</p>
             <br>
             <a href="../index.php?servicio=GuardiasDeSeguridad&descripcion=Protección%20Humana%20Especializada%20las%2024%20horas#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
-        <img src="<?php echo IMG_URL; ?>/guardias.png" alt="Guardias de seguridad" class="intro-image">
+        <img src="<?php echo IMG_URL; ?>/guardiaSeguridadPrincipal.jpg" alt="Guardias de seguridad" class="intro-image">
       </div>
 
       <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->
@@ -143,15 +144,15 @@ require_once __DIR__ . '/../Config/Routes.php';
       <div class="galeria-grid">
         <div class="item">
           <p>Guardias en Sector Comercial</p>
-          <img src="<?php echo IMG_URL; ?>/guardias-comercial.jpg" alt="Guardias en sector comercial">
+          <img src="<?php echo IMG_URL; ?>/guardiaComercial.jpg" alt="Guardias en sector comercial">
         </div>
         <div class="item">
           <p>Guardias en Sector Residencial</p>
-          <img src="<?php echo IMG_URL; ?>/guardias-residencial.jpg" alt="Guardias en sector residencial">
+          <img src="<?php echo IMG_URL; ?>/guardiaResidencial.jpg" alt="Guardias en sector residencial">
         </div>
         <div class="item">
           <p>Guardias en Eventos</p>
-          <img src="<?php echo IMG_URL; ?>/guardias-evento.jpg" alt="Guardias en eventos">
+          <img src="<?php echo IMG_URL; ?>/guardiaEventos.png" alt="Guardias en eventos">
         </div>
       </div>
     </div>
@@ -168,25 +169,29 @@ require_once __DIR__ . '/../Config/Routes.php';
       </div>
       <!-- Grid principal con tarjetas -->
       <div class="card-grid">
-        <!-- Tarjeta 1: Supervisión en Sitio -->
         <div class="card card-features">
-          <h3>Supervisión en Sitio</h3>
+          <h3>Supervisión presencial</h3>
           <br>
-          <p>La supervisión de nuestros guardias se realiza directamente en el lugar, garantizando una respuesta inmediata y eficaz.</p>
+          <p>La supervisión operativa para verificar que la prestación del servicio se proporcione de manera eficiente, se realiza 
+          mediante supervisión física por parte de un supervisor.</p>
         </div>
 
-        <!-- Tarjeta 2: Monitoreo Remoto -->
         <div class="card card-features">
-          <h3>Monitoreo Remoto</h3>
+          <h3>Supervisión a distancia</h3>
           <br>
-          <p>Combinamos la presencia física con tecnología avanzada para monitorear y gestionar cualquier eventualidad en tiempo real.</p>
+          <p>
+            • Monitoreo continuo vía radio y/o teléfono celular.<br>
+            • Realizada las 24 horas del día.<br>
+            • Involucra tanto al supervisor como a la central operativa de la organización.<br>
+          </p>
         </div>
 
-        <!-- Tarjeta 3: Coordinación con Autoridades -->
         <div class="card card-features">
-          <h3>Coordinación con Autoridades</h3>
+          <h3>Colaboración con Autoridades</h3>
           <br>
-          <p>Mantenemos comunicación constante con entidades de seguridad para reforzar la protección y respuesta ante emergencias.</p>
+          <p>
+            • Coordinación permanente para apoyo en contingencias.<br>
+            • Colaboración con autoridades de seguridad municipales y estatales.<br>
         </div>
       </div>
     </div>

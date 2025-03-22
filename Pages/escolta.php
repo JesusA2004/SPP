@@ -101,12 +101,13 @@ require_once __DIR__ . '/../Config/Routes.php';
           <br>
           <div class="card card-intro">
             <h3>Protección Ejecutiva Personalizada</h3>
-            <p>Nuestro servicio de escoltas ofrece protección móvil de alto nivel para personas y bienes, con profesionales entrenados en técnicas avanzadas de seguridad ejecutiva.</p>
+            <p>Contamos con un equipo de profesionales perfectamente capacitados para prestar el servicio de escolta y 
+            acompañamiento a cualquier parte de la república. </p>
             <br>
             <a href="../index.php?servicio=Escolta&descripcion=Protección%20Personalizada%20y%20segura%20en%20todo%20momento#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
-        <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escoltas profesionales" class="intro-image">
+        <img src="<?php echo IMG_URL; ?>/escoltasProfesionales.jpeg" alt="Escoltas profesionales" class="intro-image">
       </div>
 
       <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->
@@ -142,58 +143,54 @@ require_once __DIR__ . '/../Config/Routes.php';
       <div class="galeria-grid">
         <div class="item">
           <p>Protección Vehicular</p>
-          <img src="<?php echo IMG_URL; ?>/escolta-vehicular.jpg" alt="Protección vehicular">
+          <img src="<?php echo IMG_URL; ?>/escoltaVehicular.jpg" alt="Protección vehicular">
         </div>
         <div class="item">
           <p>Seguridad en Eventos</p>
-          <img src="<?php echo IMG_URL; ?>/escolta-evento.jpg" alt="Seguridad en eventos">
+          <img src="<?php echo IMG_URL; ?>/escoltaEventos.jpeg" alt="Seguridad en eventos">
         </div>
         <div class="item">
           <p>Protección Ejecutiva</p>
-          <img src="<?php echo IMG_URL; ?>/escolta-ejecutivo.jpg" alt="Protección ejecutiva">
+          <img src="<?php echo IMG_URL; ?>/proteccionEjecutiva.jpg" alt="Protección ejecutiva">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       Sección: Protocolo y Metodología
+       Sección: Supervisión operativa
   ======================================== -->
   <section class="servicio-descripcion">
     <div class="container">
       <div class="section-title">
-          <h2>Protocolo y Metodología</h2>
+          <h2>Supervisión operativa</h2>
           <img src="<?php echo IMG_URL; ?>/iconoSupervision.png" alt="Icono Supervisión">
       </div>
       <!-- Grid principal con tarjetas -->
       <div class="card-grid">
-        <!-- Tarjeta: Protocolos de Seguridad -->
         <div class="card card-features">
-          <h3>Protocolos de Seguridad</h3>
+          <h3>Supervisión presencial</h3>
+          <br>
+          <p>La supervisión operativa para verificar que la prestación del servicio se proporcione de manera eficiente, se realiza 
+          mediante supervisión física por parte de un supervisor.</p>
+        </div>
+
+        <div class="card card-features">
+        <h3>Supervisión a distancia</h3>
+          <br>
           <p>
-            • Evaluación de riesgo personalizada<br>
-            • Implementación de medidas de seguridad avanzadas<br>
-            • Uso de tecnología en la comunicación y monitoreo
+            • Monitoreo continuo vía radio y/o teléfono celular.<br>
+            • Realizada las 24 horas del día.<br>
+            • Involucra tanto al supervisor como a la central operativa de la organización.<br>
           </p>
         </div>
 
-        <!-- Tarjeta: Movilidad y Respuesta -->
         <div class="card card-features">
-          <h3>Movilidad y Respuesta</h3>
+          <h3>Colaboración con las autoridades</h3>
+          <br>
           <p>
-            • Vehículos de alta seguridad y blindados<br>
-            • Respuesta inmediata ante amenazas<br>
-            • Coordinación con unidades móviles especializadas
-          </p>
-        </div>
-
-        <!-- Tarjeta: Coordinación y Apoyo -->
-        <div class="card card-features">
-          <h3>Coordinación y Apoyo</h3>
-          <p>
-            • Comunicación encriptada 24/7<br>
-            • Colaboración con autoridades locales y nacionales<br>
-            • Soporte continuo durante la operación
+            • Coordinación permanente para apoyo en contingencias.<br>
+            • Colaboración con autoridades de seguridad municipales y estatales.<br>
           </p>
         </div>
       </div>

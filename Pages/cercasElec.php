@@ -165,7 +165,6 @@ require_once __DIR__ . '/../Config/Routes.php';
       </div>
       <!-- Grid principal con tarjetas -->
       <div class="card-grid">
-        <!-- Tarjeta 2: Características Técnicas -->
         <div class="card card-features">
           <h3>Supervisión presencial</h3>
           <br>
@@ -173,7 +172,6 @@ require_once __DIR__ . '/../Config/Routes.php';
           mediante supervisión física por parte de un supervisor.</p>
         </div>
 
-        <!-- Tarjeta 3: Tipos de Cercas -->
         <div class="card card-features">
           <h3>Supervisión a distancia</h3>
           <br>
@@ -184,7 +182,6 @@ require_once __DIR__ . '/../Config/Routes.php';
           </p>
         </div>
 
-        <!-- Tarjeta 4: Beneficios -->
         <div class="card card-features">
           <h3>Colaboración con las autoridades</h3>
           <br>

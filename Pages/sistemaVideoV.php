@@ -99,11 +99,12 @@ require_once __DIR__ . '/../Config/Routes.php';
       <!-- Sección Introducción + Imagen -->
       <div class="intro-section">
         <div class="intro-content">
-          <h2>Servicio Integral de Videovigilancia CCTV</h2>
+          <h2>Instalación de Circuitos Cerrados de Televisión (CCTV).</h2>
           <br>
           <div class="card card-intro">
-            <h3>Introducción</h3>
-            <p>Nuestro servicio de videovigilancia CCTV está diseñado para brindarte la máxima seguridad mediante tecnología de última generación.</p>
+            <h3>Servicio Integral de Videovigilancia CCTV</h3>
+            <p>Nuestro objetivo es mantener vigiladas las 24 horas del día diferentes áreas a resguardar. Este sistema permite la grabación de los 
+            acontecimientos ocurridos y sirve como evidencia de las anomalías que llegasen a ocurrir.</p>
             <br>
             <a href="../index.php?servicio=videovigilancia&descripcion=Servicio%20Integral%20de%20Videovigilancia%20CCTV#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
@@ -115,18 +116,18 @@ require_once __DIR__ . '/../Config/Routes.php';
       <div class="caracteristicas-container">
         <!-- Bloque 1 -->
         <div class="caracteristica-box box1">
-          <h3>Oficiales de seguridad</h3>
-          <p>Vigilancia y control para mantener tus instalaciones seguras.</p>
+          <h3>Monitoreo en Tiempo Real</h3>
+          <p>Supervisión continua las 24 horas del día con acceso remoto y almacenamiento seguro.</p>
         </div>
         <!-- Bloque 2 -->
         <div class="caracteristica-box box2">
-          <h3>Evaluación y confianza patrimonial</h3>
-          <p>Procesos de selección rigurosos para garantizar personal confiable.</p>
+          <h3>Detección de movimiento</h3>
+          <p>Alertas automáticas ante cualquier actividad sospechosa, brindando una respuesta rápida.</p>
         </div>
         <!-- Bloque 3 -->
         <div class="caracteristica-box box3">
-          <h3>Rastreo y monitoreo vehicular</h3>
-          <p>Alianzas estratégicas para el mejor monitoreo en tiempo real.</p>
+          <h3>Integración Inteligente</h3>
+          <p>Compatible con sistemas de alarma y control de acceso para mayor seguridad.</p>
         </div>
       </div>
     </div>
@@ -143,20 +144,23 @@ require_once __DIR__ . '/../Config/Routes.php';
       
       <div class="galeria-grid">
         <div class="item">
-          <img src="<?php echo IMG_URL; ?>/cctv-ejemplo1.jpg" alt="Instalación comercial">
+          <p>Instalación Comercial</p>
+          <img src="<?php echo IMG_URL; ?>/cctvCentroComercial.jpg" alt="Instalación comercial">
         </div>
         <div class="item">
-          <img src="<?php echo IMG_URL; ?>/cctv-ejemplo2.jpg" alt="Instalación residencial">
+          <p>Instalación Residencial</p>
+          <img src="<?php echo IMG_URL; ?>/cctvResidencial.png" alt="Instalación residencial">
         </div>
         <div class="item">
-          <img src="<?php echo IMG_URL; ?>/cctv-ejemplo3.jpg" alt="Tecnología night vision">
+          <p>Tecnología Night Vision</p>
+          <img src="<?php echo IMG_URL; ?>/cctvNightVision.png" alt="Tecnología night vision">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       Sección: Soporte y Beneficios
+       Sección: Supervisión operativa
   ======================================== -->
   <section class="servicio-descripcion">
     <div class="container">
