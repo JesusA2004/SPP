@@ -133,7 +133,6 @@ require_once __DIR__ . '/Config/Routes.php';
             comerciales, residenciales, organizaciones privadas tanto industrias como prestadoras de servicios en los siguientes rubros:
         </p>
         <br>
-        <br>
         <figure class="icon-cards mt-3">
             <div class="icon-cards__content">
                 <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/guardiasSegu.png');">
