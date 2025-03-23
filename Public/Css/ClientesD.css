@@ -442,4 +442,24 @@
       padding: 0 10px;
     }
   }
-  
+
+  @media (min-width: 400px) and (max-width: 710px) {
+    .cliente-card {
+        flex: 0 0 100%;
+        max-width: 300px;
+    }
+    .clientes-container {
+        padding: 0 20px;
+        max-width: 600px;
+    }
+    .cliente-prev, .cliente-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    #clientes p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 20px;
+    }
+  }
