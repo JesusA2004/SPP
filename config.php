@@ -1,5 +1,5 @@
 <?php
     return [
-        'SMTP_USERNAME' => 'amjo220898@upemor.edu.mx',
-        'SMTP_PASSWORD' => 'vdvq bdls mjvs tcwp',
+        'SMTP_USERNAME' => 'spp.segpriv@gmail.com',
+        'SMTP_PASSWORD' => 'cjuj icxt ncby uybq',
     ];
