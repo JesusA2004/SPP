@@ -1,7 +1,7 @@
 /* =========================================================
    SECCIÓN COTIZAR - DISEÑO PASTEL PREMIUM
    ========================================================= */
-#cotizar {
+   #cotizar {
     background: #f7f8fa;
     padding: 5rem 2rem;
     position: relative;
@@ -61,7 +61,7 @@
     max-width: 100%; 
 }
 
-/*Formulario*/
+/* Formulario */
 /* Ajustar el contenedor del formulario y título */
 .cotizar-form-container {
     display: flex;
@@ -73,7 +73,7 @@
 
 /* Ajustar el título */
 .cotizar-form-container .section-title {
-    text-align: left;
+    text-align: center;
     margin-bottom: 1.5rem;
     max-width: 100%;
 }
@@ -91,7 +91,7 @@
 
 #cotizar .section-title {
     font-family: 'Poppins', sans-serif;
-    text-align: left;
+    text-align: center;
     color: #003366;
     margin-bottom: 2rem;
     position: relative;
@@ -146,7 +146,7 @@
     resize: none;
 }
 
-#cotizar button [type="submit"]{
+#cotizar button [type="submit"] {
     background: linear-gradient(135deg, #ebf30f 0%, #ffffff 100%);
     color: rgb(36, 28, 28);
     padding: 1.2rem 2.5rem;
@@ -165,7 +165,7 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-.botonEnviar{
+.botonEnviar {
     background: linear-gradient(135deg, #ebf30f 0%, #ffffff 100%);
     color: rgb(36, 28, 28);
     padding: 1.2rem 2.5rem;
@@ -184,7 +184,7 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-#cotizar button[type="submit"]::before{
+#cotizar button[type="submit"]::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -208,28 +208,106 @@
     box-shadow: 0 12px 25px rgba(142, 197, 252, 0.4);
 }
 
-/* Responsive */
+/* ========== RESPONSIVE ========== */
+
+/* Pantallas hasta 768px:
+   - Reordenamos para que aparezca primero el título,
+     luego la imagen y finalmente el formulario. */
 @media (max-width: 768px) {
+    #cotizar {
+        padding: 4rem 2rem;
+    }
+
+    /* Hacemos que .cotizar-container permita flex-wrap */
+    .cotizar-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cotizar-form-container {
+        display: contents;
+    }
+
+    /* Orden deseado:
+       1) Título
+       2) Imagen
+       3) Formulario
+    */
+    .section-title {
+        order: 1;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .cotizar-image {
+        order: 2;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .cotizar-form {
+        order: 3;
+        width: 100%;
+    }
+
     #cotizar form {
         padding: 2rem;
-        border-radius: 15px;
     }
 
     #cotizar .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-left: 0;
     }
 
-    #cotizar button[type="submit"]{
+    #cotizar input,
+    #cotizar textarea {
+        font-size: 0.9rem;
+    }
+
+    .botonEnviar {
         padding: 1rem 2rem;
+        font-size: 16px;
     }
 }
 
+/* Pantallas hasta 480px */
 @media (max-width: 480px) {
     #cotizar {
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
     }
-
     #cotizar form {
         padding: 1.5rem;
+    }
+    #cotizar .section-title {
+        font-size: 1.8rem;
+    }
+    #cotizar input,
+    #cotizar textarea {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+    .botonEnviar {
+        padding: 0.8rem 1.5rem;
+        font-size: 15px;
+    }
+}
+
+/* Pantallas hasta 320px */
+@media (max-width: 320px) {
+    #cotizar {
+        padding: 2rem 0.5rem;
+    }
+    #cotizar .section-title {
+        font-size: 1.6rem;
+    }
+    #cotizar input,
+    #cotizar textarea {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+    .botonEnviar {
+        padding: 0.8rem 1.2rem;
+        font-size: 14px;
     }
 }
