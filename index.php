@@ -4,6 +4,10 @@ require_once __DIR__ . '/Config/Routes.php';
 ?>
 
     <?php include '../SPP/Includes/Header.php'; ?>
+    <!-- Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/7772980092" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"/>
+    </a>
 
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">

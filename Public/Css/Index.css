@@ -53,6 +53,35 @@ section.visible {
 }
 
 /* =========================================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .whatsapp-float img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #25D366;
+  }
+
+/* =========================================================
    ANIMACIONES DE SECCIONES
    ========================================================= */
 .section-title {
