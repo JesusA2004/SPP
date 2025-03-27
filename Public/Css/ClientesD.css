@@ -197,7 +197,12 @@
 .cliente-card {
     width: 390px;
     flex: 0 0 calc(50% - 10px);
-    background: #ffffff;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.845) 50%,
+        rgba(3, 1, 47, 0.329) 100%
+    );
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     padding: 15px;

@@ -68,9 +68,9 @@ require_once __DIR__ . '/../Config/Routes.php';
                 <img src="<?php echo IMG_URL; ?>/todosServicios.png" alt="TodosServicios">
                 Todos los servicios
               </a>
-              <a href="guardiaSegu.php" class="submenu-itemServ">
-                <img src="<?php echo IMG_URL; ?>/guardias.png" alt="GuardiasSeguridad">
-                Guardias de seguridad intramuros
+              <a href="cercasElec.php" class="submenu-itemServ">
+                <img src="<?php echo IMG_URL; ?>/cercas.png" alt="Cercas">
+                Instalación de Cercas Eléctricas y navajas
               </a>
               <a href="escolta.php" class="submenu-itemServ">
                 <img src="<?php echo IMG_URL; ?>/escolta.png" alt="Escolta">
@@ -88,6 +88,10 @@ require_once __DIR__ . '/../Config/Routes.php';
       </div>
     </nav>
   </header>
+
+  <a href="https://wa.me/7772980092" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"/>
+  </a>
 
   <!-- ========================================
        Sección: Servicio de Guardias de Seguridad

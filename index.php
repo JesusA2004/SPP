@@ -54,7 +54,7 @@ require_once __DIR__ . '/Config/Routes.php';
                     <p class="empresa-text" id="vision">
                     Servicios de Protección Profesional S.A. de C.V. será una organización reconocida por colaborador(es), competidores, clientes y público en general. 
                         Seremos la organización líder en la prestación de Servicios de Seguridad Privada. 
-                        Nuestra premisa será la innovación, creatividad, competitividad y el trabajo en equipo de nuestros colaborador(es), buscando en todo momento la mejora continua en nuestras actividades, para alcanzar la calidad total<, así como nuestra capacidad para y responder debidamente a los cambios y para crear oportunidades.
+                        Nuestra premisa será la innovación, creatividad, competitividad y el trabajo en equipo de nuestros colaborador(es), buscando en todo momento la mejora continua en nuestras actividades, para alcanzar la calidad total, así como nuestra capacidad para anticipar y responder debidamente a los cambios del entorno y para crear oportunidades.
                     </p>
                 </div>
 
@@ -87,7 +87,16 @@ require_once __DIR__ . '/Config/Routes.php';
             <div class="cliente-slider">
                 <div class="cliente-item">
                     <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/morena.jpg" alt="Cliente 1">
+                        <img src="<?php echo IMG_URL; ?>/CFE.png" alt="Cliente 1">
+                    </div>
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/TJA.png" alt="Cliente 4">
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/PROCIVAC.png" alt="Cliente 3">
+                        <h3>PROCIVAC</h3>
                     </div>
                     <div class="cliente-card">
                         <img src="<?php echo IMG_URL; ?>/impepac.png" alt="Cliente 2">
@@ -95,27 +104,20 @@ require_once __DIR__ . '/Config/Routes.php';
                 </div>
                 <div class="cliente-item">
                     <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/procivac.png" alt="Cliente 3">
-                        <h3>PROCIVAC</h3>
-                    </div>
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/RAN.png" alt="Cliente 4">
-                    </div>
-                </div>
-                <div class="cliente-item">
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/invest.jpg" alt="Cliente 5">
-                    </div>
-                    <div class="cliente-card">
                         <img src="<?php echo IMG_URL; ?>/floraplant.png" alt="Cliente 6">
                     </div>
-                </div>
-                <div class="cliente-item">
+
                     <div class="cliente-card">
                         <img src="<?php echo IMG_URL; ?>/floramundo.png" alt="Cliente 7">
                     </div>
+                </div>
+                <div class="cliente-item">
                     <div class="cliente-card">
                         <img src="<?php echo IMG_URL; ?>/doster.png" alt="Cliente 8">
+                    </div>
+                                        
+                    <div class="cliente-card">
+                        <img src="<?php echo IMG_URL; ?>/invest2.png" alt="Cliente 5">
                     </div>
                 </div>
             </div>
