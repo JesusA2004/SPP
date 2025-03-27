@@ -183,6 +183,7 @@ require_once __DIR__ . '/Config/Routes.php';
     <!-- Sección Cotizar -->
     <section id="cotizar">
         <div class="cotizar-container">
+            <br><br>
             <!-- Imagen a la izquierda -->
             <div class="cotizar-image">
                 <img id="cotizarImg" src="<?php echo IMG_URL; ?>/seccionCotizar1.jpg" alt="Cotizar">
@@ -257,8 +258,7 @@ require_once __DIR__ . '/Config/Routes.php';
                 </div>
             </div>
         <?php endif; ?>
-    </section>
-    <br>               
+    </section>          
 
     <!-- Script principal (ajusta la ruta si es necesario) -->
     <script src="<?php echo JS_URL; ?>/Principal.js"></script>
