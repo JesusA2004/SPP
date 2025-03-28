@@ -10,16 +10,15 @@
             <!-- Sección Políticas -->
             <div class="footer-section">
                 <div class="footer-column">
-                    <h3 class="footer-subtitle">Nuestras políticas</h3>
+                <h3 class="footer-subtitle">¿Quiénes somos?</h3>
                     <div class="footer-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ultrices elementum.</p>
+                        <p align="justify">SERVICIOS DE PROTECCIÓN PROFESIONAL S.A. de C.V. es una Organización especializada en la prestación de Servicios de Seguridad Privada, legalmente constituida, con Registro Federal de Contribuyentes: SPP020301HV1, y Autorización de Funcionamiento No. 082, expedida por la Dirección General de Seguridad Privada, dependiente de la Comisión Estatal de Seguridad Pública del Gobierno del Estado de Morelos. </p>
                     </div>
-                    
+                                  
                     <div class="footer-divider secondary"></div>
-                    
-                    <h3 class="footer-subtitle">Aviso de confidencialidad</h3>
+                    <h3 class="footer-subtitle">Política de Calidad</h3>
                     <div class="footer-content">
-                        <p>Praesent risus leo, fringilla eu nulla at, egestas euismod orci. Suspendisse porttitor dui in enim.</p>
+                        <p align="justify">Hacer eficientes nuestras actividades con base en la identificación oportuna de las deficiencias observadas por nuestros  clientes, aplicando una mejora continua en las mismas con la finalidad de alcanzar la calidad total y en consecuencia la satisfacción  plena de nuestros clientes. </p>
                     </div>
                 </div>
             </div>
