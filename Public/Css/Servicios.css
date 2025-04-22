@@ -1,10 +1,3 @@
-.servicios {
-  padding: 20px 0;
-  height: 900px !important;
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px;
-}
-
 .servicios .section-title {
   text-align: center;
 }
@@ -36,116 +29,24 @@
   border-radius: 10px;
 }
 
-@keyframes hologram {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) rotate(45deg); }
+/* Ajustes para compatibilidad con Bootstrap */
+.servicios {
+  padding: 20px 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
 }
 
-.servicios .descripcion-servicios:hover{
-  transform: translateY(-5px) scale(1.02); 
-  box-shadow: 
-    0 0 40px rgba(159, 158, 158, 0.751),
-    0 8px 30px rgb(6, 119, 164);;
-}
-
-/* Contenedor del carrusel de íconos */
-.icon-cards {
+.descripcion-servicios {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
-  width: 90vw; /* Ajusta el tamaño del contenedor */
-  height: 80vw; /* Aumenta la altura */
-  max-width: 700px; /* Tamaño máximo */
-  max-height: 500px; /* Altura máxima */
-  margin: 0 auto;
-  color: white;
-  perspective: 1500px; /* Mejor perspectiva para la animación */
-  transform-origin: center;
+  overflow: hidden;
 }
 
-/* Contenido rotatorio */
-.icon-cards__content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: translateZ(-35vw) rotateY(0);
-  animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+.descripcion-servicios:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 40px rgba(159, 158, 158, 0.751), 0 8px 30px rgb(6, 119, 164);
 }
 
-.icon-cards__content.step-animation {
-  animation: carousel 8s infinite steps(1) forwards;
-}
-
-/* Ítems del carrusel */
-.icon-cards__item {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 120%; /* Reducción de tamaño */
-  height: 120%; /* Aumento de la altura para acomodar más contenido */
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 6px;
-  transform-origin: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-cards__item:nth-child(1) {
-  transform: rotateY(0) translateZ(30vw);
-}
-
-.icon-cards__item:nth-child(2) {
-  transform: rotateY(90deg) translateZ(30vw);
-}
-
-.icon-cards__item:nth-child(3) {
-  transform: rotateY(180deg) translateZ(30vw);
-}
-
-.icon-cards__item:nth-child(4) {
-  transform: rotateY(270deg) translateZ(30vw);
-}
-
-/* Contenido de cada tarjeta */
-.card-content {
-  background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para mejorar la legibilidad */
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  width: 100%;
-  height: 100%; /* Cubre todo el div */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra verticalmente el contenido */
-  align-items: center; /* Centra horizontalmente el contenido */
-}
-
-.card-content h3,
-.card-content p {
-  margin: 10px 0;
-  color: white; /* Asegura que el texto sea visible */
-}
-
-.card-img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  margin-bottom: 15px;
-}
-
-.card-content p {
-  font-size: 1em;
-  margin-bottom: 15px;
-}
-
-/* Botón "Ver más" */
 .btn-ver-mas {
   padding: 10px 15px;
   text-decoration: none;
@@ -154,347 +55,48 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 50%; /* Ajusta el ancho del botón */
+  width: 50%;
   text-align: center;
-  display: flex;
-  justify-content: center; /* Centra el texto */
-  align-items: center;
+  display: inline-block;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px 2px rgba(255, 194, 0, 0.8);
-  font-size: 12px;
 }
 
 .btn-ver-mas:hover {
-  background-color: #000e7b; /* Cambia el color de fondo */
-  transform: scale(1.1); /* Aumenta el tamaño del botón */
+  background-color: #000e7b;
+  transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px 2px rgba(255, 194, 0, 0.8);
-  border: 2px solid #ffc400;
 }
 
-/* Animación del carrusel */
-@keyframes carousel {
-  0%, 20% { transform: translateZ(-30vw) rotateY(0); }
-  25%, 45% { transform: translateZ(-30vw) rotateY(-90deg); }
-  50%, 70% { transform: translateZ(-30vw) rotateY(-180deg); }
-  75%, 95% { transform: translateZ(-30vw) rotateY(-270deg); }
-  100% { transform: translateZ(-30vw) rotateY(-360deg); }
+@keyframes hologram {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
 }
 
-/* ----------- Dispositivos Móviles Pequeños (hasta 480px) ----------- */
-@media (max-width: 480px) {
-  .servicios {
-    height: auto !important;
-    padding: 15px 0;
-  }
-
-  .descripcion-servicios {
-    padding: 15px !important;
-    margin: 0 10px !important;
-    font-size: 14px;
-  }
-
-  .icon-cards {
-    width: 95vw;
-    height: 120vw;
-    max-height: 400px;
-  }
-
-  .card-content h3 {
-    font-size: 1.2em;
-  }
-
-  .btn-ver-mas {
-    padding: 8px 12px;
-    font-size: 14px;
-    width: 70%;
-  }
-}
-/* ----------- Dispositivos Móviles (400px - 710px) ----------- */
-@media (min-width: 400px) and (max-width: 710px) {
-  .servicios {
-    height: auto !important;
-    padding: 20px 0;
-  }
-
-  .descripcion-servicios {
-    width: 90% !important;
-    padding: 18px !important;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .icon-cards {
-    width: 80vw;
-    height: 60vh;
-    max-height: 500px;
-    perspective: 1500px;
-    overflow: visible;
-  }
-
-  .icon-cards__content {
-    animation: carousel 20s infinite cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-    transform: translateZ(-50vw);
-  }
-
-  .icon-cards__item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-  }
-
-  .icon-cards__item:nth-child(1) { transform: rotateY(0deg) translateZ(35vw); }
-  .icon-cards__item:nth-child(2) { transform: rotateY(90deg) translateZ(35vw); }
-  .icon-cards__item:nth-child(3) { transform: rotateY(180deg) translateZ(35vw); }
-  .icon-cards__item:nth-child(4) { transform: rotateY(270deg) translateZ(35vw); }
-
-  .card-content {
-    width: 95%;
-    height: 95%;
-    margin: 1.5%;
-    transform: scale(0.8);
-    transition: transform 0.5s;
-  }
-
-  .btn-ver-mas {
-    font-size: 12px;
-    width: 70%;
-    height: 50px;
-    padding: 8px;
-  }
-
-  @keyframes carousel {
-    0%, 20% { transform: translateZ(-35vw) rotateY(0); }
-    25%, 45% { transform: translateZ(-35vw) rotateY(-90deg); }
-    50%, 70% { transform: translateZ(-35vw) rotateY(-180deg); }
-    75%, 95% { transform: translateZ(-35vw) rotateY(-270deg); }
-    100% { transform: translateZ(-35vw) rotateY(-360deg); }
-  }
+/* Ajustes para los cards en vista no responsive */
+/*
+.servicios .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* ----------- Dispositivos Móviles (481px - 767px) ----------- */
-@media (min-width: 481px) and (max-width: 767px) {
-  .servicios {
-    height: auto !important;
-    padding: 20px 0;
-  }
+.servicios .row .col {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+}
+*/
 
-  .descripcion-servicios {
-    width: 90% !important;
-    padding: 18px !important;
-    font-size: 15px;
-  }
-
-  .icon-cards {
-    width: 80vw;
-    height: 60vh;
-    max-height: 500px;
-    perspective: 1500px;
-    overflow: visible;
-  }
-
-  .icon-cards__content {
-    animation: carousel 20s infinite cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-    transform: translateZ(-50vw);
-  }
-
-  .icon-cards__item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-  }
-
-  .icon-cards__item:nth-child(1) { transform: rotateY(0deg) translateZ(35vw); }
-  .icon-cards__item:nth-child(2) { transform: rotateY(90deg) translateZ(35vw); }
-  .icon-cards__item:nth-child(3) { transform: rotateY(180deg) translateZ(35vw); }
-  .icon-cards__item:nth-child(4) { transform: rotateY(270deg) translateZ(35vw); }
-
-  .card-content {
-    width: 95%;
-    height: 95%;
-    margin: 1.5%;
-    transform: scale(0.8);
-    transition: transform 0.5s;
-  }
-
-  .btn-ver-mas {
-    font-size: 12px;
-    width: 70%;
-    height: 50px;
-    padding: 8px;
-  }
-
-  @keyframes carousel {
-    0%, 20% { transform: translateZ(-35vw) rotateY(0); }
-    25%, 45% { transform: translateZ(-35vw) rotateY(-90deg); }
-    50%, 70% { transform: translateZ(-35vw) rotateY(-180deg); }
-    75%, 95% { transform: translateZ(-35vw) rotateY(-270deg); }
-    100% { transform: translateZ(-35vw) rotateY(-360deg); }
-  }
+.servicios .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* ----------- Tabletas (768px - 1024px) ----------- */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .servicios {
-    height: auto !important;
-    padding: 30px 0;
-  }
-
-  .descripcion-servicios {
-    width: 85% !important;
-    padding: 25px !important;
-    font-size: 17px;
-  }
-
-  .icon-cards {
-    width: 70vw;
-    height: 65vh;
-    max-width: 700px;
-    max-height: 600px;
-    perspective: 2000px;
-  }
-
-  .icon-cards__content {
-    transform: translateZ(-45vw);
-    animation-duration: 25s;
-  }
-
-  .icon-cards__item:nth-child(1) { transform: rotateY(0deg) translateZ(40vw); }
-  .icon-cards__item:nth-child(2) { transform: rotateY(90deg) translateZ(40vw); }
-  .icon-cards__item:nth-child(3) { transform: rotateY(180deg) translateZ(40vw); }
-  .icon-cards__item:nth-child(4) { transform: rotateY(270deg) translateZ(40vw); }
-
-  .card-content {
-    width: 90%;
-    height: 90%;
-    margin: 3%;
-    transform: scale(0.85);
-  }
-
-  .card-content h3 {
-    font-size: 1.5em;
-  }
-
-  .btn-ver-mas {
-    font-size: 14px;
-    width: 60%;
-    height: 45px;
-  }
-
-  @keyframes carousel {
-    0%, 20% { transform: translateZ(-40vw) rotateY(0); }
-    25%, 45% { transform: translateZ(-40vw) rotateY(-90deg); }
-    50%, 70% { transform: translateZ(-40vw) rotateY(-180deg); }
-    75%, 95% { transform: translateZ(-40vw) rotateY(-270deg); }
-    100% { transform: translateZ(-40vw) rotateY(-360deg); }
+/* Ajustes para vista responsive */
+@media (max-width: 768px) {
+  .servicios .row .col {
+    flex: 1 1 100%; /* Una columna por fila */
+    max-width: 100%;
   }
 }
-
-/* ----------- Modo Pantalla Dividida (1025px - 1440px) ----------- */
-@media (min-width: 1025px) {
-  .servicios {
-    height: auto !important;
-    padding: 30px 0;
-  }
-
-  .descripcion-servicios {
-    width: 50% !important;
-    padding: 25px !important;
-    font-size: 17px;
-  }
-
-  .icon-cards {
-    width: 100vw;
-    height: 65vh;
-    max-width: 700px;
-    max-height: 600px;
-    perspective: 800px;
-  }
-
-  .icon-cards__content {
-    transform: translateZ(-45vw);
-    animation-duration: 20s;
-  }
-
-  .icon-cards__item:nth-child(1) { transform: rotateY(0deg) translateZ(40vw); }
-  .icon-cards__item:nth-child(2) { transform: rotateY(90deg) translateZ(40vw); }
-  .icon-cards__item:nth-child(3) { transform: rotateY(180deg) translateZ(40vw); }
-  .icon-cards__item:nth-child(4) { transform: rotateY(270deg) translateZ(40vw); }
-
-  .card-content {
-    width: 90%;
-    height: 90%;
-    margin: 3%;
-    transform: scale(0.85);
-  }
-
-  .card-content h3 {
-    font-size: 1.7rem;
-  }
-
-  .card-content p {
-    font-size: 18px;
-  }
-
-
-  .btn-ver-mas {
-    font-size: 15px;
-    width: 60%;
-    height: 45px;
-  }
-
-  @keyframes carousel {
-    0%, 20% { transform: translateZ(-40vw) rotateY(0); }
-    25%, 45% { transform: translateZ(-40vw) rotateY(-90deg); }
-    50%, 70% { transform: translateZ(-40vw) rotateY(-180deg); }
-    75%, 95% { transform: translateZ(-40vw) rotateY(-270deg); }
-    100% { transform: translateZ(-40vw) rotateY(-360deg); }
-  }
-}
-
-/* ----------- Ajustes de Orientación Horizontal ----------- */
-@media (max-width: 1024px) and (orientation: landscape) {
-  .servicios {
-    height: auto !important;
-    padding-bottom: 50px;
-  }
-
-  .icon-cards {
-    max-height: 400px;
-    height: 60vh;
-  }
-}
-
-/* ----------- Pantallas 4K (Ultra HD) ----------- */
-@media (min-width: 2560px) {
-  .servicios {
-    max-width: 2000px;
-    margin: 0 auto;
-  }
-
-  .descripcion-servicios {
-    max-width: 1200px !important;
-    font-size: 1.3em;
-  }
-
-  .icon-cards {
-    max-width: 1200px;
-    max-height: 800px;
-  }
-
-  .card-content h3 {
-    font-size: 2em;
-  }
-
-  .card-content p {
-    font-size: 1.4em;
-  }
-}
-

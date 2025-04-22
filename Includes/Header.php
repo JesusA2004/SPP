@@ -22,10 +22,16 @@ require_once __DIR__ . '/../Config/Routes.php';
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Responsive.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Servicios.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Cotizar.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Header.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Modal.css">
-</head>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS Bundle (incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
+  </head>
 <body>
   <header>
     <a href="index.php">

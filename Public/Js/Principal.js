@@ -130,10 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Slider de Clientes Optimizado
-    const slider = document.querySelector('.cliente-slider');
-    const items = document.querySelectorAll('.cliente-item');
-    const prevButton = document.querySelector('.cliente-prev');
-    const nextButton = document.querySelector('.cliente-next');
     let currentIndex = 0;
     let autoSlideInterval;
 

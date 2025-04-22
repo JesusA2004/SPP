@@ -1,470 +1,187 @@
-/* Estilos base */
-:root {
-    --bg-dark: #22231a;
-    --camera-pattern: url('/SPP/Public/Resources/seccionCotizar2.png');
-    --shadow-depth: 0 8px 30px rgba(0, 0, 0, 0.3);
-    --container-padding: clamp(2rem, 6vw, 5rem);
-    --gold-effect: linear-gradient(45deg, #c6b302 0%, #ffe600 50%, #c6b302 100%);
-}
+/* ====================================
+   ClientesD.css (Versión final)
+   ==================================== */
 
-#clientes {
-    padding: 2rem 0;
-    position: relative;
-    background: 
-        linear-gradient(rgba(93, 92, 92, 0.9), rgba(1, 8, 87, 0.9)),
-        var(--camera-pattern);
-    color: white;
+/* —— Variables de color —— */
+:root {
+    --camera-pattern: url('../Resources/seccionCotizar2.png');
+    --gold-effect: linear-gradient(45deg, #e0b700 0%, #ffe000 50%, #e0b700 100%);
+    --card-gradient: linear-gradient(
+      145deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.845) 50%,
+      rgba(3, 1, 47, 0.329) 100%
+    );
+    --arrow-bg: rgba(255, 255, 255, 0.85);
+    --arrow-hover-bg: rgba(255, 255, 255, 0.4);
+    --arrow-color: #004e92;
+    --arrow-hover-color: #0c0909;
+  }
+
+  /* —— Contenedor principal —— */
+  #clientes {
+    padding: 2.5rem 0;
+    background:
+    linear-gradient(rgba(93, 92, 92, 0.9), rgba(1, 8, 87, 0.9)),
+      var(--camera-pattern) center/cover no-repeat;
+    color: #fff;
     text-align: center;
     border-radius: 30px;
     transition: transform 0.3s ease;
-}
+    position: relative;
+  }
 
-#clientes:hover {
+  #clientes:hover {
     transform: translateY(-5px);
-}
-
-/* Mejoras al título existente */
-.section-titleClientes {
+  }
+  
+  /* —— Título —— */
+  .section-titleClientes {
     position: relative;
-    overflow: hidden;
-}
-
-.section-titleClientes::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gold-effect);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.section-titleClientes:hover::after {
-    transform: scaleX(1);
-}
-
-/* Mejoras en tarjetas existentes */
-.cliente-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.cliente-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.3) 50%,
-        rgba(255,255,255,0) 100%
-    );
-    animation: cardShine 3s infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.cliente-card:hover {
-    transform: translateY(-8px) rotateX(3deg) rotateY(2deg);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-.cliente-card:hover::before {
-    opacity: 1;
-}
-
-.cliente-card img {
-    transition: transform 0.5s ease, filter 0.3s ease;
-}
-
-.cliente-card:hover img {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-/* Mejoras en botones de navegación */
-.cliente-prev, .cliente-next {
-    transition: all 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.cliente-prev:hover, .cliente-next:hover {
-    background: #ff6b6b;
-    color: white;
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 4px 15px rgba(255,107,107,0.4);
-}
-
-/* Efecto en texto descriptivo */
-#clientes p {
-    position: relative;
-    padding: 20px;
-    background: rgba(0,0,0,0.15);
-    border-radius: 10px;
-    backdrop-filter: blur(3px);
-    transition: all 0.3s ease;
-}
-
-#clientes p:hover {
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(5px);
-}
-
-/* Mejoras responsive (se mantienen tus media queries originales) */
-@media (max-width: 768px) {
-    .cliente-card::before {
-        animation-duration: 5s;
-    }
-    
-    .cliente-card:hover {
-        transform: translateY(-5px);
-    }
-}
-
-/* Animación de entrada */
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Título de Clientes Distinguidos */
-.section-titleClientes {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-    color: #ffffff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
-                 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
-    animation: fadeInScale 1s ease-in-out;
-    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-}
-.section-titleClientes:hover {
-    color: #c6b302;
-    transform: scale(1.1);
-    text-shadow: 4px 4px 8px rgba(244, 195, 0, 0.92);
-}
-
-/* Efecto de aparición */
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Contenedor del carrusel */
-.clientes-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0 50px;
-}
-
-/* Carrusel */
-.cliente-slider {
-    display: flex;
-    gap: 2%;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-/* Elementos del slider */
-.cliente-item {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    min-width: 100%;
-    flex-shrink: 0;
-}
-
-/* Tarjetas de clientes */
-.cliente-card {
-    width: 390px;
-    flex: 0 0 calc(50% - 10px);
-    background: linear-gradient(
-        145deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.845) 50%,
-        rgba(3, 1, 47, 0.329) 100%
-    );
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
-}
-.cliente-card:hover {
-    transform: translateY(-8px);
-}
-
-/* Imágenes dentro de las tarjetas */
-.cliente-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-/* Flechas de navegación */
-.cliente-prev, .cliente-next {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.8),
+      2px 2px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+    animation: fadeInScale 0.8s ease-in-out both;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .section-titleClientes::after {
+    content: '';
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.85);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #004e92;
-    z-index: 10;
-    transition: all 0.3s ease;
+    bottom: -8px;
+    left: 50%;
+    width: 60%;
+    height: 3px;
+    background: var(--gold-effect);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .section-titleClientes:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+  }
+  .section-titleClientes:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  /* —— Descripción —— */
+  #clientes p {
+    max-width: 85%;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease;
+  }
+  #clientes p:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* —— Tarjeta de cliente —— */
+  .cliente-card {
+    width: 180%;
+    max-width: none;
+    height: 400px;
+    margin: 0 auto;
+    background: var(--card-gradient);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.cliente-prev:hover, .cliente-next:hover {
-    background: #ff6b6b;
-    color: white;
-    transform: scale(1.1);
-}
-.cliente-prev {
-    left: 15px;
-}
-.cliente-next {
-    right: 15px;
-}
-
-/* Efecto de entrada */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Texto de la sección clientes */
-#clientes p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: justify;
-    line-height: 1.6;
-    margin: 10px 0;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/******************************************************
-  MEDIA QUERIES (Responsive)
-******************************************************/
-
-/* Extra pequeños: hasta 320px */
-@media (max-width: 320px) {
-    .cliente-card {
-        width: 100%;
-        flex: 0 0 100%;
-        max-width: 280px;
-    }
-    .clientes-container {
-        padding: 0 10px;
-        max-width: 280px;
-    }
-    .cliente-prev, .cliente-next {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-    }
-    #clientes p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-}
-
-/* Pequeños: de 321px a 480px */
-@media (min-width: 321px) and (max-width: 480px) {
-    .cliente-card {
-        width: 100%;
-        flex: 0 0 100%;
-        max-width: 260px;
-        margin: 0 auto;
-    }
-    .clientes-container {
-        padding: 0 15px;
-        max-width: 260px;
-    }
-    .cliente-prev, .cliente-next {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-    #clientes p {
-        font-size: 15px;
-        padding: 0 10px;
-    }
-}
-
-/* Dispositivos pequeños a medianos: de 481px a 767px */
-@media (min-width: 481px) and (max-width: 767px) {
-    .cliente-card {
-        flex: 0 0 100%;
-        max-width: 280px;
-    }
-    .clientes-container {
-        padding: 0 20px;
-        max-width: 280px;
-    }
-    .cliente-prev, .cliente-next {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-    #clientes p {
-        font-size: 16px;
-        text-align: center;
-        padding: 0 20px;
-    }
-}
-
-/* Tablets: de 768px a 991px */
-@media (min-width: 768px) and (max-width: 991px) {
-    .cliente-card {
-        flex: 0 0 100%;
-        max-width: 300px;
-    }
-    .clientes-container {
-        padding: 0 20px;
-        max-width: 600px;
-    }
-    .cliente-prev, .cliente-next {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-    #clientes p {
-        font-size: 16px;
-        text-align: center;
-        padding: 0 20px;
-    }
-}
-
-/* Laptops pequeñas y dispositivos medianos: de 992px a 1199px */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .cliente-card {
-        width: 350px;
-        flex: 0 0 calc(50% - 10px);
-    }
-    .clientes-container {
-        max-width: 800px;
-        padding: 0 30px;
-    }
-    #clientes p {
-        font-size: 17px;
-    }
-    .cliente-prev, .cliente-next {
-        top: calc(50% + 10px);
-    }
-}
-
-/* Pantallas grandes: de 1200px a 1599px */
-@media (min-width: 1200px) and (max-width: 1599px) {
-    .cliente-card {
-        width: 390px;
-        flex: 0 0 calc(50% - 10px);
-    }
-    .clientes-container {
-        max-width: 900px;
-        padding: 0 50px;
-    }
-    #clientes p {
-        font-size: 18px;
-    }
-    .cliente-prev, .cliente-next {
-        top: 50%;
-    }
-}
-
-/* Pantallas extra grandes: 1600px en adelante */
-@media (min-width: 1600px) {
-    .cliente-card {
-        width: 420px;
-        flex: 0 0 calc(50% - 10px);
-    }
-    .clientes-container {
-        max-width: 1100px;
-        padding: 0 60px;
-    }
-    #clientes p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Reducir el ancho de cada slide para mostrar parte del siguiente */
-    .cliente-item {
-        min-width: 100%;
-        /* Elimina o reduce márgenes laterales si los hubiera */
-        margin: 0;
-      }
-      
-      /* Ajusta el contenedor para que no haya padding extra que modifique el ancho visible */
-      .clientes-container {
-        padding: 0 5px;
-      }
-    /* Ajustar la card para que no quede tan junta */
-    .cliente-card {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto 10px auto;
-      padding: 10px;
-    }
-    /* Ajustar tamaño de flechas y texto si es necesario */
-    .cliente-prev, .cliente-next {
-      width: 35px;
-      height: 35px;
-      font-size: 1rem;
-    }
-    #clientes p {
-      font-size: 15px;
-      padding: 0 10px;
-    }
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateX(-20%); /* Ajuste para centrar el 180% */
   }
 
-  @media (min-width: 400px) and (max-width: 710px) {
-    .cliente-card {
-        flex: 0 0 100%;
-        max-width: 300px;
+.cliente-card img {
+  max-height: 80%;    /* Que nunca supere el 80% de la altura de la tarjeta */
+  max-width: 90%;     /* Opcional: que no se salga horizontalmente */
+  object-fit: contain; /* Mantiene proporción */
+  border-radius: 8px;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+  /* —— Bootstrap Carousel —— */
+  #clientesCarousel .carousel-inner {
+    overflow: hidden;
+  }
+  #clientesCarousel .carousel-item {
+    padding: 2rem 0;
+  }
+  #clientesCarousel .row {
+    justify-content: center;
+  }
+  #clientesCarousel .carousel-item .col-12 {
+    max-width: 300px;
+  }
+  
+  /* —— Controles personalizados —— */
+  #clientesCarousel .carousel-control-prev,
+  #clientesCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--arrow-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--arrow-color);
+    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease,
+                transform 0.3s ease;
+  }
+  #clientesCarousel .carousel-control-prev:hover,
+  #clientesCarousel .carousel-control-next:hover {
+    background: var(--arrow-hover-bg);
+    color: var(--arrow-hover-color);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+    transform: translateY(-50%) scale(1.1);
+  }
+  /* Ocultar icono por defecto y usar pseudo-elementos */
+  #clientesCarousel .carousel-control-prev-icon,
+  #clientesCarousel .carousel-control-next-icon {
+    display: none;
+  }
+  #clientesCarousel .carousel-control-prev::after {
+    content: "\276E"; /* ❮ */
+    font-size: 1.5rem;
+  }
+  #clientesCarousel .carousel-control-next::after {
+    content: "\276F"; /* ❯ */
+    font-size: 1.5rem;
+  }
+  
+  /* —— Animación de título —— */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
     }
-    .clientes-container {
-        padding: 0 20px;
-        max-width: 600px;
-    }
-    .cliente-prev, .cliente-next {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-    #clientes p {
-        font-size: 16px;
-        text-align: center;
-        padding: 0 20px;
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
+  
+  /* —— Ajustes responsivos —— */
+  @media (max-width: 768px) {
+    #clientes {
+      padding: 2rem 0.5rem;
+    }
+    .section-titleClientes {
+      font-size: 1.75rem;
+    }
+    #clientes p {
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+  

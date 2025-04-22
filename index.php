@@ -75,55 +75,62 @@ require_once __DIR__ . '/Config/Routes.php';
         </div>
     </section>
 
-    <!-- Sección Clientes Distinguidos -->
-    <section id="clientes">
-        <h2 class="section-titleClientes" align="center">Clientes Distinguidos</h2>
-        <p align="justify">
-            En Servicios de Protección Profesional, nos enorgullece contar con la confianza de empresas y organizaciones que han depositado su seguridad en nuestras manos. Nuestro compromiso es brindar protección con los más altos estándares de calidad y profesionalismo.
-        </p>
-        <br>
-        <div class="clientes-container">
-            <button class="cliente-prev">&#10094;</button>
-            <div class="cliente-slider">
-                <div class="cliente-item">
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/CFE.png" alt="Cliente 1">
-                    </div>
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/TJA.png" alt="Cliente 4">
-                    </div>
-                </div>
-                <div class="cliente-item">
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/PROCIVAC.png" alt="Cliente 3">
-                        <h3>PROCIVAC</h3>
-                    </div>
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/impepac.png" alt="Cliente 2">
-                    </div>
-                </div>
-                <div class="cliente-item">
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/floraplant.png" alt="Cliente 6">
-                    </div>
+    <!-- Espacio adicional entre secciones -->
+    <div class="section-spacing"></div>
+    <br>
 
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/floramundo.png" alt="Cliente 7">
+    <!-- Sección Clientes Distinguidos -->
+    <section id="clientes" class="py-5 position-relative">
+        <div class="container">
+            <h2 class="section-titleClientes text-center mb-4">Clientes Distinguidos</h2>
+            <p class="text-center mb-5">
+            En Servicios de Protección Profesional, nos enorgullece contar con la confianza de empresas y organizaciones que han depositado su seguridad en nuestras manos. Nuestro compromiso es brindar protección con los más altos estándares de calidad y profesionalismo.
+            </p>
+
+            <div class="position-relative">
+            <div id="clientesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+
+                <?php
+                    $clientes = ['CFE','TJA','PROCIVAC','impepac','floraplant','floramundo','doster','invest2'];
+                    foreach($clientes as $i => $c):
+                    $active = $i === 0 ? ' active' : '';
+                ?>
+                    <div class="carousel-item<?= $active ?>">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                        <div class="cliente-card mx-auto">
+                            <img src="<?php echo IMG_URL . '/' . $c; ?>.png"
+                                class="img-fluid"
+                                alt="<?php echo $c; ?>">
+                        </div>
+                        </div>
                     </div>
-                </div>
-                <div class="cliente-item">
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/doster.png" alt="Cliente 8">
                     </div>
-                                        
-                    <div class="cliente-card">
-                        <img src="<?php echo IMG_URL; ?>/invest2.png" alt="Cliente 5">
-                    </div>
+                <?php endforeach; ?>
+
                 </div>
             </div>
-            <button class="cliente-next">&#10095;</button>
+
+            <!-- Botón Anterior -->
+            <button class="carousel-control-prev position-absolute top-50 start-0 translate-middle-y"
+                    type="button"
+                    data-bs-target="#clientesCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <!-- Botón Siguiente -->
+            <button class="carousel-control-next position-absolute top-50 end-0 translate-middle-y"
+                    type="button"
+                    data-bs-target="#clientesCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+            </div>
         </div>
-        <br>
     </section>
 
     <!-- Espacio adicional entre secciones -->
@@ -131,49 +138,60 @@ require_once __DIR__ . '/Config/Routes.php';
     <br>
 
     <!-- Sección Servicios -->
-    <section id="servicios" class="servicios">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <br>
-        <p align="justify" class="descripcion-servicios">
-            Nuestra organización proporciona servicios de Seguridad Privada a dependencias de gobierno, plazas 
-            comerciales, residenciales, organizaciones privadas tanto industrias como prestadoras de servicios en los siguientes rubros:
-        </p>
-        <br>
-        <figure class="icon-cards mt-3">
-            <div class="icon-cards__content">
-                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/guardiasSegu.png');">
-                    <div class="card-content">
-                        <h3>Guardias de Seguridad Intramuros</h3>
-                        <p>Proporcionamos servicios de guardias de seguridad intramuros para proteger su propiedad las 24 horas.</p>
-                        <a class="btn-ver-mas" href=Pages/guardiaSegu.php>Ver más</a>
+    <section id="servicios" class="py-5 bg-light servicios">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title">Nuestros Servicios</h2>
+            <p class="text-center text-muted mb-5">
+                Nuestra organización proporciona servicios de Seguridad Privada a dependencias de gobierno, plazas 
+                comerciales, residenciales, organizaciones privadas tanto industrias como prestadoras de servicios en los siguientes rubros:
+            </p>
+            <div class="row">
+                <!-- Servicio 1 -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card h-100 shadow descripcion-servicios">
+                        <img src="<?php echo IMG_URL; ?>/guardiasSegu.png" class="card-img-top" alt="Guardias de Seguridad">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Guardias de Seguridad Intramuros</h5>
+                            <p class="card-text">Proporcionamos servicios de guardias de seguridad intramuros para proteger su propiedad las 24 horas.</p>
+                            <a href="Pages/guardiaSegu.php" class="btn-ver-mas">Ver más</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/escoltaServ.png');">
-                    <div class="card-content">
-                        <h3>Escolta</h3>
-                        <p>Brindamos servicios de escolta para personas o bienes de alto valor.</p>
-                        <a class="btn-ver-mas" href="Pages/escolta.php">Ver más</a>
+                <!-- Servicio 2 -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card h-100 shadow descripcion-servicios">
+                        <img src="<?php echo IMG_URL; ?>/escoltaServ.png" class="card-img-top" alt="Escolta">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Escolta</h5>
+                            <p class="card-text">Brindamos servicios de escolta para personas o bienes de alto valor.</p>
+                            <a href="Pages/escolta.php" class="btn-ver-mas">Ver más</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/camarasSegu.png');">
-                    <div class="card-content">
-                        <h3>Instalación de CCTV</h3>
-                        <p>Instalación de sistemas de cámaras de vigilancia para mayor seguridad en su propiedad.</p>
-                        <a class="btn-ver-mas" href="Pages/sistemaVideoV.php">Ver más</a>
+                <!-- Servicio 3 -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card h-100 shadow descripcion-servicios">
+                        <img src="<?php echo IMG_URL; ?>/camarasSegu.png" class="card-img-top" alt="CCTV">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Instalación de CCTV</h5>
+                            <p class="card-text">Instalación de sistemas de cámaras de vigilancia para mayor seguridad en su propiedad.</p>
+                            <a href="Pages/sistemaVideoV.php" class="btn-ver-mas">Ver más</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="icon-cards__item" style="background-image: url('<?php echo IMG_URL; ?>/cercasServ.png');">
-                    <div class="card-content">
-                        <h3>Instalación de Cercas Eléctricas</h3>
-                        <p>Ofrecemos la instalación de cercas eléctricas y de navajas para máxima protección.</p>
-                        <a class="btn-ver-mas" href="Pages/cercasElec.php">Ver más</a>
+                <!-- Servicio 4 -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card h-100 shadow descripcion-servicios">
+                        <img src="<?php echo IMG_URL; ?>/cercasServ.png" class="card-img-top" alt="Cercas Eléctricas">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Instalación de Cercas Eléctricas</h5>
+                            <p class="card-text">Ofrecemos la instalación de cercas eléctricas y de navajas para máxima protección.</p>
+                            <a href="Pages/cercasElec.php" class="btn-ver-mas">Ver más</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </figure>
+        </div>
     </section>
 
     <!-- Espacio adicional entre secciones -->
