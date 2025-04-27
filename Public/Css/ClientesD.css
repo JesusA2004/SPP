@@ -48,6 +48,7 @@
     animation: fadeInScale 0.8s ease-in-out both;
     transition: color 0.3s ease, transform 0.3s ease;
   }
+
   .section-titleClientes::after {
     content: '';
     position: absolute;
@@ -60,10 +61,12 @@
     transform-origin: center;
     transition: transform 0.3s ease;
   }
+
   .section-titleClientes:hover {
     color: #ffd700;
     transform: scale(1.05);
   }
+
   .section-titleClientes:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
@@ -80,7 +83,17 @@
     backdrop-filter: blur(4px);
     transition: background 0.3s ease;
   }
+
   #clientes p:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .text-jus{
+    text-align: justify;
+  }
+
+  .text-jus:hover{
+    color:#ffd700;
     background: rgba(0, 0, 0, 0.3);
   }
   

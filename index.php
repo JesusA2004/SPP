@@ -83,7 +83,7 @@ require_once __DIR__ . '/Config/Routes.php';
     <section id="clientes" class="py-5 position-relative">
         <div class="container">
             <h2 class="section-titleClientes text-center mb-4">Clientes Distinguidos</h2>
-            <p class="text-center mb-5">
+            <p class="text-jus">
             En Servicios de Protección Profesional, nos enorgullece contar con la confianza de empresas y organizaciones que han depositado su seguridad en nuestras manos. Nuestro compromiso es brindar protección con los más altos estándares de calidad y profesionalismo.
             </p>
 
