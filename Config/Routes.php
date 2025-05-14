@@ -8,5 +8,5 @@ define('BASE_URL', 'http://localhost/SPP');
 define('CSS_URL', BASE_URL . '/Public/Css');
 define('JS_URL', BASE_URL . '/Public/Js');
 define('IMG_URL', BASE_URL . '/Public/Resources');
-// Define la URL del video
+define('DOC_URL', BASE_URL . '/Public/Docs');
 define('VIDEO_URL', BASE_URL . '/Public/Resources');

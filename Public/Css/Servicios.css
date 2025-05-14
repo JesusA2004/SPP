@@ -1,5 +1,6 @@
 .servicios .section-title {
   text-align: center;
+  font-weight: 700;
 }
 
 .servicios .descripcion-servicios {
@@ -95,4 +96,16 @@
     flex: 1 1 100%; /* Una columna por fila */
     max-width: 100%;
   }
+}
+
+/* ============================= */
+/* Igualar tamaño de las imágenes en la sección Servicios */
+/* ============================= */
+.servicios .descripcion-servicios .card-img-top {
+  width: 100%;          /* Ocupa todo el ancho del contenedor */
+  height: 500px;        /* Ajusta a la altura que prefieras */
+  object-fit: cover;    /* Recorta/escala manteniendo proporciones */
+  object-position: center; /* Centra el foco de la imagen */
+  background-repeat: no-repeat;
+  background-size: cover;
 }

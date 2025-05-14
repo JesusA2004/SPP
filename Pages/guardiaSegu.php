@@ -104,14 +104,14 @@ require_once __DIR__ . '/../Config/Routes.php';
           <h2>Servicio de Guardias de Seguridad Intramuros</h2>
           <br>
           <div class="card card-intro">
-            <h3>Protección Humana Especializada</h3>
+            <h3>Guardias de seguridad Intramuros</h3>
             <p>Nuestro personal cuenta con la capacidad y experiencia para el resguardo y vigilancia de las personas y bienes 
             materiales dentro de la unidad donde se labora.</p>
             <br>
-            <a href="../index.php?servicio=GuardiasDeSeguridad&descripcion=Protección%20Humana%20Especializada%20las%2024%20horas#cotizar" class="btn-cotizar">Cotizar</a>
+            <a href="../index.php?servicio=GuardiasDeSeguridad&descripcion=Guardias%20de%20seguridad%20Intramuros#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
-        <img src="<?php echo IMG_URL; ?>/guardiaSeguridadPrincipal.jpg" alt="Guardias de seguridad" class="intro-image">
+        <img src="<?php echo IMG_URL; ?>/guardiasIntramuros.jpg" alt="Guardias de seguridad" class="intro-image">
       </div>
 
       <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->
@@ -151,12 +151,16 @@ require_once __DIR__ . '/../Config/Routes.php';
           <img src="<?php echo IMG_URL; ?>/guardiaComercial.jpg" alt="Guardias en sector comercial">
         </div>
         <div class="item">
-          <p>Guardias en Sector Residencial</p>
-          <img src="<?php echo IMG_URL; ?>/guardiaResidencial.jpg" alt="Guardias en sector residencial">
+          <p>Guardias en Sector Gubernamental</p>
+          <img src="<?php echo IMG_URL; ?>/guardiaGubernamental.jpg" alt="Guardias en sector residencial">
         </div>
         <div class="item">
           <p>Guardias en Eventos</p>
-          <img src="<?php echo IMG_URL; ?>/guardiaEventos.png" alt="Guardias en eventos">
+          <img src="<?php echo IMG_URL; ?>/guardiasParaEventos.jpg" alt="Guardias en eventos">
+        </div>
+        <div class="item">
+          <p>Guardias en Residencias</p>
+          <img src="<?php echo IMG_URL; ?>/guardiasResidencial.jpg" alt="Guardias en eventos">
         </div>
       </div>
     </div>

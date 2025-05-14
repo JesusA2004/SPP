@@ -15,23 +15,25 @@ require_once __DIR__ . '/../Config/Routes.php';
   <link href="https://fonts.googleapis.com/css2?family=Liter:wght@300;400;700&family=Inter+Tight:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Bootstrap JS Bundle (incluye Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
   <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Index.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Inicio.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Filosofia.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Submenu.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Responsive.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Servicios.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Cotizar.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Header.css">
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Modal.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Inicio.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Filosofia.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Submenu.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Responsive.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Servicios.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Cotizar.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Header.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Modal.css">
+  <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Footer.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS Bundle (incluye Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/ClientesD.css">
-  </head>
+</head>
 <body>
   <header>
     <a href="index.php">

@@ -1,0 +1,88 @@
+/* ================================
+   Correcciones exclusivas para Footer
+   ================================ */
+
+/* Evitar que el background global del body se filtre en el footer */
+footer.footer {
+  background-blend-mode: normal !important;
+  isolation: isolate; /* Aísla el fondo del footer */
+}
+
+/* Asegura que el texto dentro del footer tenga prioridad sobre el color global */
+footer.footer,
+footer.footer * {
+  color: #fff !important;
+  text-align: initial; /* Permite justificar según .footer-content */
+}
+
+/* Restaura justificación solo en el footer */
+footer .footer-content,
+footer .contact-item p,
+footer .doc-label,
+footer p {
+  text-align: justify !important;
+  color: #ccc !important;
+}
+
+/* Reforzar estilo del mapa y botones */
+footer .map-button {
+  background-color: transparent !important;
+  color: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+}
+
+footer .map-button:hover {
+  background-color: #ffcc00 !important;
+  color: #1a1a1a !important;
+}
+
+/* Corrige dimensiones afectadas por .container global */
+footer .container {
+  max-width: 1300px !important;
+  padding: 2rem !important;
+  margin: auto !important;
+  z-index: auto !important;
+}
+
+/* Corrección de subtítulos y separadores afectados por estilos globales */
+footer .footer-subtitle {
+  font-size: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
+  color: #ffcc00 !important;
+}
+
+footer .footer-divider {
+  background: linear-gradient(90deg, transparent 0%, #ffcc00 50%, transparent 100%) !important;
+}
+
+footer .footer-divider.secondary {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Reforzar comportamiento de documentos */
+footer .doc-link {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
+}
+
+/* Garantiza flex correcto en móviles */
+@media (max-width: 768px) {
+  footer .doc-link {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  footer .doc-icon {
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  footer .footer-subtitle {
+    font-size: 1.1rem !important;
+  }
+}

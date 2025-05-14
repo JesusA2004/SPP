@@ -149,7 +149,7 @@ require_once __DIR__ . '/Config/Routes.php';
                 <!-- Servicio 1 -->
                 <div class="col-12 col-md-6 mb-4">
                     <div class="card h-100 shadow descripcion-servicios">
-                        <img src="<?php echo IMG_URL; ?>/guardiasSegu.png" class="card-img-top" alt="Guardias de Seguridad">
+                        <img src="<?php echo IMG_URL; ?>/guardiasIntramuros.jpg" class="card-img-top" alt="Guardias de Seguridad">
                         <div class="card-body text-center">
                             <h5 class="card-title">Guardias de Seguridad Intramuros</h5>
                             <p class="card-text">Proporcionamos servicios de guardias de seguridad intramuros para proteger su propiedad las 24 horas.</p>
@@ -171,7 +171,7 @@ require_once __DIR__ . '/Config/Routes.php';
                 <!-- Servicio 3 -->
                 <div class="col-12 col-md-6 mb-4">
                     <div class="card h-100 shadow descripcion-servicios">
-                        <img src="<?php echo IMG_URL; ?>/camarasSegu.png" class="card-img-top" alt="CCTV">
+                        <img src="<?php echo IMG_URL; ?>/prinCCTV.jpg" class="card-img-top" alt="CCTV">
                         <div class="card-body text-center">
                             <h5 class="card-title">Instalación de CCTV</h5>
                             <p class="card-text">Instalación de sistemas de cámaras de vigilancia para mayor seguridad en su propiedad.</p>
@@ -182,7 +182,7 @@ require_once __DIR__ . '/Config/Routes.php';
                 <!-- Servicio 4 -->
                 <div class="col-12 col-md-6 mb-4">
                     <div class="card h-100 shadow descripcion-servicios">
-                        <img src="<?php echo IMG_URL; ?>/cercasServ.png" class="card-img-top" alt="Cercas Eléctricas">
+                        <img src="<?php echo IMG_URL; ?>/prinCercaElec.jpg" class="card-img-top" alt="Cercas Eléctricas">
                         <div class="card-body text-center">
                             <h5 class="card-title">Instalación de Cercas Eléctricas</h5>
                             <p class="card-text">Ofrecemos la instalación de cercas eléctricas y de navajas para máxima protección.</p>

@@ -1,245 +1,210 @@
-/* Estructura principal - Mejorada */
+/* ESTRUCTURA PRINCIPAL */
 .footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
     color: #ffffff;
-    padding: 4rem 1.5rem;
+    padding: 4rem 0;
     font-family: 'Poppins', sans-serif;
-    position: relative;
-    overflow: hidden;
-    border-top: 2px solid #ffcc0033;
-}
-
-.footer-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
+    border-top: 2px solid rgba(255, 204, 0, 0.2);
     position: relative;
 }
 
-/* Divisores animados */
-.footer-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, #ffcc00 50%, transparent 100%);
-    margin: 2rem 0;
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-}
-.footer-divider::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,204,0,0.4), transparent);
-    animation: shimmer 3s infinite;
-}
-.footer-divider.secondary {
-    background: rgba(255, 255, 255, 0.1);
-}
-.footer-divider.secondary::after { 
-    display: none; 
-}
-.footer-divider.small {
-    width: 70%;
-    margin: 1rem auto;
-}
-
-@keyframes shimmer {
-    100% { left: 200%; }
-}
-
-/* Títulos con efecto neon */
+/* TITULOS */
 .footer-title {
     color: #ffcc00;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #ffcc0040;
+    letter-spacing: 1.5px;
     position: relative;
+    padding-bottom: 1rem;
 }
+
 .footer-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 120px;
     height: 3px;
     background: #ffcc00;
-    border-radius: 2px;
 }
 
 .footer-subtitle {
-    color:#ffcc00
-}
-
-/* Menú holográfico */
-.footer-menu .menu-item {
-    padding: 0.8rem 1.5rem;
-    background: rgba(255,255,255,0.03);
-    border-left: 3px solid transparent;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-menu .menu-item::before {
-    content: '▸';
-    margin-right: 10px;
     color: #ffcc00;
-    filter: drop-shadow(0 0 4px #ffcc00);
-}
-.footer-menu .menu-item:hover {
-    background: linear-gradient(90deg, #ffcc0010 0%, transparent 100%);
-    border-left-color: #ffcc00;
-    transform: translateX(10px);
-    box-shadow: 2px 0 8px #ffcc0030;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-/* Contacto con iconos animados */
-.contact-item .contact-icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-.contact-item:hover .contact-icon {
-    transform: scale(1.2) rotate(10deg);
-    filter: drop-shadow(0 0 4px #ffcc00);
-}
-
-/* ========== SECCIÓN "SÍGUENOS" ========== */
-.social-column {
-    position: relative;
-    overflow: visible;
-}
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin: 1.5rem 0 2rem;
-    position: relative;
-}
-.social-btn {
-    background: none !important;
-    border: none !important;
-    padding: 0;
-    position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-}
-.social-btn img {
-    width: 48px !important;
-    height: 48px;
-    transition: all 0.3s ease;
-    filter: grayscale(0.4) brightness(1.1);
-    border-radius: 50%;
-}
-.social-btn::before {
+.footer-subtitle::before {
     content: '';
     position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #ffcc00;
     border-radius: 50%;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.social-btn:hover {
-    transform: translateY(-5px) scale(1.15);
-}
-.social-btn:hover img {
-    filter: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-.social-btn:hover::before {
-    opacity: 1;
-}
-/* Colores individuales */
-.social-btn.whatsapp:hover::before { background: radial-gradient(circle, #25d36655 0%, transparent 70%); }
-.social-btn.facebook:hover::before { background: radial-gradient(circle, #1877f255 0%, transparent 70%); }
-.social-btn.email:hover::before { background: radial-gradient(circle, #ea433555 0%, transparent 70%); }
-.social-btn.instagram:hover::before { background: radial-gradient(circle, #e1306c55 0%, transparent 70%); }
-
-/* Responsive ajustado */
-@media (max-width: 768px) {
-    .footer-title { 
-        font-size: 2rem; 
-    }
-    .social-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.7rem;
-    }
-    .social-grid .social-btn {
-        padding: 0.7rem;
-    }
-    .social-grid .social-btn img { width: 26px; }
-    .map-button { padding: 0.8rem 1.2rem; }
 }
 
-.derechos {
-    text-align: center;
-    opacity: 0.8;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-/* Contenedor para centrar el botón */
-.map-button-container {
-    text-align: center;
-    margin: 20px 0; /* Ajusta el margen según tus necesidades */
-}
-
-/* Botón VER MAPA - Diseño minimalista con efectos hover */
-.map-button {
+/* DIVISORES */
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #ffcc00 50%, transparent 100%);
+    margin: 2rem 0;
     position: relative;
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
 }
 
-/* Efecto overlay en hover */
-.map-button::after {
-    content: "";
-    position: center;
-    top: 0;
-    left: -100%;
+.footer-divider.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+/* CONTENIDO */
+.footer-content {
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify; /* Justificar el texto */
+}
+/* MENU */
+.footer-menu .menu-item {
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    color: #fff;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-menu .menu-item:hover {
+    border-left-color: #ffcc00;
+    padding-left: 1.5rem;
+    background: rgba(255, 204, 0, 0.05);
+}
+
+/* DOCUMENTOS */
+.doc-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.doc-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #f44336;
+    transition: transform 0.3s ease;
+}
+
+.doc-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.doc-link:hover .doc-icon {
+    transform: rotate(-10deg);
+}
+
+/* CONTACTO */
+.contact-item {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.2);
+}
+
+/* REDES SOCIALES */
+.social-buttons img {
+    transition: all 0.3s ease;
+    filter: grayscale(0.3);
+}
+
+.social-buttons a:hover img {
+    filter: none;
+    transform: translateY(-5px);
+}
+
+/* MAPA */
+.small-map {
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.small-map iframe {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transition: left 0.3s ease-in-out;
-    z-index: 0;
+    border: 0;
+}
+
+.map-button {
+    background: transparent;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+    padding: 0.75rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .map-button:hover {
-    background: #fff;
-    color: #121212;
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    background: #ffcc00;
+    color: #1a1a1a;
 }
 
-.map-button:hover::after {
-    left: 0;
+/* DERECHOS */
+.derechos {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
 }
 
-/* Asegura que el texto permanezca por encima del overlay */
-.map-button span {
-    position: relative;
-    z-index: 1;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .footer {
+        padding: 3rem 0;
+    }
+    
+    .footer-title {
+        font-size: 1.75rem;
+    }
+    
+    .col-md-6 {
+        margin-bottom: 2rem;
+    }
 }
 
-
+@media (max-width: 768px) {
+    .footer-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .doc-link {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .doc-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}

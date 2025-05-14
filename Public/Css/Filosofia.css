@@ -24,6 +24,10 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
+.empresa-container .section-title {
+   font-weight: 700;
+}
+
 .items-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -77,6 +81,7 @@
     font-family: 'Poppins', sans-serif;
     transition: max-height 0.5s ease-in-out;
     overflow: hidden;
+
 }
 
 .highlight {
