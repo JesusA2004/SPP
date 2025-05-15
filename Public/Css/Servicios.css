@@ -85,6 +85,9 @@
   text-align: justify;
 }
 
+.card-title{
+  font-weight: 700;
+}
 .card-text:hover {
   color: #fbff00;
   transition: color 0.3s ease-in-out;

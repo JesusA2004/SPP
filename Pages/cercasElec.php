@@ -109,7 +109,7 @@ require_once __DIR__ . '/../Config/Routes.php';
             <a href="../index.php?servicio=InstalacionCercasElectricas&descripcion=Instalación%20Profesional%20de%20Cercas%20Electrificadas#cotizar" class="btn-cotizar">Cotizar</a>
           </div>
         </div>
-        <img src="<?php echo IMG_URL; ?>/instalacionCercas.png" alt="Cercas eléctricas" class="intro-image">
+        <img src="<?php echo IMG_URL; ?>/prinCercaElec.jpg" alt="Cercas eléctricas" class="intro-image">
       </div>
 
       <!-- NUEVA SECCIÓN: 3 cajas con efecto holograma -->

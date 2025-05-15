@@ -148,7 +148,7 @@ require_once __DIR__ . '/../Config/Routes.php';
       <div class="galeria-grid">
         <div class="item">
           <p>Guardias en Sector Comercial</p>
-          <img src="<?php echo IMG_URL; ?>/guardiaComercial.jpg" alt="Guardias en sector comercial">
+          <img src="<?php echo IMG_URL; ?>/guardiasComercial.jpg" alt="Guardias en sector comercial">
         </div>
         <div class="item">
           <p>Guardias en Sector Gubernamental</p>

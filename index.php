@@ -52,9 +52,9 @@ require_once __DIR__ . '/Config/Routes.php';
                     <img src="<?php echo IMG_URL; ?>/vision.png" alt="vision">
                     <h3 class="empresa-title">Visión</h3>
                     <p class="empresa-text" id="vision">
-                    Servicios de Protección Profesional S.A. de C.V. será una organización reconocida por colaborador(es), competidores, clientes y público en general. 
+                    Servicios de Protección Profesional S.A. de C.V. será una organización reconocida por el personal colaborador, competidores, clientes y público en general. 
                         Seremos la organización líder en la prestación de Servicios de Seguridad Privada. 
-                        Nuestra premisa será la innovación, creatividad, competitividad y el trabajo en equipo de nuestros colaborador(es), buscando en todo momento la mejora continua en nuestras actividades, para alcanzar la calidad total, así como nuestra capacidad para anticipar y responder debidamente a los cambios del entorno y para crear oportunidades.
+                        Nuestra premisa será la innovación, creatividad, competitividad y el trabajo en equipo de nuestro personal colaborador, buscando en todo momento la mejora continua en nuestras actividades, para alcanzar la calidad total, así como nuestra capacidad para anticipar y responder debidamente a los cambios del entorno y para crear oportunidades.
                     </p>
                 </div>
 
