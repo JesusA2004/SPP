@@ -170,11 +170,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showSlide(currentIndex);
     startAutoSlide();
-
-    // Inicialización del botón "Saber Más"
-    document.getElementById("saberMas").addEventListener("click", function() {
-        smoothScroll("#empresa");
-    });
-    
 });
 

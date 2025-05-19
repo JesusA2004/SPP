@@ -46,13 +46,13 @@
               <h3 class="footer-subtitle">Documentos Oficiales</h3>
               <div class="row g-3">
                 <div class="col-6 col-md-12">
-                  <a href="<?php echo BASE_URL; ?>/Includes/stream.php?file=AvisoRegistro.pdf" class="doc-link" target="_blank">
+                  <a href="<?php echo DOC_URL; ?>/AvisoRegistro.pdf" class="doc-link" target="_blank">
                     <i class="bi bi-file-earmark-pdf-fill doc-icon"></i>
                     <span class="doc-label">Aviso de Registro</span>
                   </a>
                 </div>
                 <div class="col-6 col-md-12">
-                  <a href="<?php echo BASE_URL; ?>/Includes/stream.php?file=LicenciaFuncionamiento.pdf" class="doc-link" target="_blank">
+                  <a href="<?php echo DOC_URL; ?>/LicenciaFuncionamiento.pdf" class="doc-link" target="_blank">
                     <i class="bi bi-file-earmark-pdf-fill doc-icon"></i>
                     <span class="doc-label">Licencia de Funcionamiento</span>
                   </a>

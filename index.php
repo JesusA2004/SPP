@@ -25,7 +25,9 @@ require_once __DIR__ . '/Config/Routes.php';
             nuestra ventaja competitiva es generar la confianza en nuestros clientes a través de 
             una excelente calidad en nuestros servicios.
         </p>
-        <button id="saberMas">SABER MÁS</button>
+        <button id="saberMas" class="btn btn-primary">
+            SABER MÁS
+        </button>
     </section>
 
     <!-- Espacio adicional entre secciones -->
@@ -141,10 +143,11 @@ require_once __DIR__ . '/Config/Routes.php';
     <section id="servicios" class="py-5 bg-light servicios">
         <div class="container">
             <h2 class="text-center mb-4 section-title">Nuestros Servicios</h2>
-            <p class="text-center text-muted mb-5">
+            <p align="center">
                 Nuestra organización proporciona servicios de Seguridad Privada a dependencias de gobierno, plazas 
                 comerciales, residenciales, organizaciones privadas tanto industrias como prestadoras de servicios en los siguientes rubros:
             </p>
+            <br>
             <div class="row">
                 <!-- Servicio 1 -->
                 <div class="col-12 col-md-6 mb-4">
@@ -223,8 +226,19 @@ require_once __DIR__ . '/Config/Routes.php';
                     </div>
 
                     <div class="input-container">
-                        <label for="telefono">Teléfono</label>
-                        <input type="number" placeholder="Ingresa tu teléfono" required id="telefono" name="telefono">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Ingresa tu teléfono (10 dígitos)"
+                            required
+                            id="telefono"
+                            name="telefono"
+                            pattern="\d{10}"
+                        >
+                        <div class="invalid-feedback">
+                            El teléfono debe tener 10 dígitos.
+                        </div>
                     </div>
 
                     <div class="input-container">
@@ -301,6 +315,13 @@ require_once __DIR__ . '/Config/Routes.php';
                     imgElement.style.opacity = "1"; // Hacer visible la nueva imagen
                 }, 500); // Tiempo suficiente para la transición de opacidad
             }, 4000); // Cambia la imagen cada 4 segundos
+        });
+        document.getElementById("saberMas").addEventListener("click", function(event) {
+            event.preventDefault();
+            const target = document.querySelector("#empresa");
+            if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
         });
     </script>
 

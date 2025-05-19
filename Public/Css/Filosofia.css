@@ -113,4 +113,8 @@
     .empresa-item {
         width: 100%;
     }
+
+    .empresa-container p{
+        text-align: justify;
+    }
 }
