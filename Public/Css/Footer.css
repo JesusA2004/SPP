@@ -131,6 +131,18 @@
     transform: scale(1.2);
 }
 
+/* Enlaces de contacto dentro del footer */
+.contact-link {
+  color: inherit;            /* hereda el color blanco */
+  text-decoration: none;     /* quita subrayado */
+  display: inline-flex;      /* alinea icono y texto */
+  align-items: center;
+}
+
+.contact-link:hover .contact-icon {
+  transform: scale(1.2);     /* mismo efecto hover que en .contact-item */
+}
+
 /* REDES SOCIALES */
 .social-buttons img {
     transition: all 0.3s ease;

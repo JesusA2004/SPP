@@ -70,6 +70,19 @@ footer .doc-link {
   border-radius: 8px !important;
 }
 
+/* Enlaces de contacto dentro del footer */
+.contact-link {
+  color: inherit;            /* hereda el color blanco */
+  text-decoration: none;     /* quita subrayado */
+  display: inline-flex;      /* alinea icono y texto */
+  align-items: center;
+}
+
+.contact-link:hover .contact-icon {
+  transform: scale(1.2);     /* mismo efecto hover que en .contact-item */
+}
+
+
 /* Garantiza flex correcto en móviles */
 @media (max-width: 768px) {
   footer .doc-link {

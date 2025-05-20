@@ -73,8 +73,10 @@
                   Av. Lomas del Tzompantle 200<br>Cuernavaca, Morelos
                 </p>
                 <p class="contact-item">
-                  <span class="contact-icon">📞</span>
-                  777-102-26-76
+                  <a href="tel:+527771022676" class="contact-link">
+                    <span class="contact-icon">📞</span>
+                    777‑102‑26‑76
+                  </a>
                 </p>
                 <p class="contact-item">
                   <span class="contact-icon">✉️</span>
