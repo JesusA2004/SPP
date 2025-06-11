@@ -33,6 +33,8 @@ require_once __DIR__ . '/../Config/Routes.php';
   <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Modal.css">
   <link rel="stylesheet" href="<?php echo CSS_URL; ?>/Footer.css">
 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 <body>
   <header>
